@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أدواتي في Claude Code</title>
+<style>
+  :root {
+    --bg: #0f1115; --card: #171a21; --line: #262b36; --text: #e8eaf0; --muted: #9aa3b2;
+    --accent: #d97757; --ok: #3fb68b; --warn: #e0a83a; --bad: #e06464;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", sans-serif; line-height: 1.6;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px 60px; }
+  h1 { margin: 0 0 6px; font-size: 30px; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 18px; min-width: 130px; }
+  .stat b { display: block; font-size: 24px; }
+  .stat small { color: var(--muted); }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; align-items: center; }
+  .controls button {
+    background: var(--card); color: var(--text); border: 1px solid var(--line);
+    border-radius: 999px; padding: 6px 14px; cursor: pointer; font: inherit; font-size: 14px;
+  }
+  .controls button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .controls input {
+    margin-inline-start: auto; background: var(--card); color: var(--text); border: 1px solid var(--line);
+    border-radius: 8px; padding: 7px 12px; font: inherit; font-size: 14px; min-width: 220px;
+  }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th, td { padding: 12px 14px; text-align: right; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: #1d212a; color: var(--muted); font-weight: 600; font-size: 14px; }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #1b1f27; }
+  td.name { font-weight: 600; white-space: nowrap; }
+  td.name code { font-family: Consolas, monospace; font-size: 13px; color: var(--accent); font-weight: 400; display: block; }
+  .tag { display: inline-block; font-size: 12px; padding: 2px 10px; border-radius: 999px; background: #232836; color: var(--muted); white-space: nowrap; }
+  .st { font-size: 13px; white-space: nowrap; }
+  .st::before { content: "●"; margin-inline-end: 6px; }
+  .st.ok { color: var(--ok); } .st.warn { color: var(--warn); } .st.bad { color: var(--bad); }
+  .foot { color: var(--muted); font-size: 13px; margin-top: 18px; }
+  @media (max-width: 700px) { td.name { white-space: normal; } .controls input { margin: 0; width: 100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>أدواتي في <span>Claude Code</span></h1>
+  <p class="sub">كل الأدوات والسكلز اللي عندي، وحالة كل وحدة. آخر تحديث: 7 نوفمبر 2026.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="controls" id="filters">
+    <button class="active" data-cat="all">الكل</button>
+    <button data-cat="ربط خارجي">ربط خارجي</button>
+    <button data-cat="أداة محلية">أدوات محلية</button>
+    <button data-cat="مونتاج وفيديو">مونتاج وفيديو</button>
+    <button data-cat="محتوى">محتوى</button>
+    <button data-cat="عملاء وCRM">عملاء وCRM</button>
+    <button data-cat="تصميم وملفات">تصميم وملفات</button>
+    <button data-cat="برمجة">برمجة</button>
+    <button data-cat="شخصي">شخصي</button>
+    <input id="q" type="search" placeholder="دوّر على أداة...">
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>الأداة</th><th>النوع</th><th>وش تسوي</th><th>الحالة</th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <p class="foot">الأدوات اللي حالتها "يحتاج تسجيل دخول" تنربط من <code>/mcp</code>. واللي "واقفة" سيرفرها مطفي على الجهاز، شغّله وترجع تشتغل.</p>
+</div>
+
+<script>
+const tools = [
+  // ربط خارجي (Connectors)
+  ["Gmail", "gmail", "ربط خارجي", "قراءة الإيميلات والبحث فيها، كتابة مسودات وردود، ترتيب بالتصنيفات (30 أداة)", "ok"],
+  ["Google Drive", "google-drive", "ربط خارجي", "قراءة ملفات Drive وإنشاؤها وتعديلها ومشاركتها (11 أداة)", "ok"],
+  ["Canva", "canva", "ربط خارجي", "تصاميم وفيديوهات من قوالب، إزالة خلفية، تصدير (45 أداة)", "ok"],
+  ["fal", "fal", "ربط خارجي", "توليد صور وفيديو وصوت وموسيقى بموديلات AI (64 أداة)", "ok"],
+  ["Claude Docs", "claude-docs", "ربط خارجي", "مستندات حيّة أكتبها وأعدّلها لك (8 أدوات)", "ok"],
+  ["vidIQ", "vidiq", "ربط خارجي", "تحليل قناة يوتيوب، أفكار فيديو، SEO، ترندات", "warn"],
+  ["Vercel", "vercel", "ربط خارجي", "نشر مواقع وتطبيقات على Vercel", "warn"],
+
+  // أدوات محلية (MCP على الجهاز)
+  ["Claude in Chrome", "claude-in-chrome", "أداة محلية", "يتحكم بمتصفح Chrome حقك: يفتح صفحات، يضغط، يعبّي فورمات", "ok"],
+  ["المتصفح الداخلي", "Claude_Browser", "أداة محلية", "متصفح داخل تطبيق Claude لمعاينة المواقع والمشاريع المحلية", "ok"],
+  ["التحكم بالكمبيوتر", "computer-use", "أداة محلية", "سكرين شوت وضغط وكتابة في أي برنامج على الجهاز", "ok"],
+  ["Terminal", "terminal", "أداة محلية", "يشغّل أوامر في تبويب Terminal داخل التطبيق", "ok"],
+  ["wigolo", "wigolo", "أداة محلية", "بحث في النت، جلب صفحات، زحف مواقع، أبحاث (10 أدوات)", "ok"],
+  ["scrapling", "scrapling", "أداة محلية", "سحب بيانات من مواقع محمية بمتصفح خفي (17 أداة)", "ok"],
+  ["Blender", "blender", "أداة محلية", "يتحكم ببرنامج Blender: مجسمات 3D وخامات وموديلات (25 أداة)", "ok"],
+  ["EffectCraft", "effectcraft", "أداة محلية", "موشن قرافيكس بأسلوب After Effects (31 أداة)", "ok"],
+  ["FilmCraft", "filmcraft", "أداة محلية", "مونتاج فيديو بأسلوب Premiere (17 أداة)", "ok"],
+  ["VectorCraft", "vectorcraft", "أداة محلية", "رسم فكتور بأسلوب Illustrator (25 أداة)", "ok"],
+  ["Artifacts", "claude-artifacts", "أداة محلية", "ينشر صفحات HTML خاصة فيك على claude.ai (41 أداة)", "ok"],
+  ["المهام المجدولة", "scheduled-tasks", "أداة محلية", "مهام تشتغل لحالها كل يوم أو كل ساعة (6 أدوات)", "ok"],
+  ["Handoff", "handoff", "أداة محلية", "تسليم الشغل بين الجلسات", "ok"],
+  ["Twenty CRM", "twenty", "أداة محلية", "الـ CRM حقك على localhost:3000", "bad"],
+  ["OpenReel", "openreel", "أداة محلية", "تعديل ريلز", "bad"],
+  ["Voicebox", "voicebox", "أداة محلية", "توليد صوت", "bad"],
+  ["VoiceStudio", "voicestudio", "أداة محلية", "استوديو صوت", "bad"],
+
+  // مونتاج وفيديو (Skills)
+  ["مونتاج إعلان / ريل", "video-ad-editor", "مونتاج وفيديو", "يشيل السكتات، كابشن عربي بتوقيت الكلمة، موشن قرافيكس، 9:16", "ok"],
+  ["نسخ أسلوب مونتاج", "clone-editing-style", "مونتاج وفيديو", "يدرس أسلوب صانع محتوى ويمنتج فيديوك بنفس الأسلوب", "ok"],
+  ["صياد B-roll", "broll-hunter", "مونتاج وفيديو", "يلقى صور ومقاطع للي تقوله في الفيديو ويرتبها بالتوقيت", "ok"],
+  ["كابشن متحرك", "caption-animation", "مونتاج وفيديو", "كابشن كلمة بكلمة بأسلوب TikTok", "ok"],
+  ["قص على الإيقاع", "beat-sync-editing", "مونتاج وفيديو", "قصّات على البيت، J-cut و L-cut، speed ramp", "ok"],
+  ["مخرج الموشن", "motion-director", "مونتاج وفيديو", "فيديوهات موشن قرافيكس من الكود بأسلوب استوديو", "ok"],
+  ["أفلام كرتون قصيرة", "omi-freedy-animated-shorts", "مونتاج وفيديو", "قصص كرتون 2D في عالم 3D، 55-70 ثانية", "ok"],
+  ["Hypit", "hypit", "مونتاج وفيديو", "إخراج فيديوهات بميديا مولّدة", "ok"],
+  ["Remotion", "remotion-video", "مونتاج وفيديو", "فيديو من كود React", "ok"],
+  ["عرض منتج", "product-demo-video", "مونتاج وفيديو", "فيديو ديمو لتطبيق من سكرين شوتات", "ok"],
+  ["شاهد", "watch", "مونتاج وفيديو", "يشوف فيديو أو رابط ويطلع النص", "ok"],
+
+  // محتوى
+  ["آلة الهوكات", "hook-machine", "محتوى", "يكتب هوكات ويقيّمها ويحلل ليش فيديو نجح", "ok"],
+  ["محرك المواضيع", "topic-engine", "محتوى", "مواضيع وزوايا محتوى من أدلة حقيقية", "ok"],
+  ["منهج Kallaway", "kallaway", "محتوى", "قواعد كتابة سكربتات الريلز والهوكات والسلاسل", "ok"],
+  ["بحث الجمهور", "avatar-research", "محتوى", "يدرس جمهورك من مصادر حقيقية بكلامهم", "ok"],
+  ["بنك الهوية", "identity-bank", "محتوى", "قصتك وصوتك وهويتك، تقراها باقي السكلز", "ok"],
+  ["آخر 30 يوم", "last30days", "محتوى", "وش يقول الناس عن أي موضوع في Reddit و X ويوتيوب", "ok"],
+  ["كتابة إعلانية", "copywriting", "محتوى", "نصوص بيع وإعلانات", "ok"],
+  ["توليد صور", "image-prompt", "محتوى", "يكتب برومبت صورة ويولّدها (يسألك عن التكلفة أول)", "ok"],
+
+  // عملاء وCRM
+  ["مولّد العملاء", "lead-generator", "عملاء وCRM", "يلقى شركات كويتية تعلن الحين ويحطها في Twenty", "ok"],
+  ["متابعة العملاء", "lead-tracker", "عملاء وCRM", "ملاحظات العملاء، رسائل متابعة، مين عليه الدور اليوم", "ok"],
+  ["إدخال العملاء", "punch-in-leads", "عملاء وCRM", "يرسل قوائم عملاء من Excel إلى Twenty", "ok"],
+
+  // تصميم وملفات
+  ["Design Pro", "design-pro", "تصميم وملفات", "ألوان وخطوط وأنظمة تصميم، 151 هوية براند", "ok"],
+  ["تصميم واجهات", "frontend-design", "تصميم وملفات", "صفحات وواجهات ويب بتصميم مرتب", "ok"],
+  ["PDF / Word / Excel / PowerPoint", "pdf · docx · xlsx · pptx", "تصميم وملفات", "يقرا ويسوي ويعدّل هذي الملفات", "ok"],
+  ["رسوم بيانية", "dataviz", "تصميم وملفات", "جداول ورسوم بيانية وداشبوردات", "ok"],
+
+  // برمجة
+  ["Superpowers", "superpowers:*", "برمجة", "خطط، اختبارات، تصحيح أخطاء، مراجعة كود", "ok"],
+  ["مراجعة كود", "code-review", "برمجة", "يدوّر على أخطاء في التعديلات", "ok"],
+  ["Claude API", "claude-api", "برمجة", "مرجع لبناء تطبيقات على Claude", "ok"],
+  ["Vercel Skills", "vercel:*", "برمجة", "Next.js، نشر، AI SDK، وكلاء", "ok"],
+  ["صانع السكلز", "skill-creator", "برمجة", "يسوي سكلز جديدة ويحسّنها", "ok"],
+
+  // شخصي
+  ["Brain", "brain", "شخصي", "مساعدك: أهدافك، مهامك، وش الأهم اليوم", "ok"],
+  ["Apple Music", "apple-music-downloader", "شخصي", "يحط أغانيك على الآيفون", "ok"],
+  ["Caveman", "caveman", "شخصي", "ردود مختصرة توفّر توكنز", "ok"],
+];
+
+const stLabel = { ok: "شغّالة", warn: "يحتاج تسجيل دخول", bad: "واقفة" };
+const rows = document.getElementById("rows");
+const q = document.getElementById("q");
+let cat = "all";
+
+function render() {
+  const term = q.value.trim().toLowerCase();
+  rows.innerHTML = tools
+    .filter(t => (cat === "all" || t[2] === cat) &&
+      (!term || t.join(" ").toLowerCase().includes(term)))
+    .map(t => `<tr>
+      <td class="name">${t[0]}<code dir="ltr">${t[1]}</code></td>
+      <td><span class="tag">${t[2]}</span></td>
+      <td>${t[3]}</td>
+      <td><span class="st ${t[4]}">${stLabel[t[4]]}</span></td>
+    </tr>`).join("") || `<tr><td colspan="4" style="color:var(--muted)">ما فيه نتائج.</td></tr>`;
+}
+
+const count = s => tools.filter(t => t[4] === s).length;
+document.getElementById("stats").innerHTML = [
+  [tools.length, "أداة"], [count("ok"), "شغّالة"], [count("warn"), "تحتاج تسجيل دخول"], [count("bad"), "واقفة"]
+].map(([n, l]) => `<div class="stat"><b>${n}</b><small>${l}</small></div>`).join("");
+
+document.getElementById("filters").addEventListener("click", e => {
+  if (e.target.tagName !== "BUTTON") return;
+  document.querySelectorAll("#filters button").forEach(b => b.classList.remove("active"));
+  e.target.classList.add("active");
+  cat = e.target.dataset.cat;
+  render();
+});
+q.addEventListener("input", render);
+render();
+</script>
+</body>
+</html>
