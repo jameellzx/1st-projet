@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Gumdrop Grand Prix</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud" class="hidden">
+  <div id="hud-lap">LAP <b id="lap-num">1</b>/<span id="lap-total">3</span><div id="hud-time">0:00.000</div></div>
+  <div id="hud-item"><div id="item-icon"></div><div id="item-name"></div></div>
+  <canvas id="minimap" width="200" height="200"></canvas>
+  <div id="hud-pos"><span id="pos-num">1</span><sup id="pos-suf">st</sup></div>
+  <div id="hud-speed"><b id="speed-num">0</b> km/h</div>
+  <div id="drift-meter"><div id="drift-fill"></div></div>
+  <div id="countdown"></div>
+  <div id="toast"></div>
+  <div id="touch">
+    <div class="tl"><button data-k="left">◀</button><button data-k="right">▶</button></div>
+    <div class="tr"><button data-k="item">ITEM</button><button data-k="drift">DRIFT</button><button data-k="brake">BRAKE</button><button data-k="gas">GAS</button></div>
+  </div>
+</div>
+
+<div id="screens">
+  <section id="s-title" class="screen">
+    <h1>Gumdrop <span>Grand Prix</span></h1>
+    <p class="tag">A kart racer you can play online with friends. Drift, boost and throw gumballs.</p>
+    <label class="field">Your name <input id="name" maxlength="12" autocomplete="off"></label>
+    <div class="row">
+      <button id="btn-quick" class="big">Quick Race vs Bots</button>
+      <button id="btn-host" class="big alt">Host Online Race</button>
+    </div>
+    <div class="row join-row">
+      <input id="join-code" maxlength="5" placeholder="ROOM CODE" autocomplete="off">
+      <button id="btn-join">Join Online Race</button>
+    </div>
+    <div id="title-msg" class="msg"></div>
+    <div class="help">
+      <div><kbd>↑</kbd>/<kbd>W</kbd> gas &nbsp; <kbd>↓</kbd>/<kbd>S</kbd> brake &nbsp; <kbd>←</kbd><kbd>→</kbd>/<kbd>A</kbd><kbd>D</kbd> steer</div>
+      <div><kbd>Space</kbd> hold while turning to drift. Hold longer for blue, orange, then purple sparks, and let go for a boost.</div>
+      <div><kbd>Shift</kbd>/<kbd>E</kbd> use item &nbsp;·&nbsp; Press gas as the <b>1</b> fades for a rocket start.</div>
+    </div>
+  </section>
+
+  <section id="s-char" class="screen hidden">
+    <h2>Choose your racer</h2>
+    <div class="char-layout">
+      <canvas id="preview" width="420" height="300"></canvas>
+      <div id="char-info"></div>
+    </div>
+    <div id="char-grid"></div>
+    <div class="row"><button id="char-back">Back</button><button id="char-ok" class="big">Ready</button></div>
+  </section>
+
+  <section id="s-track" class="screen hidden">
+    <h2>Choose a track</h2>
+    <div id="track-grid"></div>
+    <div class="row"><button id="track-back">Back</button><button id="track-ok" class="big">Go</button></div>
+  </section>
+
+  <section id="s-lobby" class="screen hidden">
+    <h2>Online Lobby</h2>
+    <div id="lobby-code-box">
+      <div>Room code</div>
+      <div id="lobby-code">-----</div>
+      <div class="row"><input id="lobby-link" readonly><button id="lobby-copy">Copy invite link</button></div>
+    </div>
+    <div id="lobby-track"></div>
+    <ul id="lobby-list"></ul>
+    <div id="lobby-msg" class="msg"></div>
+    <div class="row"><button id="lobby-leave">Leave</button><button id="lobby-start" class="big">Start Race</button></div>
+  </section>
+
+  <section id="s-results" class="screen hidden">
+    <h2>Results</h2>
+    <table id="res-table"><tbody id="res-list"></tbody></table>
+    <div id="res-msg" class="msg"></div>
+    <div class="row" id="res-buttons"></div>
+  </section>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
