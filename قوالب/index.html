@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>قوالب</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, "Segoe UI", Tahoma, sans-serif; background: #f6f5f2; color: #1d1d1b; }
+  header { padding: 40px 6% 16px; }
+  h1 { margin: 0 0 6px; font-size: 34px; }
+  header p { margin: 0; color: #666; }
+  main { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; padding: 24px 6% 60px; }
+  .card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.08); display: flex; flex-direction: column; }
+  .thumb { display: block; aspect-ratio: 16 / 10; background: #eee; overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .body { padding: 18px 20px 20px; direction: ltr; text-align: left; }
+  h2 { margin: 0 0 4px; font-size: 20px; }
+  .body p { margin: 0 0 6px; font-size: 14px; }
+  .meta { color: #777; font-size: 12px !important; }
+  .swatches { display: flex; gap: 6px; margin: 10px 0; }
+  .swatches span { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.1); }
+  .links { display: flex; gap: 10px; margin: 10px 0; }
+  .links a { background: #1d1d1b; color: #fff; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-size: 13px; }
+  .links a + a { background: #ecebe6; color: #1d1d1b; }
+  code { display: block; font-size: 11px; background: #f3f2ee; padding: 8px; border-radius: 6px; word-break: break-all; }
+</style>
+</head>
+<body>
+<header><h1>قوالب</h1><p>1 قالب جاهز · اضغط على الصورة عشان تفتح نسخة الـ HTML</p></header>
+<main>
+  <article class="card">
+    <a href="baby-bath-store/html/index.html" class="thumb"><img src="baby-bath-store/preview-0-html.jpg" alt=""></a>
+    <div class="body">
+      <h2>baby-bath-store</h2>
+      <p>Baby bath &amp; skincare homepage (layout studied from tubbytodd.com)</p>
+      <p class="meta">10 sections · 2026-11-13 · Nunito 800 headings, Nunito 400 text</p>
+      <div class="swatches"><span title="yellow #F9DE6E" style="background:#F9DE6E"></span><span title="light blue #C4E9F2" style="background:#C4E9F2"></span><span title="blue #496CA4" style="background:#496CA4"></span><span title="teal #427D8A" style="background:#427D8A"></span><span title="cream #FFEFAF" style="background:#FFEFAF"></span><span title="lilac #E3D6E5" style="background:#E3D6E5"></span><span title="mint #E0F2DA" style="background:#E0F2DA"></span><span title="blush #F9EDE4" style="background:#F9EDE4"></span></div>
+      <div class="links"><a href="baby-bath-store/html/index.html">Open HTML</a><a href="baby-bath-store/README.md">README</a></div>
+      <code>python install.py baby-bath-store "theme" --store x.myshopify.com --theme-id N</code>
+    </div>
+  </article>
+</main>
+</body>
+</html>

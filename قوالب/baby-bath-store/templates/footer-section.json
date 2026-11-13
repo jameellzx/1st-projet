@@ -1,0 +1,29 @@
+{
+  "ck_footer": {
+    "type": "ck-footer",
+    "blocks": {
+      "menu_1": {
+        "type": "menu",
+        "settings": {
+          "title": "Shop",
+          "menu": "main-menu"
+        }
+      },
+      "menu_2": {
+        "type": "menu",
+        "settings": {
+          "title": "Help",
+          "menu": "footer"
+        }
+      }
+    },
+    "block_order": [
+      "menu_1",
+      "menu_2"
+    ],
+    "settings": {
+      "newsletter_heading": "Our emails are (almost) as fun as bath time.",
+      "newsletter_note": "<p>By signing up you agree to get marketing emails. Unsubscribe any time.</p>"
+    }
+  }
+}

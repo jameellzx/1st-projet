@@ -1,0 +1,26 @@
+{
+  "source": "https://tubbytodd.com/",
+  "capture": "Claude in Chrome (user's browser), viewport 2560x1305; Playwright capture blocked by Cloudflare",
+  "global_tokens": {
+    "font_heading": "VAGRoundedNext 800, uppercase on hero (substitute: rounded font from Shopify library)",
+    "font_body": "VAGRoundedNext 400, 16px/1.4, text #222",
+    "button": "square corners (radius 0), black bg + white text, or white bg + black text + border",
+    "palette": ["#F9DE6E yellow", "#C4E9F2 light blue", "#496CA4 blue", "#427D8A teal", "#FFEFAF cream", "#E3D6E5 lilac", "#E0F2DA mint", "#F9EDE4 blush", "#000", "#FFF"]
+  },
+  "sections": [
+    { "name": "Hero carousel", "file": "ck-hero-carousel", "y": [0, 1257], "purpose": "Full-bleed slides, big heading left, text, black button", "behaviors": ["slide arrows", "dots", "autoplay"], "blocks": "slide (image, heading, text, button)" },
+    { "name": "Scrolling marquee", "file": "ck-marquee", "y": [1257, 1293], "bg": "#F9DE6E", "purpose": "Uppercase claims separated by bullets, infinite scroll", "behaviors": ["marquee"], "blocks": "item (text)" },
+    { "name": "Promo banner", "file": "ck-promo-banner", "y": [1293, 1885], "purpose": "Full-width image bg, heading + text + black button on right", "blocks": "none" },
+    { "name": "Circle category cards", "file": "ck-circle-cards", "y": [1885, 2534], "bg": "#FFF", "purpose": "Centered heading, 4 circular images with label link", "blocks": "card (image, label, link)" },
+    { "name": "Best sellers product carousel", "file": "ck-product-carousel", "y": [2534, 3179], "bg": "#C4E9F2", "purpose": "Big blue heading left, product cards (image, title, stars, price, Add to Cart) with arrows", "behaviors": ["carousel arrows", "add to cart"], "dynamic": ["collection picker"] },
+    { "name": "Image + text (cream)", "file": "ck-image-text", "y": [3179, 4452], "bg": "#FFEFAF", "purpose": "50/50 tall image + centered text + outlined button. Reused 3x with different colors/side", "blocks": "none" },
+    { "name": "Logo strip", "file": "ck-logo-strip", "y": [4452, 4606], "bg": "#496CA4", "purpose": "Row of white press logos", "blocks": "logo (image, link)" },
+    { "name": "Rich text + video", "file": "ck-rich-media", "y": [4606, 5278], "bg": "#FFF", "purpose": "Centered heading, video/image, small link. Reused for photo-grid section (mint) with button", "blocks": "none" },
+    { "name": "Image + text (lilac, image right)", "file": "ck-image-text (reuse)", "y": [5278, 6590] },
+    { "name": "Rich text + photo grid (mint)", "file": "ck-rich-media (reuse)", "y": [6590, 7293] },
+    { "name": "Testimonials slider", "file": "ck-testimonials", "y": [7293, 7720], "bg": "#FFF", "purpose": "Icon, teal heading, one quote + name at a time, arrows + dots", "behaviors": ["slider"], "blocks": "quote (text, name)" },
+    { "name": "Image + text (blush)", "file": "ck-image-text (reuse)", "y": [7720, 8563] },
+    { "name": "Footer (yellow)", "file": "ck-footer", "y": [8563, 8979], "bg": "#F9DE6E", "purpose": "Logo, 3 link columns, newsletter, socials", "optional": true }
+  ],
+  "content_policy": "Layout, spacing, colors, type sizes and behaviors are cloned. Source logo, product photos, people photos and marketing copy are NOT copied: placeholders + store's own products, all editable."
+}

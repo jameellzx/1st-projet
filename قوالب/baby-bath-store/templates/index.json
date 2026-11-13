@@ -1,0 +1,360 @@
+{
+  "sections": {
+    "hero": {
+      "type": "ck-hero-carousel",
+      "settings": {},
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ck-hero-1.jpg",
+            "heading": "Bath time, but make it bubbly",
+            "text": "<p>Gentle washes, lotions and balms made for little skin, and loved by the whole family.</p>",
+            "button_label": "Shop the bath line",
+            "overlay_opacity": 0
+          }
+        },
+        "slide_2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ck-hero-2.jpg",
+            "heading": "Soft skin all winter long",
+            "text": "<p>Two cozy-season must-haves to keep dry patches away from head to toe.</p>",
+            "button_label": "Shop winter care",
+            "overlay_opacity": 0
+          }
+        },
+        "slide_3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/ck-hero-3.jpg",
+            "heading": "Made for every stage",
+            "text": "<p>From the first bath to the big-kid years, one simple routine that grows with them.</p>",
+            "button_label": "Find your routine",
+            "content_position": "right",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_1",
+        "slide_2",
+        "slide_3"
+      ]
+    },
+    "marquee": {
+      "type": "ck-marquee",
+      "settings": {},
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "text": "Tear free"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "text": "No parabens"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "text": "No synthetic fragrance"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "text": "No harsh sulfates"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "text": "Pediatrician tested"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ]
+    },
+    "promo": {
+      "type": "ck-promo-banner",
+      "settings": {
+        "image": "shopify://shop_images/ck-promo.jpg",
+        "heading": "Gift season is here (and so is a free tote)!",
+        "text": "<p>Get a free canvas tote with any bundle or gift set, only while they last.</p>",
+        "button_label": "Grab yours"
+      }
+    },
+    "cards": {
+      "type": "ck-circle-cards",
+      "settings": {
+        "heading": "Build your little one's routine"
+      },
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ck-card-baby.jpg",
+            "label": "Baby + Toddler (0-4)"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ck-card-kids.jpg",
+            "label": "Kids (5+)"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ck-card-parents.jpg",
+            "label": "For Parents"
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ck-card-bundle.jpg",
+            "label": "Build Your Own Bundle"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4"
+      ]
+    },
+    "bestsellers": {
+      "type": "ck-product-carousel",
+      "settings": {
+        "heading": "Meet the Best Sellers"
+      },
+      "blocks": {
+        "demo_1": {
+          "type": "demo",
+          "settings": {
+            "image": "shopify://shop_images/ck-prod-giftset.jpg",
+            "title": "The Daily Trio Bundle",
+            "price": "From $36",
+            "rating": 49,
+            "review_count": "6,120",
+            "badge": "Save more!"
+          }
+        },
+        "demo_2": {
+          "type": "demo",
+          "settings": {
+            "image": "shopify://shop_images/ck-prod-ointment.jpg",
+            "title": "Everywhere Healing Balm",
+            "price": "From $12",
+            "rating": 49,
+            "review_count": "23,418"
+          }
+        },
+        "demo_3": {
+          "type": "demo",
+          "settings": {
+            "image": "shopify://shop_images/ck-prod-shampoo.jpg",
+            "title": "Hair + Body Wash",
+            "price": "From $11",
+            "rating": 48,
+            "review_count": "4,902"
+          }
+        },
+        "demo_4": {
+          "type": "demo",
+          "settings": {
+            "image": "shopify://shop_images/ck-prod-lotion.jpg",
+            "title": "Everyday Lotion",
+            "price": "From $14",
+            "rating": 48,
+            "review_count": "3,377"
+          }
+        },
+        "demo_5": {
+          "type": "demo",
+          "settings": {
+            "image": "shopify://shop_images/ck-prod-wash.jpg",
+            "title": "Foaming Bubble Bath",
+            "price": "$18",
+            "rating": 47,
+            "review_count": "1,865"
+          }
+        },
+        "demo_6": {
+          "type": "demo",
+          "settings": {
+            "image": "shopify://shop_images/ck-prod-bubbles.jpg",
+            "title": "Rubber Duck Bath Set",
+            "price": "$24",
+            "rating": 49,
+            "review_count": "912",
+            "badge": "New"
+          }
+        }
+      },
+      "block_order": [
+        "demo_1",
+        "demo_2",
+        "demo_3",
+        "demo_4",
+        "demo_5",
+        "demo_6"
+      ]
+    },
+    "story_1": {
+      "type": "ck-image-text",
+      "settings": {
+        "image": "shopify://shop_images/ck-story-bath.jpg",
+        "heading": "Calm sensitive skin with The Daily Trio",
+        "text": "<p>Looking for a simple, clean-ingredient routine for your baby? Same. Meet The Daily Trio: wash, moisturize and protect in three easy steps that work for the whole family.</p>",
+        "button_label": "Start your routine",
+        "content_background": "#FFEFAF",
+        "background_color": "#FFEFAF",
+        "media_position": "left"
+      }
+    },
+    "press": {
+      "type": "ck-logo-strip",
+      "settings": {},
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "name": "Parent Weekly"
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "settings": {
+            "name": "the Nest"
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "settings": {
+            "name": "Morning Brief"
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "settings": {
+            "name": "STYLE DAILY"
+          }
+        }
+      },
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4"
+      ]
+    },
+    "video": {
+      "type": "ck-rich-media",
+      "settings": {
+        "image": "shopify://shop_images/ck-video-family.jpg",
+        "heading": "We think you'll love these products as much as we do!",
+        "link_label": "See our happy-skin guarantee",
+        "link_style": "link"
+      }
+    },
+    "story_2": {
+      "type": "ck-image-text",
+      "settings": {
+        "image": "shopify://shop_images/ck-story-founder.jpg",
+        "heading": "Here for your family since day one",
+        "text": "<p>Hi, I'm the founder! I started this little company in my kitchen, looking for something gentle enough for my own kids' sensitive skin. Now we get to share it with thousands of families.</p>",
+        "button_label": "Read our story",
+        "content_background": "#E3D6E5",
+        "background_color": "#E3D6E5",
+        "media_position": "right"
+      }
+    },
+    "community": {
+      "type": "ck-rich-media",
+      "settings": {
+        "image": "shopify://shop_images/ck-community.jpg",
+        "heading": "We love meeting families from all over!",
+        "link_label": "Come play with us",
+        "link_style": "button",
+        "background_color": "#E0F2DA",
+        "media_ratio": "4 / 3",
+        "media_width": 640
+      }
+    },
+    "reviews": {
+      "type": "ck-testimonials",
+      "settings": {
+        "heading": "Just one of 40,000+ five-star reviews:"
+      },
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "quote": "<p>“This balm is the only thing that clears up my son's dry patches.”</p>",
+            "name": "Sara M."
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "quote": "<p>“Both my girls have super sensitive skin. We're never switching.”</p>",
+            "name": "Noor K."
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "quote": "<p>“Smells so good, and one bottle lasts us forever.”</p>",
+            "name": "Jenna R."
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ]
+    },
+    "guide": {
+      "type": "ck-image-text",
+      "settings": {
+        "image": "shopify://shop_images/ck-story-family.jpg",
+        "heading": "A beginner's guide to our bath line",
+        "text": "",
+        "button_label": "Read the guide",
+        "content_background": "#F9EDE4",
+        "background_color": "#F9EDE4",
+        "media_position": "left",
+        "min_height_desktop": 600
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "marquee",
+    "promo",
+    "cards",
+    "bestsellers",
+    "story_1",
+    "press",
+    "video",
+    "story_2",
+    "community",
+    "reviews",
+    "guide"
+  ]
+}

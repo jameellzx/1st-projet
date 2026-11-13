@@ -1,0 +1,23 @@
+{
+  "name": "baby-bath-store",
+  "title": "Baby bath & skincare homepage (layout studied from tubbytodd.com)",
+  "made": "2026-11-13",
+  "base_theme": "Dawn 16.1.1 (works on any Online Store 2.0 theme)",
+  "first_store": "wbx0tf-4r.myshopify.com, theme #168975499483",
+  "sections": [
+    "ck-hero-carousel", "ck-marquee", "ck-promo-banner", "ck-circle-cards", "ck-product-carousel",
+    "ck-image-text", "ck-logo-strip", "ck-rich-media", "ck-testimonials", "ck-footer"
+  ],
+  "page_order": [
+    "hero slideshow", "scrolling text", "promo banner", "circle cards", "best sellers carousel",
+    "image + text (cream)", "logo strip", "text + image", "image + text (lilac, image right)",
+    "text + image + button (mint)", "review slider", "image + text (blush)", "yellow footer"
+  ],
+  "colors": {
+    "yellow": "#F9DE6E", "light blue": "#C4E9F2", "blue": "#496CA4", "teal": "#427D8A",
+    "cream": "#FFEFAF", "lilac": "#E3D6E5", "mint": "#E0F2DA", "blush": "#F9EDE4"
+  },
+  "fonts": "Nunito 800 headings, Nunito 400 text",
+  "images": "19 Pixabay photos (free license), see images/photo-credits.json",
+  "copy": "original text written for this template, not the source site's"
+}

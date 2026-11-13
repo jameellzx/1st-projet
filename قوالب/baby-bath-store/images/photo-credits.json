@@ -1,0 +1,543 @@
+{
+ "version": 1,
+ "source": {
+  "kind": "text",
+  "timebase": "source"
+ },
+ "duration": null,
+ "density": "key",
+ "moments": [
+  {
+   "id": "m01",
+   "anchor": "hero1",
+   "text": "hero1",
+   "start": 0.0,
+   "end": 2.5,
+   "query": "baby bath products bottles soft pastel background",
+   "pick": {
+    "file": "assets/m13_08.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/gc552fcbd38f476ac6ddc71907383add68097abc15d8af88e2c664c97a54d374bb00814c5667ee94dadbe29b9a1997b6aff97afd8c378a186d9e426bd42710061_1280.jpg",
+    "page": "https://pixabay.com/photos/bubble-bath-bath-pink-3927674/",
+    "license": "pixabay",
+    "title": "bubble bath, bath, pink, valentine's day, romantic, romance, tea, bathtub, bubbles, spa, relaxation, suds, bubble bath, ",
+    "clip": 0.2589
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m02",
+   "anchor": "hero2",
+   "text": "hero2",
+   "start": 3.0,
+   "end": 5.5,
+   "query": "toddler bath bubbles happy",
+   "pick": {
+    "file": "assets/m02_01.jpg",
+    "kind": "image",
+    "w": 1018,
+    "h": 1280,
+    "aspect": 0.7953,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g6e08f92fff027d08db82c8cdb14de0c2a0b40e9814a0863b6c7c93fed58b5800ee441370a81e0274fceabfacc7f363bc80c557b1ce81fb698f1920d48e4b2ab0_1280.jpg",
+    "page": "https://pixabay.com/photos/child-baby-bathing-cheerful-happy-1506939/",
+    "license": "pixabay",
+    "title": "child, baby, bathing, cheerful, happy, portrait, childhood, entertainment, funny, joy, human, cute, face, baby, baby, ba",
+    "clip": 0.2778
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m03",
+   "anchor": "hero3",
+   "text": "hero3",
+   "start": 6.0,
+   "end": 8.5,
+   "query": "family bath time baby mother",
+   "pick": {
+    "file": "assets/m07_06.jpg",
+    "kind": "image",
+    "w": 933,
+    "h": 1280,
+    "aspect": 0.7289,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g4a6e17f3e0c1ea8f9d6d471b77efc4ffc68fcd4a9198bebc8c68d56c3c97dc6c23311f088102f22ae225217d1525cc6da7bb37c7c54b5e809e48b15b5a585a44_1280.jpg",
+    "page": "https://pixabay.com/photos/mother-child-baby-holding-happy-331231/",
+    "license": "pixabay",
+    "title": "mother, child, baby, holding, happy, infant, suckling, parent, daughter, family, girl, kid, people, blue happy, blue hap",
+    "clip": 0.2552
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m04",
+   "anchor": "promo",
+   "text": "promo",
+   "start": 9.0,
+   "end": 11.5,
+   "query": "gift box wrapped present pastel",
+   "pick": {
+    "file": "assets/m04_07.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g013655f47ed4025a3d51883aa30932b1f6ca81bb3405f1377a57e7f6284e5e3ffea9b2a32f64e9d5470e994a4d27efc66ec2f4fe74d4750e0635d796738849ea_1280.jpg",
+    "page": "https://pixabay.com/photos/gift-parcel-surprise-ribbon-548299/",
+    "license": "pixabay",
+    "title": "gift, parcel, surprise, ribbon, christmas, christmas party, fixed, christmas decoration, packaging, greetings, christmas",
+    "clip": 0.2802
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m05",
+   "anchor": "card1",
+   "text": "card1",
+   "start": 12.0,
+   "end": 14.5,
+   "query": "smiling baby close up",
+   "pick": {
+    "file": "assets/m05_04.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g2598ecbdbd0227fa7fa48d5b165457a732222120e12df25dee713535d5393a713261a6cb5ea94892c65d86990948ff80dfa4f5001ecc5d9cc3b7119aae5bf105_1280.jpg",
+    "page": "https://pixabay.com/photos/infant-child-small-child-face-cute-372796/",
+    "license": "pixabay",
+    "title": "infant, child, small child, face, cute, boy, people, newborn, portrait, small, live new, born",
+    "clip": 0.2609
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m06",
+   "anchor": "card2",
+   "text": "card2",
+   "start": 15.0,
+   "end": 17.5,
+   "query": "kid brushing teeth",
+   "pick": {
+    "file": "assets/m06_07.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/gc64d0bb0fdfb8703dd341ef4ffbeab104425434abdb23b39ccd342fbc5ed49812daa56fc124dfd82601843dbbe9aea873c668a97204b9c8d50ddf67117e90fbe_1280.jpg",
+    "page": "https://pixabay.com/photos/girl-lying-relax-young-white-cute-510451/",
+    "license": "pixabay",
+    "title": "girl, lying, relax, young, white, cute, happy, home, child, people, beautiful, female, little, childhood, portrait, inte",
+    "clip": 0.1466
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m07",
+   "anchor": "card3",
+   "text": "card3",
+   "start": 18.0,
+   "end": 20.5,
+   "query": "mother holding baby",
+   "pick": {
+    "file": "assets/m07_08.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g8bcdf1ab81aa2061c7fc0d868623ec5b727d630cec9102f230b9e74c8ed8f20694307bc686bab8efc6902834fa477bf2392ac165a56e2b24c83e626279834a16_1280.jpg",
+    "page": "https://pixabay.com/photos/mother-baby-happy-family-child-316213/",
+    "license": "pixabay",
+    "title": "mother, baby, happy, family, child, kid, daddy, mum, mummy, father, sister, brother, smile, mother, mother, mother, moth",
+    "clip": 0.266
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m08",
+   "anchor": "card4",
+   "text": "card4",
+   "start": 21.0,
+   "end": 23.5,
+   "query": "skincare products bundle bottles",
+   "pick": {
+    "file": "assets/m09_05.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g82d8c4fcd275abe4608dcd17da6344da1d6463406d3c765537806ab17b07c0ec662ae0482974059173d580251602f7a2bc411921dc4f16d8981100657f239487_1280.jpg",
+    "page": "https://pixabay.com/photos/cosmetics-beauty-products-6051633/",
+    "license": "pixabay",
+    "title": "cosmetics, beauty, products, nature, containers, herbs, leaves, organic, healthy",
+    "clip": 0.2102
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m09",
+   "anchor": "prod1",
+   "text": "prod1",
+   "start": 24.0,
+   "end": 26.5,
+   "query": "lotion bottle white background",
+   "pick": {
+    "file": "assets/m09_01.jpg",
+    "kind": "image",
+    "w": 851,
+    "h": 1280,
+    "aspect": 0.6648,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g97818a3ea042dd00e119622dcb7e392215e0f002b55790ba4461baed2d3fe2be5be4699b838505c58b9cbb4077a9d948595399f27750286632cc3ba2601ec857_1280.jpg",
+    "page": "https://pixabay.com/photos/bottle-care-clipping-commercial-4865366/",
+    "license": "pixabay",
+    "title": "bottle, care, clipping, commercial, concept, container, health, hygiene, improvement, label, lotion, make-up, massage, m",
+    "clip": 0.291
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m10",
+   "anchor": "prod2",
+   "text": "prod2",
+   "start": 27.0,
+   "end": 29.5,
+   "query": "soap dispenser pump bottle",
+   "pick": {
+    "file": "assets/m10_02.jpg",
+    "kind": "image",
+    "w": 854,
+    "h": 1280,
+    "aspect": 0.6672,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/gadef0ad123054a25a908ee11f726f78d1a4d11931aa101f6d7b65020f43c6fa0a22e4873cd30f7029c2060012f1b569135f93942af9843385aac27962c300912_1280.jpg",
+    "page": "https://pixabay.com/photos/soap-dispenser-to-wash-soap-hygiene-5078746/",
+    "license": "pixabay",
+    "title": "soap dispenser, to wash, soap, hygiene, personal hygiene, cleaning, soap dispenser, soap dispenser, soap dispenser, soap",
+    "clip": 0.258
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m11",
+   "anchor": "prod3",
+   "text": "prod3",
+   "start": 30.0,
+   "end": 32.5,
+   "query": "cream jar white",
+   "pick": {
+    "file": "assets/m11_01.jpg",
+    "kind": "image",
+    "w": 852,
+    "h": 1280,
+    "aspect": 0.6656,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g2aa9c1bafb29eec1e86b91492fbf6b38d0090d5fa70960e3b6ee76b6d6ad479957d28062162397b7b869bdd992fa16c01c32d27f8005391c8ae6ba724d4c1dd7_1280.jpg",
+    "page": "https://pixabay.com/photos/women-cosmetic-night-care-4726513/",
+    "license": "pixabay",
+    "title": "women, cosmetic, night, care, collection, beauty, bottle, white, day, cosmetic product, day night, night vector, gray ni",
+    "clip": 0.2794
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m12",
+   "anchor": "prod4",
+   "text": "prod4",
+   "start": 33.0,
+   "end": 35.5,
+   "query": "shampoo bottle",
+   "pick": {
+    "file": "assets/m12_05.jpg",
+    "kind": "image",
+    "w": 851,
+    "h": 1280,
+    "aspect": 0.6648,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g0a51d0618194e0841329a8cafd8b2a34aa86157c0d01bbf3eb6081ce615c1bc734373941a9695a67533c42736ec781a429d4e855889eb450e02274cb98c6be02_1280.jpg",
+    "page": "https://pixabay.com/photos/accessories-bath-bathe-bottle-4887139/",
+    "license": "pixabay",
+    "title": "accessories, bath, bathe, bottle, bottles, clean, cleanse, colorful, cosmetic, cream, fresh, healthy, jar, jars, sauna, ",
+    "clip": 0.2685
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m13",
+   "anchor": "prod5",
+   "text": "prod5",
+   "start": 36.0,
+   "end": 38.5,
+   "query": "bath bubbles foam",
+   "pick": {
+    "file": "assets/m13_01.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/gd4b6005de345fc7925fc55a72067feadc20ead0ed537e6e20ff4e0f0da22fb6f37b28a1a0397212d50fa2ba61f554ceacfcc0d31d901a2e7876aeffabbc2f5d8_1280.jpg",
+    "page": "https://pixabay.com/photos/rubber-duck-rubber-duckie-pool-bath-8028856/",
+    "license": "pixabay",
+    "title": "rubber duck, rubber duckie, pool, bath, swimming pool, swimming, rubber duck, rubber duck, pool, pool, swimming pool, sw",
+    "clip": 0.1032
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m14",
+   "anchor": "prod6",
+   "text": "prod6",
+   "start": 39.0,
+   "end": 41.5,
+   "query": "gift set cosmetics",
+   "pick": {
+    "file": "assets/m08_05.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g6fae3082c658a896c06fa1060899681a7d5ba03d35ba9bbfcab9b2db4ffa4ced298b5512ae7ed7c2af7a2056af1994c694b78455009ace80a3d39d96a0aab705_1280.jpg",
+    "page": "https://pixabay.com/photos/lavander-products-lavander-salt-1191908/",
+    "license": "pixabay",
+    "title": "lavander products, lavander, salt, healthy, natural, herb, fresh, product, spa, wellness, relaxation, aroma, aromatherap",
+    "clip": 0.1671
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m15",
+   "anchor": "it1",
+   "text": "it1",
+   "start": 42.0,
+   "end": 44.5,
+   "query": "toddler bathtub bottles bathroom",
+   "pick": {
+    "file": "assets/m02_07.jpg",
+    "kind": "image",
+    "w": 1226,
+    "h": 1280,
+    "aspect": 0.9578,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g9c9d1e818827e313cfcb8cd9719113805b3346b5e6d093f130e73cb3ea63bfb79a3ad11d207d634c8ef9fceb91031454dd5b8d9998c7dbe544a34852303318f0_1280.jpg",
+    "page": "https://pixabay.com/photos/infant-boy-human-young-cute-501630/",
+    "license": "pixabay",
+    "title": "infant, boy, human, young, cute, portrait, face, head, eyes, relaxation, happy, laugh, pretty, childhood, child, smile, ",
+    "clip": 0.2628
+   },
+   "alternatives": [],
+   "suggest": "card"
+  },
+  {
+   "id": "m16",
+   "anchor": "it2",
+   "text": "it2",
+   "start": 45.0,
+   "end": 47.5,
+   "query": "woman holding skincare products smiling",
+   "pick": {
+    "file": "assets/m16_01.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g388471e037994797d9d1513785803b20f62a2e6a4af7f2b8e100d516e7fcbe5eab3bc93053cc30fda6bf54b1dd613630d2f3d7dd069ba7d3dbd2043b28af5e97_1280.jpg",
+    "page": "https://pixabay.com/photos/fashion-asian-japanese-chinese-4257913/",
+    "license": "pixabay",
+    "title": "fashion, asian, japanese, chinese, beautiful, woman, girl, young, dress, portrait, model, pretty, person, lady, cute, ad",
+    "clip": 0.1931
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m17",
+   "anchor": "it3",
+   "text": "it3",
+   "start": 48.0,
+   "end": 50.5,
+   "query": "mother baby bed cozy",
+   "pick": {
+    "file": "assets/m17_06.jpg",
+    "kind": "image",
+    "w": 853,
+    "h": 1280,
+    "aspect": 0.6664,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g78fdf56ba399e4ed522699d1cc3b78f0b5f920ae407168d475b061eeb02a951729c88126e9a78f8f96b436eab1648d43dfa93b9a012dcc924b9a6dedc5e44650_1280.jpg",
+    "page": "https://pixabay.com/photos/baby-cute-portrait-child-indian-7318667/",
+    "license": "pixabay",
+    "title": "baby, cute, portrait, child, indian, boy, kid, love, childhood, india, cute, cute, portrait, indian, indian, indian, boy",
+    "clip": 0.162
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m18",
+   "anchor": "video",
+   "text": "video",
+   "start": 51.0,
+   "end": 53.5,
+   "query": "family laughing together home",
+   "pick": {
+    "file": "assets/m18_07.jpg",
+    "kind": "image",
+    "w": 989,
+    "h": 1280,
+    "aspect": 0.7727,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/g27b38f4fe768e0857f1dad51f3f4f1805ffd8cfab4290984589a8f6ebf6d97f040daec6536fc9e6c1976c7819c9fff64aabe7043f8ea7f23eab7f357c1444e92_1280.jpg",
+    "page": "https://pixabay.com/photos/happy-family-mother-baby-father-5469309/",
+    "license": "pixabay",
+    "title": "happy, family, mother, baby, father, friends, love, people, children, child, together, girl, joy, friendship, parent, ki",
+    "clip": 0.2196
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  },
+  {
+   "id": "m19",
+   "anchor": "community",
+   "text": "community",
+   "start": 54.0,
+   "end": 56.5,
+   "query": "happy families collage outdoors",
+   "pick": {
+    "file": "assets/m19_02.jpg",
+    "kind": "image",
+    "w": 848,
+    "h": 1280,
+    "aspect": 0.6625,
+    "focus": [
+     0.5,
+     0.4
+    ],
+    "duration": null,
+    "source": "pixabay",
+    "url": "https://pixabay.com/get/ge223c4ef2cc2ad778509310516147215d09559d71e3849d5b349bd1be8b6ee44ee90474d8c398bd30562f43c3b2a13e8f0cc1cbbd3658a1bd1ff94bdc6923470_1280.jpg",
+    "page": "https://pixabay.com/photos/mother-boy-son-whisper-love-3997967/",
+    "license": "pixabay",
+    "title": "mother, boy, son, whisper, love, laughter, secret, park, family, mother, mother, whisper, secret, secret, family, family",
+    "clip": 0.1869
+   },
+   "alternatives": [],
+   "suggest": "fullscreen"
+  }
+ ]
+}

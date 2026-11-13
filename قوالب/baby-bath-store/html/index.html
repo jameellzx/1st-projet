@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baby bath &amp; skincare homepage (layout studied from tubbytodd.com)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.ck-demo-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 5%; font-family: var(--ck-demo-font, sans-serif); border-bottom: 1px solid #eee; background: #fff; position: sticky; top: 0; z-index: 10; }
+.ck-demo-header strong { font-size: 22px; font-weight: 800; }
+.ck-demo-header nav { display: flex; gap: 24px; font-size: 14px; }
+.ck-demo-header nav a { text-decoration: none; }
+
+:root { --ck-demo-font: 'Nunito', sans-serif; }
+
+.ck-hero-carousel { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-hero-carousel .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-hero-carousel[data-full-width] .ck-inner { max-width: 100%; }
+.ck-hero-carousel .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-hero-carousel .ck-text p { margin: 0; }
+.ck-hero-carousel .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-hero-carousel .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-hero-carousel[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-hero-carousel[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-hero-carousel[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-hero-carousel { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-hero-carousel .ck-heading { font-size: var(--ck-h-size); }
+  .ck-hero-carousel[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-hero-carousel * { animation: none !important; transition: none !important; } }
+
+.ck-hero-carousel .ck-hero__slider { display: block; position: relative; }
+.ck-hero-carousel .ck-hero__track { position: relative; height: var(--ck-h-mobile); overflow: hidden; }
+.ck-hero-carousel .ck-hero__slide { position: absolute; inset: 0; display: flex; align-items: var(--ck-valign); opacity: 0; visibility: hidden; transition: opacity var(--ck-speed) ease, visibility var(--ck-speed) ease; color: var(--ck-slide-fg, var(--ck-fg)); text-align: left; }
+.ck-hero-carousel .ck-hero__slide.is-active { opacity: 1; visibility: visible; }
+.ck-hero-carousel .ck-hero__slide::after { content: ""; position: absolute; inset: 0; background: var(--ck-overlay-color); opacity: var(--ck-slide-overlay); pointer-events: none; }
+.ck-hero-carousel .ck-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ck-hero-carousel .ck-hero__ph { background: var(--ck-bg); }
+.ck-hero-carousel .ck-hero__slide.has-mobile .ck-hero__img--desk { display: none; }
+.ck-hero-carousel .ck-hero__content { position: relative; z-index: 1; width: 100%; max-width: var(--ck-slide-text-max); padding: var(--ck-gutter); margin-left: var(--ck-content-offset); }
+.ck-hero-carousel .ck-hero__slide[data-pos="center"] { justify-content: center; text-align: center; }
+.ck-hero-carousel .ck-hero__slide[data-pos="center"] .ck-hero__content { margin-left: auto; margin-right: auto; }
+.ck-hero-carousel .ck-hero__slide[data-pos="right"] { justify-content: flex-end; }
+.ck-hero-carousel .ck-hero__slide[data-pos="right"] .ck-hero__content { margin-left: auto; margin-right: var(--ck-content-offset); }
+.ck-hero-carousel .ck-hero__slide .ck-heading { color: var(--ck-slide-heading, var(--ck-heading-color)); }
+.ck-hero-carousel .ck-hero__text { margin-top: var(--ck-text-gap); }
+.ck-hero-carousel .ck-hero__btn { margin-top: var(--ck-text-gap); }
+.ck-hero-carousel .ck-hero__arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: var(--ck-arrow-size); height: var(--ck-arrow-size); padding: 0; border: 0; background: none; color: var(--ck-arrow-color); cursor: pointer; }
+.ck-hero-carousel .ck-hero__arrow--prev { left: var(--ck-gutter); }
+.ck-hero-carousel .ck-hero__arrow--next { right: var(--ck-gutter); }
+.ck-hero-carousel .ck-hero__dots { position: absolute; left: 0; right: 0; bottom: var(--ck-gutter); z-index: 2; display: flex; justify-content: center; gap: var(--ck-dot-size); }
+.ck-hero-carousel .ck-hero__dot { width: var(--ck-dot-size); height: var(--ck-dot-size); padding: 0; border: 0; border-radius: 50%; background: var(--ck-dot-color); opacity: 0.35; cursor: pointer; }
+.ck-hero-carousel .ck-hero__dot.is-active { opacity: 1; }
+@media screen and (max-width: 749px) {
+  .ck-hero-carousel .ck-hero__img--mob { display: block; }
+}
+@media screen and (min-width: 750px) {
+  .ck-hero-carousel .ck-hero__track { height: var(--ck-h-desktop); }
+  .ck-hero-carousel .ck-hero__img--mob { display: none; }
+  .ck-hero-carousel .ck-hero__slide.has-mobile .ck-hero__img--desk { display: block; }
+}
+
+.ck-marquee { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-marquee .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-marquee[data-full-width] .ck-inner { max-width: 100%; }
+.ck-marquee .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-marquee .ck-text p { margin: 0; }
+.ck-marquee .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-marquee .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-marquee[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-marquee[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-marquee[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-marquee { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-marquee .ck-heading { font-size: var(--ck-h-size); }
+  .ck-marquee[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-marquee * { animation: none !important; transition: none !important; } }
+
+.ck-marquee .ck-marquee__viewport { overflow: hidden; white-space: nowrap; }
+.ck-marquee .ck-marquee__track { display: inline-flex; animation: ck-marquee var(--ck-marquee-dur) linear infinite; animation-direction: var(--ck-marquee-dir); }
+.ck-marquee .ck-marquee__viewport:hover .ck-marquee__track { animation-play-state: var(--ck-marquee-play); }
+.ck-marquee .ck-marquee__group { display: inline-flex; align-items: center; flex-shrink: 0; }
+.ck-marquee .ck-marquee__item, .ck-marquee .ck-marquee__sep { padding: 0 var(--ck-item-gap); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); }
+.ck-marquee .ck-marquee__item { color: var(--ck-item-color, var(--ck-fg)); }
+.ck-marquee .ck-marquee__item a { color: inherit; text-decoration: none; }
+@keyframes ck-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.ck-promo-banner { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-promo-banner .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-promo-banner[data-full-width] .ck-inner { max-width: 100%; }
+.ck-promo-banner .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-promo-banner .ck-text p { margin: 0; }
+.ck-promo-banner .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-promo-banner .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-promo-banner[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-promo-banner[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-promo-banner[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-promo-banner { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-promo-banner .ck-heading { font-size: var(--ck-h-size); }
+  .ck-promo-banner[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-promo-banner * { animation: none !important; transition: none !important; } }
+
+.ck-promo-banner { position: relative; overflow: hidden; }
+.ck-promo-banner .ck-banner__media { position: absolute; inset: 0; }
+.ck-promo-banner .ck-banner__img { width: 100%; height: 100%; object-fit: cover; }
+.ck-promo-banner .ck-banner__img--mob { display: none; }
+.ck-promo-banner .ck-banner__inner { position: relative; display: flex; align-items: var(--ck-valign); min-height: var(--ck-min-h-m); }
+.ck-promo-banner .ck-banner__inner[data-pos="left"] { justify-content: flex-start; }
+.ck-promo-banner .ck-banner__inner[data-pos="center"] { justify-content: center; }
+.ck-promo-banner .ck-banner__inner[data-pos="right"] { justify-content: flex-end; }
+.ck-promo-banner .ck-banner__content { max-width: var(--ck-content-w); }
+.ck-promo-banner .ck-banner__text, .ck-promo-banner .ck-banner__btn { margin-top: var(--ck-text-gap); }
+@media screen and (max-width: 749px) {
+  .ck-promo-banner .ck-banner__img--mob { display: block; }
+  .ck-promo-banner .ck-banner__media:has(.ck-banner__img--mob) .ck-banner__img--desk { display: none; }
+}
+@media screen and (min-width: 750px) {
+  .ck-promo-banner .ck-banner__inner { min-height: var(--ck-min-h); }
+}
+
+.ck-circle-cards { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-circle-cards .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-circle-cards[data-full-width] .ck-inner { max-width: 100%; }
+.ck-circle-cards .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-circle-cards .ck-text p { margin: 0; }
+.ck-circle-cards .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-circle-cards .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-circle-cards[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-circle-cards[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-circle-cards[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-circle-cards { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-circle-cards .ck-heading { font-size: var(--ck-h-size); }
+  .ck-circle-cards[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-circle-cards * { animation: none !important; transition: none !important; } }
+
+.ck-circle-cards .ck-cards__heading { margin-bottom: var(--ck-heading-gap); }
+.ck-circle-cards .ck-cards__grid { display: grid; gap: var(--ck-gap); grid-template-columns: repeat(var(--ck-cols-mobile), minmax(0, 1fr)); }
+.ck-circle-cards .ck-cards__card { display: flex; flex-direction: column; align-items: center; gap: var(--ck-gap); text-decoration: none; color: var(--ck-label-color); }
+.ck-circle-cards .ck-cards__media { display: block; width: var(--ck-img-size); aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: var(--ck-ring, transparent); transition: transform var(--ck-anim-dur) ease; }
+.ck-circle-cards .ck-cards__card:hover .ck-cards__media { transform: scale(var(--ck-hover-scale)); }
+.ck-circle-cards .ck-cards__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ck-circle-cards .ck-cards__label { font-size: var(--ck-label-size); }
+@media screen and (min-width: 750px) { .ck-circle-cards .ck-cards__grid { grid-template-columns: repeat(var(--ck-cols-tablet), minmax(0, 1fr)); } }
+@media screen and (min-width: 990px) { .ck-circle-cards .ck-cards__grid { grid-template-columns: repeat(var(--ck-cols), minmax(0, 1fr)); } }
+
+.ck-product-carousel { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-product-carousel .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-product-carousel[data-full-width] .ck-inner { max-width: 100%; }
+.ck-product-carousel .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-product-carousel .ck-text p { margin: 0; }
+.ck-product-carousel .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-product-carousel .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-product-carousel[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-product-carousel[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-product-carousel[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-product-carousel { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-product-carousel .ck-heading { font-size: var(--ck-h-size); }
+  .ck-product-carousel[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-product-carousel * { animation: none !important; transition: none !important; } }
+
+.ck-product-carousel .ck-prod__layout { display: flex; flex-direction: column; gap: var(--ck-gap); align-items: stretch; }
+.ck-product-carousel .ck-prod__text { margin-top: var(--ck-gap); }
+.ck-product-carousel .ck-prod__scroller { position: relative; display: flex; align-items: center; gap: var(--ck-gap); min-width: 0; }
+.ck-product-carousel .ck-prod__track { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--ck-gap); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; flex: 1; min-width: 0; }
+.ck-product-carousel .ck-prod__track::-webkit-scrollbar { display: none; }
+.ck-product-carousel .ck-prod__card { flex: 0 0 calc((100% - var(--ck-gap) * (var(--ck-per-view-mobile) - 1)) / var(--ck-per-view-mobile)); scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; gap: var(--ck-gap); text-align: center; font-size: var(--ck-card-size); }
+.ck-product-carousel .ck-prod__media { position: relative; display: block; width: 100%; aspect-ratio: 1; background: var(--ck-card-bg); overflow: hidden; border-radius: var(--ck-radius); }
+.ck-product-carousel .ck-prod__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ck-product-carousel .ck-prod__badge { position: absolute; top: var(--ck-gap); left: var(--ck-gap); background: var(--ck-badge-bg); color: var(--ck-badge-fg); font-weight: var(--ck-btn-weight); text-transform: uppercase; font-size: calc(var(--ck-card-size) * 0.75); padding: calc(var(--ck-gap) / 3) calc(var(--ck-gap) / 1.5); }
+.ck-product-carousel .ck-prod__title { color: inherit; text-decoration: none; font-weight: var(--ck-btn-weight); }
+.ck-product-carousel .ck-prod__rating { display: inline-flex; align-items: center; gap: calc(var(--ck-gap) / 2); }
+.ck-product-carousel .ck-prod__stars { display: inline-block; width: calc(var(--ck-star-size) * 5); height: var(--ck-star-size); background: linear-gradient(90deg, var(--ck-star-color) var(--ck-rating), var(--ck-star-empty) var(--ck-rating)); -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l3 7h7l-5.5 4.5 2 7.5-6.5-4.5-6.5 4.5 2-7.5L2 9h7z'/%3E%3C/svg%3E"); mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l3 7h7l-5.5 4.5 2 7.5-6.5-4.5-6.5 4.5 2-7.5L2 9h7z'/%3E%3C/svg%3E"); -webkit-mask-size: var(--ck-star-size) var(--ck-star-size); mask-size: var(--ck-star-size) var(--ck-star-size); -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x; }
+.ck-product-carousel .ck-prod__compare { opacity: 0.6; }
+.ck-product-carousel .ck-prod__form { margin: 0; }
+.ck-product-carousel .ck-prod__atc[disabled] { opacity: 0.5; cursor: not-allowed; }
+.ck-product-carousel .ck-prod__arrow { flex: 0 0 auto; width: var(--ck-arrow-size); height: var(--ck-arrow-size); padding: 0; border: 0; background: none; color: var(--ck-arrow-color); cursor: pointer; }
+.ck-product-carousel .ck-prod__arrow[disabled] { opacity: 0.3; cursor: default; }
+@media screen and (min-width: 750px) {
+  .ck-product-carousel .ck-prod__card { flex-basis: calc((100% - var(--ck-gap) * (var(--ck-per-view-tablet) - 1)) / var(--ck-per-view-tablet)); }
+}
+@media screen and (min-width: 990px) {
+  .ck-product-carousel .ck-prod__layout { flex-direction: row; align-items: center; }
+  .ck-product-carousel .ck-prod__intro { flex: 0 0 var(--ck-intro-w); }
+  .ck-product-carousel .ck-prod__scroller { flex: 1; }
+  .ck-product-carousel .ck-prod__card { flex-basis: calc((100% - var(--ck-gap) * (var(--ck-per-view) - 1)) / var(--ck-per-view)); }
+}
+
+.ck-image-text { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-image-text .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-image-text[data-full-width] .ck-inner { max-width: 100%; }
+.ck-image-text .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-image-text .ck-text p { margin: 0; }
+.ck-image-text .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-image-text .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-image-text[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-image-text[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-image-text[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-image-text { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-image-text .ck-heading { font-size: var(--ck-h-size); }
+  .ck-image-text[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-image-text * { animation: none !important; transition: none !important; } }
+
+.ck-image-text .ck-it__grid { display: flex; flex-direction: column; }
+.ck-image-text .ck-it__media { position: relative; height: var(--ck-min-h-m); overflow: hidden; }
+.ck-image-text .ck-it__img { width: 100%; height: 100%; object-fit: var(--ck-fit); display: block; }
+.ck-image-text .ck-it__content { background: var(--ck-content-bg); display: flex; align-items: var(--ck-valign); justify-content: center; padding: var(--ck-pad-top-m) var(--ck-gutter) var(--ck-pad-bottom-m); }
+.ck-image-text .ck-it__box { max-width: var(--ck-box-w); }
+.ck-image-text .ck-it__text, .ck-image-text .ck-it__btn { margin-top: var(--ck-text-gap); }
+@media screen and (min-width: 750px) {
+  .ck-image-text .ck-it__grid { flex-direction: row; min-height: var(--ck-min-h); }
+  .ck-image-text .ck-it__grid[data-media="right"] { flex-direction: row-reverse; }
+  .ck-image-text .ck-it__media { flex: 0 0 var(--ck-media-w); height: auto; }
+  .ck-image-text .ck-it__content { flex: 1; padding: var(--ck-pad-top) var(--ck-gutter) var(--ck-pad-bottom); }
+}
+
+.ck-logo-strip { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-logo-strip .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-logo-strip[data-full-width] .ck-inner { max-width: 100%; }
+.ck-logo-strip .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-logo-strip .ck-text p { margin: 0; }
+.ck-logo-strip .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-logo-strip .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-logo-strip[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-logo-strip[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-logo-strip[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-logo-strip { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-logo-strip .ck-heading { font-size: var(--ck-h-size); }
+  .ck-logo-strip[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-logo-strip * { animation: none !important; transition: none !important; } }
+
+.ck-logo-strip .ck-logos__heading { margin-bottom: var(--ck-gap); }
+.ck-logo-strip .ck-logos__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--ck-gap); }
+.ck-logo-strip .ck-logos__item { opacity: var(--ck-logo-opacity); }
+.ck-logo-strip .ck-logos__link { display: block; color: inherit; text-decoration: none; }
+.ck-logo-strip .ck-logos__img { height: var(--ck-logo-h-m); width: auto; display: block; filter: var(--ck-logo-filter); }
+.ck-logo-strip .ck-logos__name { font-family: var(--ck-heading-font); font-weight: var(--ck-h-weight); font-size: calc(var(--ck-logo-h-m) * 0.6); line-height: 1; }
+@media screen and (min-width: 750px) {
+  .ck-logo-strip .ck-logos__img { height: var(--ck-logo-h); }
+  .ck-logo-strip .ck-logos__name { font-size: calc(var(--ck-logo-h) * 0.6); }
+}
+
+.ck-rich-media { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-rich-media .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-rich-media[data-full-width] .ck-inner { max-width: 100%; }
+.ck-rich-media .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-rich-media .ck-text p { margin: 0; }
+.ck-rich-media .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-rich-media .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-rich-media[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-rich-media[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-rich-media[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-rich-media { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-rich-media .ck-heading { font-size: var(--ck-h-size); }
+  .ck-rich-media[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-rich-media * { animation: none !important; transition: none !important; } }
+
+.ck-rich-media .ck-rm__text { margin-top: var(--ck-text-gap); }
+.ck-rich-media .ck-rm__media { max-width: var(--ck-media-max); margin: var(--ck-text-gap) auto 0; aspect-ratio: var(--ck-media-ratio); overflow: hidden; border-radius: var(--ck-radius); }
+.ck-rich-media .ck-rm__img, .ck-rich-media .ck-rm__video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ck-rich-media .ck-rm__cta { display: inline-block; margin-top: var(--ck-text-gap); }
+.ck-rich-media .ck-rm__link { color: var(--ck-link-color); font-size: var(--ck-link-size); font-weight: var(--ck-btn-weight); text-decoration: none; }
+.ck-rich-media .ck-rm__link:hover { text-decoration: underline; }
+
+.ck-testimonials { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-testimonials .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-testimonials[data-full-width] .ck-inner { max-width: 100%; }
+.ck-testimonials .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-testimonials .ck-text p { margin: 0; }
+.ck-testimonials .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-testimonials .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-testimonials[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-testimonials[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-testimonials[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-testimonials { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-testimonials .ck-heading { font-size: var(--ck-h-size); }
+  .ck-testimonials[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-testimonials * { animation: none !important; transition: none !important; } }
+
+.ck-testimonials .ck-tm__icon { width: var(--ck-icon-w); margin: 0 auto var(--ck-text-gap); }
+.ck-testimonials .ck-tm__icon-img { width: 100%; height: auto; display: block; }
+.ck-testimonials .ck-tm__slider { display: grid; grid-template-columns: var(--ck-arrow-size) 1fr var(--ck-arrow-size); align-items: center; gap: var(--ck-text-gap); margin-top: var(--ck-text-gap); }
+.ck-testimonials .ck-tm__track { display: grid; grid-column: 2; }
+.ck-testimonials .ck-tm__slide { grid-area: 1 / 1; margin: 0; opacity: 0; visibility: hidden; transition: opacity var(--ck-speed) ease, visibility var(--ck-speed) ease; }
+.ck-testimonials .ck-tm__slide.is-active { opacity: 1; visibility: visible; }
+.ck-testimonials .ck-tm__quote { margin: 0; padding: 0; border: 0; font-style: normal; font-size: var(--ck-quote-size); }
+.ck-testimonials .ck-tm__quote::before, .ck-testimonials .ck-tm__quote::after { content: none; }
+.ck-testimonials .ck-tm__quote p { margin: 0; }
+.ck-testimonials .ck-tm__name { margin-top: calc(var(--ck-text-gap) / 2); font-size: var(--ck-name-size); }
+.ck-testimonials .ck-tm__arrow { width: var(--ck-arrow-size); height: var(--ck-arrow-size); padding: 0; border: 0; background: none; color: var(--ck-arrow-color); cursor: pointer; }
+.ck-testimonials .ck-tm__arrow--prev { grid-column: 1; grid-row: 1; }
+.ck-testimonials .ck-tm__arrow--next { grid-column: 3; grid-row: 1; }
+.ck-testimonials .ck-tm__dots { grid-column: 1 / -1; display: flex; justify-content: center; gap: var(--ck-dot-size); }
+.ck-testimonials .ck-tm__dot { width: var(--ck-dot-size); height: var(--ck-dot-size); padding: 0; border: 0; border-radius: 50%; background: var(--ck-dot-color); opacity: 0.3; cursor: pointer; }
+.ck-testimonials .ck-tm__dot.is-active { opacity: 1; }
+
+.ck-footer { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-footer .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-footer[data-full-width] .ck-inner { max-width: 100%; }
+.ck-footer .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-footer .ck-text p { margin: 0; }
+.ck-footer .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-footer .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-footer[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-footer[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-footer[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-footer { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-footer .ck-heading { font-size: var(--ck-h-size); }
+  .ck-footer[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-footer * { animation: none !important; transition: none !important; } }
+
+.ck-footer { text-align: left; }
+.ck-footer .ck-ft__top { display: grid; gap: var(--ck-gap); grid-template-columns: repeat(var(--ck-cols-mobile), minmax(0, 1fr)); }
+.ck-footer .ck-ft__brand, .ck-footer .ck-ft__news { grid-column: 1 / -1; }
+.ck-footer .ck-ft__logo { display: inline-block; color: inherit; text-decoration: none; }
+.ck-footer .ck-ft__logo-img { width: var(--ck-logo-w); height: auto; display: block; }
+.ck-footer .ck-ft__title { margin: 0 0 var(--ck-link-gap); font-size: var(--ck-title-size); font-weight: var(--ck-h-weight); }
+.ck-footer .ck-ft__links { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--ck-link-gap); }
+.ck-footer .ck-ft__links a, .ck-footer .ck-ft__bottom a { color: inherit; text-decoration: none; font-size: var(--ck-link-size); }
+.ck-footer .ck-ft__links a:hover, .ck-footer .ck-ft__bottom a:hover { text-decoration: underline; }
+.ck-footer .ck-ft__form { display: flex; align-items: center; border-bottom: 1px solid var(--ck-line); }
+.ck-footer .ck-ft__input { flex: 1; border: 0; background: transparent; color: inherit; font: inherit; font-size: var(--ck-link-size); padding: var(--ck-link-gap) 0; outline-offset: 2px; }
+.ck-footer .ck-ft__submit { width: var(--ck-title-size); height: var(--ck-title-size); border: 0; padding: 0; background: none; color: inherit; cursor: pointer; }
+.ck-footer .ck-ft__ok, .ck-footer .ck-ft__note { font-size: var(--ck-small-size); margin-top: var(--ck-link-gap); }
+.ck-footer .ck-ft__social { margin-top: var(--ck-link-gap); justify-content: flex-start; }
+.ck-footer .ck-ft__bottom { display: flex; flex-wrap: wrap; gap: var(--ck-link-gap) var(--ck-gap); margin-top: var(--ck-gap); font-size: var(--ck-small-size); }
+.ck-footer .ck-ft__bottom a { font-size: var(--ck-small-size); }
+@media screen and (min-width: 750px) {
+  .ck-footer .ck-ft__top { grid-template-columns: repeat(var(--ck-cols-tablet), minmax(0, 1fr)); }
+}
+@media screen and (min-width: 990px) {
+  .ck-footer .ck-ft__top { grid-template-columns: repeat(var(--ck-cols), minmax(0, 1fr)); }
+  .ck-footer .ck-ft__brand { grid-column: auto; }
+  .ck-footer .ck-ft__news { grid-column: span 2; }
+}
+
+</style>
+</head>
+<body>
+<header class="ck-demo-header"><strong>My Store</strong><nav><a href="#">Home</a><a href="#">Catalog</a><a href="#">Contact</a></nav></header>
+<div id="shopify-section-hero" class="shopify-section"><style>
+  #shopify-section-hero {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-hero-carousel" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #222222;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 56px;
+    --ck-h-size-m: 34px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.1;
+    --ck-h-ls: 0em;
+    --ck-h-tt: uppercase;
+    --ck-b-size: 20px;
+    --ck-b-size-m: 16px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 0px;
+    --ck-pad-bottom: 0px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 0px;
+    --ck-max-width: 1600px;
+    --ck-gutter: 24px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-h-desktop: 90vh;
+    --ck-h-mobile: 75vh;
+    --ck-content-offset: 5%;
+    --ck-valign: center;
+    --ck-speed: 600ms;
+    --ck-overlay-color: #000000;
+    --ck-arrow-color: #000000;
+    --ck-arrow-size: 32px;
+    --ck-dot-color: #000000;
+    --ck-dot-size: 8px;
+    --ck-text-gap: 16px;
+  " data-animate="none" data-full-width
+>
+<ck-slider class="ck-hero__slider" data-autoplay="true" data-interval="6" data-loop="true">
+  <div class="ck-hero__track"><div
+        class="ck-hero__slide is-active"
+        data-slide
+        data-pos="left"
+        style="--ck-slide-overlay: 0.0;
+          --ck-slide-text-max: 520px;
+        "
+        
+      ><img src="../images/ck-hero-1.jpg" alt="" loading="eager" class="ck-hero__img ck-hero__img--desk"><div class="ck-hero__content"><h2 class="ck-heading">Bath time, but make it bubbly</h2><div class="ck-text ck-hero__text"><p>Gentle washes, lotions and balms made for little skin, and loved by the whole family.</p></div><a class="ck-btn ck-hero__btn" href="#">Shop the bath line</a></div>
+      </div><div
+        class="ck-hero__slide"
+        data-slide
+        data-pos="left"
+        style="--ck-slide-overlay: 0.0;
+          --ck-slide-text-max: 520px;
+        "
+        
+      ><img src="../images/ck-hero-2.jpg" alt="" loading="lazy" class="ck-hero__img ck-hero__img--desk"><div class="ck-hero__content"><h2 class="ck-heading">Soft skin all winter long</h2><div class="ck-text ck-hero__text"><p>Two cozy-season must-haves to keep dry patches away from head to toe.</p></div><a class="ck-btn ck-hero__btn" href="#">Shop winter care</a></div>
+      </div><div
+        class="ck-hero__slide"
+        data-slide
+        data-pos="right"
+        style="--ck-slide-overlay: 0.0;
+          --ck-slide-text-max: 520px;
+        "
+        
+      ><img src="../images/ck-hero-3.jpg" alt="" loading="lazy" class="ck-hero__img ck-hero__img--desk"><div class="ck-hero__content"><h2 class="ck-heading">Made for every stage</h2><div class="ck-text ck-hero__text"><p>From the first bath to the big-kid years, one simple routine that grows with them.</p></div><a class="ck-btn ck-hero__btn" href="#">Find your routine</a></div>
+      </div></div><button type="button" class="ck-hero__arrow ck-hero__arrow--prev" data-prev aria-label="Previous slide"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+    <button type="button" class="ck-hero__arrow ck-hero__arrow--next" data-next aria-label="Next slide"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="ck-hero__dots"><button type="button" class="ck-hero__dot is-active" data-dot aria-label="Next slide 1"></button><button type="button" class="ck-hero__dot" data-dot aria-label="Next slide 2"></button><button type="button" class="ck-hero__dot" data-dot aria-label="Next slide 3"></button></div></ck-slider>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-marquee" class="shopify-section"><style>
+  #shopify-section-marquee {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-marquee" style="
+    --ck-bg: #F9DE6E;
+    --ck-fg: #000000;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 13px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 8px;
+    --ck-pad-bottom: 8px;
+    --ck-pad-top-m: 8px;
+    --ck-pad-bottom-m: 8px;
+    --ck-max-width: 1600px;
+    --ck-gutter: 20px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-marquee-dur: 40s;
+    --ck-marquee-dir: normal;
+    --ck-item-gap: 12px;
+    --ck-marquee-play: paused;
+  " data-animate="none" data-full-width
+>
+<div class="ck-marquee__viewport" aria-label="Product highlights">
+  <div class="ck-marquee__track"><div class="ck-marquee__group"><span class="ck-marquee__item" style="" >Tear free</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No parabens</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No synthetic fragrance</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No harsh sulfates</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >Pediatrician tested</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span></div><div class="ck-marquee__group" aria-hidden="true"><span class="ck-marquee__item" style="" >Tear free</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No parabens</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No synthetic fragrance</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No harsh sulfates</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >Pediatrician tested</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span></div><div class="ck-marquee__group" aria-hidden="true"><span class="ck-marquee__item" style="" >Tear free</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No parabens</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No synthetic fragrance</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No harsh sulfates</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >Pediatrician tested</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span></div><div class="ck-marquee__group" aria-hidden="true"><span class="ck-marquee__item" style="" >Tear free</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No parabens</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No synthetic fragrance</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >No harsh sulfates</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span><span class="ck-marquee__item" style="" >Pediatrician tested</span>
+          <span class="ck-marquee__sep" aria-hidden="true">•</span></div></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-promo" class="shopify-section"><style>
+  #shopify-section-promo {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-promo-banner" style="
+    --ck-bg: #C4E9F2;
+    --ck-fg: #222222;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 0px;
+    --ck-pad-bottom: 0px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 0px;
+    --ck-max-width: 1600px;
+    --ck-gutter: 20px;
+    --ck-align: left;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-min-h: 420px;
+    --ck-min-h-m: 520px;
+    --ck-content-w: 440px;
+    --ck-text-gap: 14px;
+    --ck-valign: center;
+  " data-animate="none"
+>
+<div class="ck-banner__media"><img src="../images/ck-promo.jpg" alt="" loading="lazy" class="ck-banner__img ck-banner__img--desk"></div>
+<div class="ck-inner ck-banner__inner" data-pos="right">
+  <div class="ck-banner__content"><h2 class="ck-heading">Gift season is here (and so is a free tote)!</h2><div class="ck-text ck-banner__text"><p>Get a free canvas tote with any bundle or gift set, only while they last.</p></div><a class="ck-btn ck-banner__btn" href="#">Grab yours</a></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-cards" class="shopify-section"><style>
+  #shopify-section-cards {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-circle-cards" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #222222;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 48px;
+    --ck-pad-bottom: 56px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1200px;
+    --ck-gutter: 20px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 2;
+    --ck-cols-mobile: 2;
+    --ck-gap: 32px;
+    --ck-img-size: 90%;
+    --ck-label-size: 15px;
+    --ck-label-color: #496CA4;
+    --ck-heading-gap: 36px;
+    --ck-hover-scale: 1.04;
+  " data-animate="none"
+>
+<div class="ck-inner"><h2 class="ck-heading ck-cards__heading">Build your little one's routine</h2><div class="ck-cards__grid"><a class="ck-cards__card" href="#" style="" >
+        <span class="ck-cards__media"><img src="../images/ck-card-baby.jpg" alt="" loading="lazy" class="ck-cards__img"></span>
+        <span class="ck-cards__label">Baby + Toddler (0-4)</span>
+      </a><a class="ck-cards__card" href="#" style="" >
+        <span class="ck-cards__media"><img src="../images/ck-card-kids.jpg" alt="" loading="lazy" class="ck-cards__img"></span>
+        <span class="ck-cards__label">Kids (5+)</span>
+      </a><a class="ck-cards__card" href="#" style="" >
+        <span class="ck-cards__media"><img src="../images/ck-card-parents.jpg" alt="" loading="lazy" class="ck-cards__img"></span>
+        <span class="ck-cards__label">For Parents</span>
+      </a><a class="ck-cards__card" href="#" style="" >
+        <span class="ck-cards__media"><img src="../images/ck-card-bundle.jpg" alt="" loading="lazy" class="ck-cards__img"></span>
+        <span class="ck-cards__label">Build Your Own Bundle</span>
+      </a></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-bestsellers" class="shopify-section"><style>
+  #shopify-section-bestsellers {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-product-carousel" style="
+    --ck-bg: #C4E9F2;
+    --ck-fg: #222222;
+    --ck-heading-color: #496CA4;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 48px;
+    --ck-h-size-m: 32px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 12px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 40px;
+    --ck-pad-bottom: 40px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1400px;
+    --ck-gutter: 20px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 14px;
+    --ck-btn-py: 8px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-per-view: 3;
+    --ck-per-view-tablet: 2;
+    --ck-per-view-mobile: 1;
+    --ck-gap: 12px;
+    --ck-intro-w: 30%;
+    --ck-card-bg: #ffffff;
+    --ck-card-size: 14px;
+    --ck-star-color: #F4B400;
+    --ck-star-size: 14px;
+    --ck-star-empty: #D9D9D9;
+    --ck-badge-bg: #ffffff;
+    --ck-badge-fg: #000000;
+    --ck-arrow-color: #000000;
+    --ck-arrow-size: 28px;
+  " data-animate="none"
+>
+<div class="ck-inner ck-prod__layout">
+  <div class="ck-prod__intro"><h2 class="ck-heading">Meet the Best Sellers</h2></div>
+  <ck-scroller class="ck-prod__scroller"><button type="button" class="ck-prod__arrow ck-prod__arrow--prev" data-prev aria-label="Previous products"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><ul class="ck-prod__track" data-track role="list"><li class="ck-prod__card" >
+            <a class="ck-prod__media" href="#"><img src="../images/ck-prod-giftset.jpg" alt="" loading="lazy" class="ck-prod__img"><span class="ck-prod__badge">Save more!</span></a>
+            <a class="ck-prod__title" href="#">The Daily Trio Bundle</a><span class="ck-prod__rating" style="--ck-rating: 98%;">
+                <span class="ck-prod__stars" aria-hidden="true"></span>
+                <span class="ck-prod__count">(6,120)</span>
+              </span><span class="ck-prod__price">From $36</span><a class="ck-btn ck-prod__atc" href="#">Add to cart +</a></li><li class="ck-prod__card" >
+            <a class="ck-prod__media" href="#"><img src="../images/ck-prod-ointment.jpg" alt="" loading="lazy" class="ck-prod__img"></a>
+            <a class="ck-prod__title" href="#">Everywhere Healing Balm</a><span class="ck-prod__rating" style="--ck-rating: 98%;">
+                <span class="ck-prod__stars" aria-hidden="true"></span>
+                <span class="ck-prod__count">(23,418)</span>
+              </span><span class="ck-prod__price">From $12</span><a class="ck-btn ck-prod__atc" href="#">Add to cart +</a></li><li class="ck-prod__card" >
+            <a class="ck-prod__media" href="#"><img src="../images/ck-prod-shampoo.jpg" alt="" loading="lazy" class="ck-prod__img"></a>
+            <a class="ck-prod__title" href="#">Hair + Body Wash</a><span class="ck-prod__rating" style="--ck-rating: 96%;">
+                <span class="ck-prod__stars" aria-hidden="true"></span>
+                <span class="ck-prod__count">(4,902)</span>
+              </span><span class="ck-prod__price">From $11</span><a class="ck-btn ck-prod__atc" href="#">Add to cart +</a></li><li class="ck-prod__card" >
+            <a class="ck-prod__media" href="#"><img src="../images/ck-prod-lotion.jpg" alt="" loading="lazy" class="ck-prod__img"></a>
+            <a class="ck-prod__title" href="#">Everyday Lotion</a><span class="ck-prod__rating" style="--ck-rating: 96%;">
+                <span class="ck-prod__stars" aria-hidden="true"></span>
+                <span class="ck-prod__count">(3,377)</span>
+              </span><span class="ck-prod__price">From $14</span><a class="ck-btn ck-prod__atc" href="#">Add to cart +</a></li><li class="ck-prod__card" >
+            <a class="ck-prod__media" href="#"><img src="../images/ck-prod-wash.jpg" alt="" loading="lazy" class="ck-prod__img"></a>
+            <a class="ck-prod__title" href="#">Foaming Bubble Bath</a><span class="ck-prod__rating" style="--ck-rating: 94%;">
+                <span class="ck-prod__stars" aria-hidden="true"></span>
+                <span class="ck-prod__count">(1,865)</span>
+              </span><span class="ck-prod__price">$18</span><a class="ck-btn ck-prod__atc" href="#">Add to cart +</a></li><li class="ck-prod__card" >
+            <a class="ck-prod__media" href="#"><img src="../images/ck-prod-bubbles.jpg" alt="" loading="lazy" class="ck-prod__img"><span class="ck-prod__badge">New</span></a>
+            <a class="ck-prod__title" href="#">Rubber Duck Bath Set</a><span class="ck-prod__rating" style="--ck-rating: 98%;">
+                <span class="ck-prod__stars" aria-hidden="true"></span>
+                <span class="ck-prod__count">(912)</span>
+              </span><span class="ck-prod__price">$24</span><a class="ck-btn ck-prod__atc" href="#">Add to cart +</a></li></ul><button type="button" class="ck-prod__arrow ck-prod__arrow--next" data-next aria-label="Next products"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></ck-scroller>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-story_1" class="shopify-section"><style>
+  #shopify-section-story_1 {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-image-text" style="
+    --ck-bg: #FFEFAF;
+    --ck-fg: #000000;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #ffffff;
+    --ck-btn-fg: #000000;
+    --ck-btn-bg-hover: #f2f2f2;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 2px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 18px;
+    --ck-b-size-m: 16px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 48px;
+    --ck-pad-bottom: 48px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1200px;
+    --ck-gutter: 32px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-media-w: 50%;
+    --ck-min-h: 720px;
+    --ck-min-h-m: 360px;
+    --ck-box-w: 480px;
+    --ck-text-gap: 16px;
+    --ck-content-bg: #FFEFAF;
+    --ck-valign: center;
+    --ck-fit: cover;
+  " data-animate="none" data-full-width
+>
+<div class="ck-it__grid" data-media="left">
+  <div class="ck-it__media"><img src="../images/ck-story-bath.jpg" alt="" loading="lazy" class="ck-it__img"></div>
+  <div class="ck-it__content">
+    <div class="ck-it__box"><h2 class="ck-heading">Calm sensitive skin with The Daily Trio</h2><div class="ck-text ck-it__text"><p>Looking for a simple, clean-ingredient routine for your baby? Same. Meet The Daily Trio: wash, moisturize and protect in three easy steps that work for the whole family.</p></div><a class="ck-btn ck-it__btn" href="#">Start your routine</a></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-press" class="shopify-section"><style>
+  #shopify-section-press {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-logo-strip" style="
+    --ck-bg: #496CA4;
+    --ck-fg: #ffffff;
+    --ck-heading-color: #ffffff;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 28px;
+    --ck-pad-bottom: 28px;
+    --ck-pad-top-m: 20px;
+    --ck-pad-bottom-m: 20px;
+    --ck-max-width: 1200px;
+    --ck-gutter: 20px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-gap: 64px;
+    --ck-logo-h: 40px;
+    --ck-logo-h-m: 26px;
+    --ck-logo-opacity: 1.0;
+    --ck-logo-filter: brightness(0) invert(1);
+  " data-animate="none"
+>
+<div class="ck-inner"><ul class="ck-logos__list" role="list"><li class="ck-logos__item" ><span class="ck-logos__name">Parent Weekly</span></li><li class="ck-logos__item" ><span class="ck-logos__name">the Nest</span></li><li class="ck-logos__item" ><span class="ck-logos__name">Morning Brief</span></li><li class="ck-logos__item" ><span class="ck-logos__name">STYLE DAILY</span></li></ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-video" class="shopify-section"><style>
+  #shopify-section-video {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-rich-media" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #222222;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #ffffff;
+    --ck-btn-fg: #000000;
+    --ck-btn-bg-hover: #f2f2f2;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 2px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 48px;
+    --ck-pad-bottom: 56px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1200px;
+    --ck-gutter: 20px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-media-max: 820px;
+    --ck-media-ratio: 16 / 9;
+    --ck-text-gap: 24px;
+    --ck-link-color: #427D8A;
+    --ck-link-size: 14px;
+  " data-animate="none"
+>
+<div class="ck-inner"><h2 class="ck-heading ck-rm__heading">We think you'll love these products as much as we do!</h2><div class="ck-rm__media"><img src="../images/ck-video-family.jpg" alt="" loading="lazy" class="ck-rm__img"></div><a class="ck-rm__link ck-rm__cta" href="#">See our happy-skin guarantee</a></div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-story_2" class="shopify-section"><style>
+  #shopify-section-story_2 {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-image-text" style="
+    --ck-bg: #E3D6E5;
+    --ck-fg: #000000;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #ffffff;
+    --ck-btn-fg: #000000;
+    --ck-btn-bg-hover: #f2f2f2;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 2px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 18px;
+    --ck-b-size-m: 16px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 48px;
+    --ck-pad-bottom: 48px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1200px;
+    --ck-gutter: 32px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-media-w: 50%;
+    --ck-min-h: 720px;
+    --ck-min-h-m: 360px;
+    --ck-box-w: 480px;
+    --ck-text-gap: 16px;
+    --ck-content-bg: #E3D6E5;
+    --ck-valign: center;
+    --ck-fit: cover;
+  " data-animate="none" data-full-width
+>
+<div class="ck-it__grid" data-media="right">
+  <div class="ck-it__media"><img src="../images/ck-story-founder.jpg" alt="" loading="lazy" class="ck-it__img"></div>
+  <div class="ck-it__content">
+    <div class="ck-it__box"><h2 class="ck-heading">Here for your family since day one</h2><div class="ck-text ck-it__text"><p>Hi, I'm the founder! I started this little company in my kitchen, looking for something gentle enough for my own kids' sensitive skin. Now we get to share it with thousands of families.</p></div><a class="ck-btn ck-it__btn" href="#">Read our story</a></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-community" class="shopify-section"><style>
+  #shopify-section-community {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-rich-media" style="
+    --ck-bg: #E0F2DA;
+    --ck-fg: #222222;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #ffffff;
+    --ck-btn-fg: #000000;
+    --ck-btn-bg-hover: #f2f2f2;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 2px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 48px;
+    --ck-pad-bottom: 56px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1200px;
+    --ck-gutter: 20px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-media-max: 640px;
+    --ck-media-ratio: 4 / 3;
+    --ck-text-gap: 24px;
+    --ck-link-color: #427D8A;
+    --ck-link-size: 14px;
+  " data-animate="none"
+>
+<div class="ck-inner"><h2 class="ck-heading ck-rm__heading">We love meeting families from all over!</h2><div class="ck-rm__media"><img src="../images/ck-community.jpg" alt="" loading="lazy" class="ck-rm__img"></div><a class="ck-btn ck-rm__cta" href="#">Come play with us</a></div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-reviews" class="shopify-section"><style>
+  #shopify-section-reviews {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-testimonials" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #222222;
+    --ck-heading-color: #427D8A;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 40px;
+    --ck-pad-bottom: 40px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1600px;
+    --ck-gutter: 20px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-icon-w: 80px;
+    --ck-quote-size: 18px;
+    --ck-name-size: 13px;
+    --ck-text-gap: 16px;
+    --ck-speed: 400ms;
+    --ck-arrow-color: #427D8A;
+    --ck-arrow-size: 28px;
+    --ck-dot-color: #427D8A;
+    --ck-dot-size: 6px;
+  " data-animate="none"
+>
+<div class="ck-inner"><h2 class="ck-heading">Just one of 40,000+ five-star reviews:</h2><ck-slider class="ck-tm__slider" data-autoplay="true" data-interval="5" data-loop="true"><button type="button" class="ck-tm__arrow ck-tm__arrow--prev" data-prev aria-label="Previous review"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="ck-tm__track"><figure class="ck-tm__slide is-active" data-slide >
+          <blockquote class="ck-tm__quote"><p>“This balm is the only thing that clears up my son's dry patches.”</p></blockquote>
+          <figcaption class="ck-tm__name">Sara M.</figcaption>
+        </figure><figure class="ck-tm__slide" data-slide >
+          <blockquote class="ck-tm__quote"><p>“Both my girls have super sensitive skin. We're never switching.”</p></blockquote>
+          <figcaption class="ck-tm__name">Noor K.</figcaption>
+        </figure><figure class="ck-tm__slide" data-slide >
+          <blockquote class="ck-tm__quote"><p>“Smells so good, and one bottle lasts us forever.”</p></blockquote>
+          <figcaption class="ck-tm__name">Jenna R.</figcaption>
+        </figure></div><button type="button" class="ck-tm__arrow ck-tm__arrow--next" data-next aria-label="Next review"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="ck-tm__dots"><button type="button" class="ck-tm__dot is-active" data-dot aria-label="Next review 1"></button><button type="button" class="ck-tm__dot" data-dot aria-label="Next review 2"></button><button type="button" class="ck-tm__dot" data-dot aria-label="Next review 3"></button></div></ck-slider>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-guide" class="shopify-section"><style>
+  #shopify-section-guide {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-image-text" style="
+    --ck-bg: #F9EDE4;
+    --ck-fg: #000000;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #ffffff;
+    --ck-btn-fg: #000000;
+    --ck-btn-bg-hover: #f2f2f2;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 2px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 18px;
+    --ck-b-size-m: 16px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 48px;
+    --ck-pad-bottom: 48px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1200px;
+    --ck-gutter: 32px;
+    --ck-align: center;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-media-w: 50%;
+    --ck-min-h: 600px;
+    --ck-min-h-m: 360px;
+    --ck-box-w: 480px;
+    --ck-text-gap: 16px;
+    --ck-content-bg: #F9EDE4;
+    --ck-valign: center;
+    --ck-fit: cover;
+  " data-animate="none" data-full-width
+>
+<div class="ck-it__grid" data-media="left">
+  <div class="ck-it__media"><img src="../images/ck-story-family.jpg" alt="" loading="lazy" class="ck-it__img"></div>
+  <div class="ck-it__content">
+    <div class="ck-it__box"><h2 class="ck-heading">A beginner's guide to our bath line</h2><a class="ck-btn ck-it__btn" href="#">Read the guide</a></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-ck_footer" class="shopify-section"><style>
+  #shopify-section-ck_footer {
+    --ck-heading-font: Nunito, sans-serif;
+    --ck-body-font: Nunito, sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-footer" style="
+    --ck-bg: #F9DE6E;
+    --ck-fg: #000000;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 800;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 16px;
+    --ck-b-size-m: 15px;
+    --ck-b-lh: 1.4;
+    --ck-btn-size: 14px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: uppercase;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 40px;
+    --ck-pad-bottom: 24px;
+    --ck-pad-top-m: 40px;
+    --ck-pad-bottom-m: 40px;
+    --ck-max-width: 1400px;
+    --ck-gutter: 20px;
+    --ck-align: left;
+    --ck-radius: 0px;
+    --ck-btn-px: 24px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-cols: 5;
+    --ck-cols-tablet: 3;
+    --ck-cols-mobile: 2;
+    --ck-gap: 32px;
+    --ck-logo-w: 100px;
+    --ck-title-size: 14px;
+    --ck-link-size: 13px;
+    --ck-link-gap: 6px;
+    --ck-line: #000000;
+    --ck-small-size: 11px;
+  " data-animate="none"
+>
+<div class="ck-inner ck-ft__top">
+  <div class="ck-ft__brand">
+    <a href="#" class="ck-ft__logo"><span class="ck-heading">My Store</span></a>
+  </div><nav class="ck-ft__col" ><p class="ck-ft__title">Shop</p></nav><nav class="ck-ft__col" ><p class="ck-ft__title">Help</p></nav><div class="ck-ft__news"><p class="ck-ft__title">Our emails are (almost) as fun as bath time.</p><form onsubmit="return false" class="">
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input class="ck-ft__input" type="email" name="contact[email]" required autocomplete="email" placeholder="Email address" aria-label="Email address">
+        <button type="submit" class="ck-ft__submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></form><div class="ck-ft__note"><p>By signing up you agree to get marketing emails. Unsubscribe any time.</p></div></div></div>
+<div class="ck-inner ck-ft__bottom">
+  <span>© 2026 My Store</span></div>
+</div>
+</div>
+
+
+
+
+
+</div>
+<script>
+
+if (!customElements.get('ck-slider')) {
+  class CkSlider extends HTMLElement {
+    connectedCallback() {
+      this.slides = [...this.querySelectorAll('[data-slide]')];
+      this.dots = [...this.querySelectorAll('[data-dot]')];
+      this.index = 0;
+      this.loop = this.dataset.loop !== 'false';
+      this.interval = Number(this.dataset.interval || 0) * 1000;
+      this.prev = this.querySelector('[data-prev]');
+      this.next = this.querySelector('[data-next]');
+      this.onPrev = () => this.go(this.index - 1);
+      this.onNext = () => this.go(this.index + 1);
+      this.onEnter = () => this.stop();
+      this.onLeave = () => this.start();
+      this.prev && this.prev.addEventListener('click', this.onPrev);
+      this.next && this.next.addEventListener('click', this.onNext);
+      this.dots.forEach((dot, i) => dot.addEventListener('click', () => { this.go(i); this.start(); }));
+      this.addEventListener('mouseenter', this.onEnter);
+      this.addEventListener('mouseleave', this.onLeave);
+      this.go(0);
+      this.start();
+    }
+    disconnectedCallback() {
+      this.stop();
+      this.prev && this.prev.removeEventListener('click', this.onPrev);
+      this.next && this.next.removeEventListener('click', this.onNext);
+      this.removeEventListener('mouseenter', this.onEnter);
+      this.removeEventListener('mouseleave', this.onLeave);
+    }
+    go(i) {
+      const n = this.slides.length;
+      if (!n) return;
+      if (i < 0) i = this.loop ? n - 1 : 0;
+      if (i >= n) i = this.loop ? 0 : n - 1;
+      this.index = i;
+      this.slides.forEach((s, k) => { s.classList.toggle('is-active', k === i); s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      this.dots.forEach((d, k) => { d.classList.toggle('is-active', k === i); d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    }
+    start() {
+      this.stop();
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (this.dataset.autoplay === 'true' && this.interval > 0 && this.slides.length > 1 && !reduce) {
+        this.timer = setInterval(() => this.go(this.index + 1), this.interval);
+      }
+    }
+    stop() { clearInterval(this.timer); }
+  }
+  customElements.define('ck-slider', CkSlider);
+  document.addEventListener('shopify:block:select', (e) => {
+    const slider = e.target.closest('ck-slider');
+    if (!slider || !slider.slides) return;
+    const i = slider.slides.indexOf(e.target);
+    if (i > -1) { slider.stop(); slider.go(i); }
+  });
+  document.addEventListener('shopify:block:deselect', (e) => {
+    const slider = e.target.closest('ck-slider');
+    if (slider && slider.start) slider.start();
+  });
+}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+if (!customElements.get('ck-scroller')) {
+  class CkScroller extends HTMLElement {
+    connectedCallback() {
+      this.track = this.querySelector('[data-track]');
+      this.prev = this.querySelector('[data-prev]');
+      this.next = this.querySelector('[data-next]');
+      if (!this.track) return;
+      this.onPrev = () => this.track.scrollBy({ left: -this.track.clientWidth, behavior: 'smooth' });
+      this.onNext = () => this.track.scrollBy({ left: this.track.clientWidth, behavior: 'smooth' });
+      this.onScroll = () => this.update();
+      this.prev && this.prev.addEventListener('click', this.onPrev);
+      this.next && this.next.addEventListener('click', this.onNext);
+      this.track.addEventListener('scroll', this.onScroll, { passive: true });
+      this.update();
+    }
+    disconnectedCallback() {
+      if (!this.track) return;
+      this.prev && this.prev.removeEventListener('click', this.onPrev);
+      this.next && this.next.removeEventListener('click', this.onNext);
+      this.track.removeEventListener('scroll', this.onScroll);
+    }
+    update() {
+      const max = this.track.scrollWidth - this.track.clientWidth - 1;
+      if (this.prev) this.prev.disabled = this.track.scrollLeft <= 0;
+      if (this.next) this.next.disabled = this.track.scrollLeft >= max;
+    }
+  }
+  customElements.define('ck-scroller', CkScroller);
+}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+if (!customElements.get('ck-slider')) {
+  class CkSlider extends HTMLElement {
+    connectedCallback() {
+      this.slides = [...this.querySelectorAll('[data-slide]')];
+      this.dots = [...this.querySelectorAll('[data-dot]')];
+      this.index = 0;
+      this.loop = this.dataset.loop !== 'false';
+      this.interval = Number(this.dataset.interval || 0) * 1000;
+      this.prev = this.querySelector('[data-prev]');
+      this.next = this.querySelector('[data-next]');
+      this.onPrev = () => this.go(this.index - 1);
+      this.onNext = () => this.go(this.index + 1);
+      this.onEnter = () => this.stop();
+      this.onLeave = () => this.start();
+      this.prev && this.prev.addEventListener('click', this.onPrev);
+      this.next && this.next.addEventListener('click', this.onNext);
+      this.dots.forEach((dot, i) => dot.addEventListener('click', () => { this.go(i); this.start(); }));
+      this.addEventListener('mouseenter', this.onEnter);
+      this.addEventListener('mouseleave', this.onLeave);
+      this.go(0);
+      this.start();
+    }
+    disconnectedCallback() {
+      this.stop();
+      this.prev && this.prev.removeEventListener('click', this.onPrev);
+      this.next && this.next.removeEventListener('click', this.onNext);
+      this.removeEventListener('mouseenter', this.onEnter);
+      this.removeEventListener('mouseleave', this.onLeave);
+    }
+    go(i) {
+      const n = this.slides.length;
+      if (!n) return;
+      if (i < 0) i = this.loop ? n - 1 : 0;
+      if (i >= n) i = this.loop ? 0 : n - 1;
+      this.index = i;
+      this.slides.forEach((s, k) => { s.classList.toggle('is-active', k === i); s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+      this.dots.forEach((d, k) => { d.classList.toggle('is-active', k === i); d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    }
+    start() {
+      this.stop();
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (this.dataset.autoplay === 'true' && this.interval > 0 && this.slides.length > 1 && !reduce) {
+        this.timer = setInterval(() => this.go(this.index + 1), this.interval);
+      }
+    }
+    stop() { clearInterval(this.timer); }
+  }
+  customElements.define('ck-slider', CkSlider);
+  document.addEventListener('shopify:block:select', (e) => {
+    const slider = e.target.closest('ck-slider');
+    if (!slider || !slider.slides) return;
+    const i = slider.slides.indexOf(e.target);
+    if (i > -1) { slider.stop(); slider.go(i); }
+  });
+  document.addEventListener('shopify:block:deselect', (e) => {
+    const slider = e.target.closest('ck-slider');
+    if (slider && slider.start) slider.start();
+  });
+}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+</script>
+</body>
+</html>
