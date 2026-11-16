@@ -1,0 +1,732 @@
+{%- liquid
+  assign hf = section.settings.heading_font
+  assign bf = section.settings.body_font
+-%}
+<style>
+  #shopify-section-{{ section.id }} {
+    --ck-heading-font: {{ hf.family }}, var(--ck-ar-font, sans-serif), {{ hf.fallback_families }};
+    --ck-body-font: {{ bf.family }}, var(--ck-ar-font, sans-serif), {{ bf.fallback_families }};
+  }
+  {{ hf | font_face: font_display: 'swap' }}
+  {{ bf | font_face: font_display: 'swap' }}
+</style>
+<div class="color-{{ section.settings.color_scheme }} ck-scheme">
+<div class="ck-ec-newsletter" style="
+    --ck-bg: {{ section.settings.background_color }};
+    --ck-fg: {{ section.settings.text_color }};
+    --ck-heading-color: {{ section.settings.heading_color }};
+    --ck-btn-bg: {{ section.settings.button_background }};
+    --ck-btn-fg: {{ section.settings.button_text }};
+    --ck-btn-bg-hover: {{ section.settings.button_hover_background }};
+    --ck-btn-border: {{ section.settings.button_border }};
+    --ck-btn-border-w: {{ section.settings.button_border_width }}px;
+    --ck-h-size: {{ section.settings.heading_size }}px;
+    --ck-h-size-m: {{ section.settings.heading_size_mobile }}px;
+    --ck-h-weight: {{ section.settings.heading_weight }};
+    --ck-h-lh: {{ section.settings.heading_line_height }};
+    --ck-h-ls: {{ section.settings.heading_letter_spacing }}em;
+    --ck-h-tt: {{ section.settings.heading_text_transform }};
+    --ck-b-size: {{ section.settings.body_size }}px;
+    --ck-b-size-m: {{ section.settings.body_size_mobile }}px;
+    --ck-b-lh: {{ section.settings.body_line_height }};
+    --ck-btn-size: {{ section.settings.button_size }}px;
+    --ck-btn-weight: {{ section.settings.button_weight }};
+    --ck-btn-tt: {{ section.settings.button_text_transform }};
+    --ck-btn-ls: {{ section.settings.button_letter_spacing }}em;
+    --ck-pad-top: {{ section.settings.padding_top }}px;
+    --ck-pad-bottom: {{ section.settings.padding_bottom }}px;
+    --ck-pad-top-m: {{ section.settings.padding_top_mobile }}px;
+    --ck-pad-bottom-m: {{ section.settings.padding_bottom_mobile }}px;
+    --ck-max-width: {{ section.settings.content_width }}px;
+    --ck-gutter: {{ section.settings.side_padding }}px;
+    --ck-align: {{ section.settings.text_alignment }};
+    --ck-radius: {{ section.settings.corner_radius }}px;
+    --ck-btn-px: {{ section.settings.button_padding_x }}px;
+    --ck-btn-py: {{ section.settings.button_padding_y }}px;
+    --ck-anim-dur: {{ section.settings.animation_duration }}ms;
+    --ck-anim-distance: {{ section.settings.animation_distance }}px;
+    --ck-small: {{ section.settings.small_text_size }}px;
+    --ck-large: {{ section.settings.large_text_size }}px;
+    --ck-chip-px: {{ section.settings.chip_padding_x }}px;
+    --ck-chip-py: {{ section.settings.chip_padding_y }}px;
+    --ck-num-size: {{ section.settings.number_size }}px;
+    --ck-media-w: {{ section.settings.media_width }}%;
+    --ck-gap: {{ section.settings.gap }}px;
+    --ck-kicker-size: {{ section.settings.kicker_size }}px;
+    --ck-input-border: {{ section.settings.input_border }};
+    --ck-input-bg: {{ section.settings.input_background }};
+    --ck-form-w: {{ section.settings.form_width }}px;
+    --ck-media-offset: {{ section.settings.media_offset }}px;
+  " data-animate="{{ section.settings.animation_style }}"
+  {%- if section.settings.full_width %} data-full-width{% endif %}
+  {%- unless section.settings.show_on_mobile %} data-hide-mobile{% endunless %}
+  {%- unless section.settings.show_on_desktop %} data-hide-desktop{% endunless %}
+>
+<div class="ck-inner ck-nl" data-media="{{ section.settings.media_position }}">
+  <div class="ck-nl__media">{%- if section.settings.image != blank -%}{{ section.settings.image | image_url: width: 1600 | image_tag: widths: '375, 550, 750, 1100, 1500', sizes: '(min-width: 990px) 40vw, 100vw', class: 'ck-nl__img', loading: 'lazy', alt: section.settings.image_alt }}{%- elsif section.settings.image_asset != blank -%}<img src="{{ section.settings.image_asset | asset_url }}" class="ck-nl__img" alt="{{ section.settings.image_alt | escape }}" loading="lazy">{%- else -%}{{ 'image' | placeholder_svg_tag: 'ck-nl__img' }}{%- endif -%}</div>
+  <div class="ck-nl__content">
+    {%- if section.settings.kicker != blank -%}<p class="ck-nl__kicker">{{ section.settings.kicker | escape }}</p>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h2 class="ck-heading">{{ section.settings.heading }}</h2>{%- endif -%}
+    {%- if section.settings.text != blank -%}<div class="ck-text">{{ section.settings.text }}</div>{%- endif -%}
+    {%- form 'customer', class: 'ck-nl__form' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      {%- if form.posted_successfully? -%}
+        <p class="ck-nl__ok">{{ section.settings.success_message | escape }}</p>
+      {%- else -%}
+        <div class="ck-nl__field">
+          <input class="ck-nl__input" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ section.settings.placeholder | escape }}" aria-label="{{ section.settings.placeholder | escape }}">
+          <button class="ck-btn ck-nl__btn" type="submit">{{ section.settings.button_label | escape }}</button>
+        </div>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</div>
+</div>
+</div>
+
+{% stylesheet %}
+.ck-ec-newsletter { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-newsletter ck-scroller { display: block; }
+.ck-ec-newsletter .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-newsletter[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-newsletter .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-newsletter .ck-text p { margin: 0; }
+.ck-ec-newsletter .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-newsletter .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-newsletter[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-newsletter[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-newsletter[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-newsletter { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-newsletter .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-newsletter[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-newsletter * { animation: none !important; transition: none !important; } }
+
+.ck-ec-newsletter .ck-nl { display: flex; flex-direction: column; gap: var(--ck-gap); align-items: center; }
+.ck-ec-newsletter .ck-nl__media { width: 100%; }
+.ck-ec-newsletter .ck-nl__img { width: 100%; height: auto; display: block; }
+.ck-ec-newsletter .ck-nl__content { flex: 1; text-align: var(--ck-align); }
+.ck-ec-newsletter .ck-nl__kicker { margin: 0; font-family: var(--ck-heading-font); font-size: calc(var(--ck-kicker-size) * 0.75); color: var(--ck-heading-color); }
+.ck-ec-newsletter .ck-nl__form { margin-top: var(--ck-btn-py); max-width: var(--ck-form-w); }
+.ck-ec-newsletter .ck-nl__field { display: flex; align-items: center; border: 1px solid var(--ck-input-border); background: var(--ck-input-bg); border-radius: var(--ck-radius); padding: var(--ck-chip-py); }
+.ck-ec-newsletter .ck-nl__input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; color: inherit; padding: 0 var(--ck-btn-py); }
+.ck-ec-newsletter .ck-nl__input:focus { outline: none; }
+.ck-ec-newsletter .ck-nl__field:focus-within { outline: 2px solid var(--ck-heading-color); }
+@media screen and (min-width: 990px) {
+  .ck-ec-newsletter .ck-nl { flex-direction: row; }
+  .ck-ec-newsletter .ck-nl__media { flex: 0 0 var(--ck-media-w); margin-bottom: calc(var(--ck-media-offset) * -1); align-self: flex-end; }
+  .ck-ec-newsletter .ck-nl[data-media="end"] .ck-nl__media { order: 2; }
+  .ck-ec-newsletter .ck-nl__kicker { font-size: var(--ck-kicker-size); }
+}
+{% endstylesheet %}
+
+{% javascript %}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "EC: newsletter",
+  "tag": "section",
+  "class": "ck-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Small heading",
+      "default": "Stay Updated"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "With Our Newsletter"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Email placeholder",
+      "default": "Email address"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Sign Up"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Thanks!"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_asset",
+      "label": "Image: fallback theme asset (file in assets/)",
+      "default": "ec-newsletter.png"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image: alt text"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter layout"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Image position (desktop)",
+      "default": "start",
+      "options": [
+        {
+          "value": "start",
+          "label": "Before text"
+        },
+        {
+          "value": "end",
+          "label": "After text"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "media_width",
+      "label": "Image width",
+      "min": 20,
+      "max": 60,
+      "step": 1,
+      "default": 40,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "media_offset",
+      "label": "Image overhang below section",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "default": 120,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "form_width",
+      "label": "Form max width",
+      "min": 200,
+      "max": 800,
+      "step": 10,
+      "default": 400,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "kicker_size",
+      "label": "Small heading size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "input_border",
+      "label": "Input border",
+      "default": "#E5E5E5"
+    },
+    {
+      "type": "color",
+      "id": "input_background",
+      "label": "Input background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#FFECE1"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#686868"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_border",
+      "label": "Button border",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Button border width",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "dm_sans_n5"
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body font",
+      "default": "dm_sans_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size (desktop)",
+      "min": 12,
+      "max": 112,
+      "step": 2,
+      "default": 64,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading size (mobile)",
+      "min": 12,
+      "max": 72,
+      "step": 2,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_weight",
+      "label": "Heading weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "label": "Heading line height",
+      "min": 0.8,
+      "max": 2,
+      "step": 0.1,
+      "default": 1.2
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "label": "Heading letter spacing",
+      "min": -1,
+      "max": 3,
+      "step": 0.1,
+      "default": 0,
+      "unit": "em"
+    },
+    {
+      "type": "select",
+      "id": "heading_text_transform",
+      "label": "Heading case",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "As typed"
+        },
+        {
+          "value": "uppercase",
+          "label": "UPPERCASE"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Text size (desktop)",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size_mobile",
+      "label": "Text size (mobile)",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_line_height",
+      "label": "Text line height",
+      "min": 1,
+      "max": 2.2,
+      "step": 0.1,
+      "default": 1.7
+    },
+    {
+      "type": "range",
+      "id": "button_size",
+      "label": "Button text size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "button_weight",
+      "label": "Button weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "default": 700
+    },
+    {
+      "type": "select",
+      "id": "button_text_transform",
+      "label": "Button case",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "As typed"
+        },
+        {
+          "value": "uppercase",
+          "label": "UPPERCASE"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "button_letter_spacing",
+      "label": "Button letter spacing",
+      "min": -1,
+      "max": 3,
+      "step": 0.1,
+      "default": 0,
+      "unit": "em"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding (mobile)",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding (mobile)",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content width",
+      "min": 600,
+      "max": 2000,
+      "step": 20,
+      "default": 1440,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "side_padding",
+      "label": "Side padding",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 36,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "right",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_x",
+      "label": "Button side padding",
+      "min": 4,
+      "max": 64,
+      "step": 2,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_y",
+      "label": "Button height padding",
+      "min": 4,
+      "max": 32,
+      "step": 2,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Small parts"
+    },
+    {
+      "type": "range",
+      "id": "small_text_size",
+      "label": "Small text size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "large_text_size",
+      "label": "Large text size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "chip_padding_x",
+      "label": "Badge side padding",
+      "min": 4,
+      "max": 30,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "chip_padding_y",
+      "label": "Badge height padding",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "default": 3,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "label": "Number circle size",
+      "min": 20,
+      "max": 60,
+      "step": 1,
+      "default": 34,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Visibility and animation"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_desktop",
+      "label": "Show on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_mobile",
+      "label": "Show on mobile",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "Entrance animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fade",
+          "label": "Fade in"
+        },
+        {
+          "value": "slide",
+          "label": "Slide up"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "animation_duration",
+      "label": "Animation duration",
+      "min": 0,
+      "max": 1500,
+      "step": 50,
+      "default": 600,
+      "unit": "ms"
+    },
+    {
+      "type": "range",
+      "id": "animation_distance",
+      "label": "Slide distance",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 24,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "EC: newsletter"
+    }
+  ]
+}
+{% endschema %}

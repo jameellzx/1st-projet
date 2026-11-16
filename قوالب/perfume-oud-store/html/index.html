@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>متجر عطور وعود وبخور (RTL عربي) - تصميم ecomposer 6481</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.ck-demo-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 5%; font-family: var(--ck-demo-font, sans-serif); border-bottom: 1px solid #eee; background: #fff; position: sticky; top: 0; z-index: 10; }
+.ck-demo-header strong { font-size: 22px; font-weight: 800; }
+.ck-demo-header nav { display: flex; gap: 24px; font-size: 14px; }
+.ck-demo-header nav a { text-decoration: none; }
+
+:root { --ck-demo-font: 'DM Sans', sans-serif; }
+
+.ck-ec-hero { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-hero ck-scroller { display: block; }
+.ck-ec-hero .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-hero[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-hero .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-hero .ck-text p { margin: 0; }
+.ck-ec-hero .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-hero .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-hero[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-hero[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-hero[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-hero { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-hero .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-hero[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-hero * { animation: none !important; transition: none !important; } }
+
+.ck-ec-hero .ck-hero { display: flex; flex-direction: column; gap: var(--ck-gap); }
+.ck-ec-hero .ck-hero__text { display: flex; flex-direction: column; gap: var(--ck-text-gap); text-align: var(--ck-align-m); align-items: center; order: 2; }
+.ck-ec-hero .ck-hero__media { order: 1; }
+.ck-ec-hero .ck-hero__img { display: block; width: 100%; height: auto; }
+.ck-ec-hero .ck-hero__actions { display: flex; flex-wrap: wrap; gap: var(--ck-text-gap); align-items: center; justify-content: center; }
+.ck-ec-hero .ck-hero__link { color: var(--ck-link-color); font-weight: var(--ck-btn-weight); }
+@media screen and (min-width: 990px) {
+  .ck-ec-hero .ck-hero { flex-direction: row; align-items: stretch; min-height: var(--ck-minh); }
+  .ck-ec-hero .ck-hero__text { flex: 1; justify-content: var(--ck-valign); text-align: var(--ck-align); align-items: flex-start; order: 1; }
+  .ck-ec-hero .ck-hero__actions { justify-content: flex-start; }
+  .ck-ec-hero .ck-hero__media { flex: 0 0 var(--ck-media-w); display: flex; align-items: flex-end; order: 2; }
+  .ck-ec-hero .ck-hero[data-media="start"] .ck-hero__media { order: 0; }
+}
+
+.ck-ec-marquee { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-marquee ck-scroller { display: block; }
+.ck-ec-marquee .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-marquee[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-marquee .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-marquee .ck-text p { margin: 0; }
+.ck-ec-marquee .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-marquee .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-marquee[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-marquee[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-marquee[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-marquee { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-marquee .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-marquee[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-marquee .ck-inner { animation: none !important; transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { .ck-ec-marquee .ck-marquee__track { animation-duration: calc(var(--ck-marquee-dur) * 1.5) !important; } }
+
+.ck-ec-marquee .ck-marquee__viewport { overflow: hidden; white-space: nowrap; direction: ltr; }
+.ck-ec-marquee .ck-marquee__track { display: inline-flex; animation: ck-marquee var(--ck-marquee-dur) linear infinite; animation-direction: var(--ck-marquee-dir); }
+.ck-ec-marquee .ck-marquee__viewport:hover .ck-marquee__track { animation-play-state: var(--ck-marquee-play); }
+.ck-ec-marquee .ck-marquee__group { display: inline-flex; align-items: center; flex-shrink: 0; }
+.ck-ec-marquee .ck-marquee__item { padding: 0 var(--ck-item-gap); font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); color: var(--ck-item-color, var(--ck-heading-color)); direction: rtl; }
+.ck-ec-marquee .ck-marquee__item a { color: inherit; text-decoration: none; }
+.ck-ec-marquee .ck-marquee__sep { display: inline-flex; }
+.ck-ec-marquee .ck-marquee__icon { width: var(--ck-icon-size); height: var(--ck-icon-size); object-fit: contain; display: block; }
+@keyframes ck-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media screen and (min-width: 750px) { .ck-ec-marquee .ck-marquee__item { font-size: var(--ck-h-size); } }
+
+.ck-ec-categories { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-categories ck-scroller { display: block; }
+.ck-ec-categories .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-categories[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-categories .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-categories .ck-text p { margin: 0; }
+.ck-ec-categories .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-categories .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-categories[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-categories[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-categories[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-categories { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-categories .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-categories[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-categories * { animation: none !important; transition: none !important; } }
+
+.ck-ec-categories .ck-head { margin-bottom: var(--ck-head-gap); }
+.ck-ec-categories .ck-sub { margin-top: var(--ck-sub-gap); }
+
+.ck-ec-categories .ck-arrows { display: flex; justify-content: center; gap: calc(var(--ck-arrow-size) / 3); margin-bottom: calc(var(--ck-arrow-size) / 2); }
+.ck-ec-categories .ck-arrow { width: var(--ck-arrow-size); height: var(--ck-arrow-size); border: 0; border-radius: 50%; background: var(--ck-arrow-bg); color: var(--ck-arrow-fg); padding: calc(var(--ck-arrow-size) / 4); cursor: pointer; }
+@media screen and (min-width: 990px) { .ck-ec-categories[data-arrows-desktop="false"] .ck-arrows { display: none; } }
+
+.ck-ec-categories .ck-cats { display: flex; flex-wrap: wrap; justify-content: center; column-gap: var(--ck-gap); row-gap: var(--ck-row-gap); --ck-c: var(--ck-cols-mobile); }
+.ck-ec-categories .ck-cat { flex: 0 0 calc((100% - var(--ck-gap) * (var(--ck-c) - 1)) / var(--ck-c)); display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--ck-fg); }
+.ck-ec-categories .ck-cat__media { position: relative; width: 100%; padding-top: var(--ck-ratio); overflow: hidden; border-radius: var(--ck-radius); margin-bottom: var(--ck-text-gap); }
+.ck-ec-categories .ck-cats[data-shape="oval"] .ck-cat__media { border-radius: 50%; }
+.ck-ec-categories .ck-cats[data-shape="square"] .ck-cat__media { border-radius: 0; }
+.ck-ec-categories .ck-cat__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ck-ec-categories .ck-cat__title { font-family: var(--ck-heading-font); font-size: var(--ck-title-size-m); font-weight: var(--ck-h-weight); color: var(--ck-heading-color); line-height: var(--ck-h-lh); }
+@media screen and (max-width: 749px) { .ck-ec-categories .ck-arrows { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-categories .ck-cats { --ck-c: var(--ck-cols-tablet); }
+  .ck-ec-categories .ck-cats[data-layout="slider"] { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .ck-ec-categories .ck-cats[data-layout="slider"]::-webkit-scrollbar { display: none; }
+  .ck-ec-categories .ck-cats[data-layout="slider"] .ck-cat { scroll-snap-align: start; }
+}
+@media screen and (min-width: 990px) { .ck-ec-categories .ck-cats { --ck-c: var(--ck-cols); } .ck-ec-categories .ck-cat__title { font-size: var(--ck-title-size); } }
+
+.ck-ec-products { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-products ck-scroller { display: block; }
+.ck-ec-products .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-products[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-products .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-products .ck-text p { margin: 0; }
+.ck-ec-products .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-products .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-products[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-products[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-products[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-products { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-products .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-products[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-products * { animation: none !important; transition: none !important; } }
+
+.ck-ec-products .ck-head { margin-bottom: var(--ck-head-gap); }
+.ck-ec-products .ck-sub { margin-top: var(--ck-sub-gap); }
+
+.ck-ec-products .ck-arrows { display: flex; justify-content: center; gap: calc(var(--ck-arrow-size) / 3); margin-bottom: calc(var(--ck-arrow-size) / 2); }
+.ck-ec-products .ck-arrow { width: var(--ck-arrow-size); height: var(--ck-arrow-size); border: 0; border-radius: 50%; background: var(--ck-arrow-bg); color: var(--ck-arrow-fg); padding: calc(var(--ck-arrow-size) / 4); cursor: pointer; }
+@media screen and (min-width: 990px) { .ck-ec-products[data-arrows-desktop="false"] .ck-arrows { display: none; } }
+
+.ck-ec-products .ck-proof { display: inline-block; margin: var(--ck-proof-gap, 6px) 0 0; padding: var(--ck-chip-py) var(--ck-chip-px); border: 1px dashed var(--ck-proof-fg); border-radius: var(--ck-radius); background: var(--ck-proof-bg); color: var(--ck-proof-fg); font-size: var(--ck-small); line-height: 1.6; }
+
+.ck-ec-products .ck-prods { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - var(--ck-gap) * (var(--ck-cols-mobile) - 1)) / var(--ck-cols-mobile) * 0.8); gap: var(--ck-gap); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.ck-ec-products .ck-prods::-webkit-scrollbar { display: none; }
+.ck-ec-products .ck-prod { scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; gap: var(--ck-item-gap); }
+.ck-ec-products .ck-prod__media { position: relative; display: block; width: 100%; padding-top: var(--ck-ratio); overflow: hidden; margin-bottom: var(--ck-item-gap); }
+.ck-ec-products .ck-prod__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: var(--ck-img-fit); }
+.ck-ec-products .ck-prod__badge { position: absolute; top: var(--ck-item-gap); inset-inline-start: var(--ck-item-gap); background: var(--ck-badge-bg); color: var(--ck-badge-fg); border-radius: var(--ck-radius); padding: var(--ck-chip-py) var(--ck-chip-px); font-size: var(--ck-small); line-height: 1.5; }
+.ck-ec-products .ck-prod__vendor { color: var(--ck-vendor-color); font-weight: var(--ck-btn-weight); text-transform: uppercase; font-size: var(--ck-small); }
+.ck-ec-products .ck-prod__title { color: var(--ck-heading-color); font-family: var(--ck-heading-font); font-size: var(--ck-title-size); font-weight: var(--ck-btn-weight); text-decoration: none; }
+.ck-ec-products .ck-prod__details { font-size: var(--ck-small); line-height: 1.6; }
+.ck-ec-products .ck-prod__price { color: var(--ck-price-color); font-weight: var(--ck-btn-weight); font-size: var(--ck-title-size); }
+.ck-ec-products .ck-prod__compare { color: var(--ck-compare-color); }
+.ck-ec-products .ck-prod__sale { color: var(--ck-sale-color); }
+.ck-ec-products .ck-prod__note { color: var(--ck-note-color); font-size: var(--ck-small); }
+.ck-ec-products .ck-prod__actions { display: flex; flex-wrap: wrap; gap: var(--ck-item-gap) calc(var(--ck-item-gap) * 3); align-items: center; justify-content: center; margin-top: var(--ck-item-gap); }
+.ck-ec-products .ck-btn--sm { padding: calc(var(--ck-btn-py) * 0.7) calc(var(--ck-btn-px) * 0.7); }
+.ck-ec-products .ck-prod__link { color: var(--ck-heading-color); font-weight: var(--ck-btn-weight); }
+.ck-ec-products .ck-prods__foot { margin-top: var(--ck-foot-gap); color: var(--ck-heading-color); }
+@media screen and (min-width: 750px) { .ck-ec-products .ck-prods { grid-auto-columns: calc((100% - var(--ck-gap) * (var(--ck-cols-tablet) - 1)) / var(--ck-cols-tablet)); } }
+@media screen and (min-width: 990px) { .ck-ec-products .ck-prods { grid-auto-columns: calc((100% - var(--ck-gap) * (var(--ck-cols) - 1)) / var(--ck-cols)); } }
+
+.ck-ec-split { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-split ck-scroller { display: block; }
+.ck-ec-split .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-split[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-split .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-split .ck-text p { margin: 0; }
+.ck-ec-split .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-split .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-split[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-split[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-split[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-split { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-split .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-split[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-split * { animation: none !important; transition: none !important; } }
+
+.ck-ec-split .ck-proof { display: inline-block; margin: var(--ck-proof-gap, 6px) 0 0; padding: var(--ck-chip-py) var(--ck-chip-px); border: 1px dashed var(--ck-proof-fg); border-radius: var(--ck-radius); background: var(--ck-proof-bg); color: var(--ck-proof-fg); font-size: var(--ck-small); line-height: 1.6; }
+
+.ck-ec-split .ck-split { display: flex; flex-direction: column; gap: var(--ck-gap); }
+.ck-ec-split .ck-split__panel { order: 2; background: var(--ck-panel-bg); border-radius: var(--ck-panel-radius); padding: var(--ck-panel-pad-m); display: flex; flex-direction: column; gap: var(--ck-item-gap); align-items: center; justify-content: center; text-align: var(--ck-panel-align); }
+.ck-ec-split .ck-split__panel > * { width: 100%; max-width: var(--ck-panel-max); }
+.ck-ec-split .ck-split__panel > .ck-badge { width: auto; }
+.ck-ec-split .ck-split__media { order: 1; background: var(--ck-media-bg); border-radius: var(--ck-panel-radius); overflow: hidden; height: var(--ck-media-h-m); }
+.ck-ec-split .ck-split__img { width: 100%; height: 100%; object-fit: var(--ck-fit); display: block; }
+.ck-ec-split .ck-badge { display: inline-block; background: var(--ck-badge-bg); color: var(--ck-badge-fg); border-radius: var(--ck-radius); padding: var(--ck-chip-py) var(--ck-chip-px); font-weight: var(--ck-btn-weight); font-size: var(--ck-large); }
+.ck-ec-split .ck-split__actions { display: flex; flex-wrap: wrap; gap: var(--ck-item-gap); align-items: center; justify-content: center; }
+.ck-ec-split .ck-split__link { color: var(--ck-heading-color); font-weight: var(--ck-btn-weight); }
+.ck-ec-split .ck-step { display: flex; gap: var(--ck-item-gap); text-align: start; align-items: flex-start; }
+.ck-ec-split .ck-step__num { flex: 0 0 auto; width: var(--ck-num-size); height: var(--ck-num-size); border-radius: 50%; background: var(--ck-accent); color: var(--ck-panel-bg); display: inline-flex; align-items: center; justify-content: center; font-weight: var(--ck-btn-weight); }
+.ck-ec-split .ck-step__title { color: var(--ck-heading-color); display: block; }
+.ck-ec-split .ck-tl { display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--ck-row, transparent); border-radius: var(--ck-radius); overflow: hidden; text-align: center; font-size: var(--ck-small); }
+.ck-ec-split .ck-tl > span { background: var(--ck-bg); padding: var(--ck-chip-px) var(--ck-chip-py); }
+.ck-ec-split .ck-tl__label { font-weight: var(--ck-btn-weight); color: var(--ck-heading-color); }
+.ck-ec-split .ck-tl--head > span { background: transparent; color: var(--ck-accent); font-weight: var(--ck-btn-weight); }
+.ck-ec-split .ck-note--box { background: var(--ck-bg); border-radius: var(--ck-panel-radius); padding: var(--ck-panel-pad-m); }
+.ck-ec-split .ck-note--big { font-family: var(--ck-heading-font); font-size: var(--ck-large); color: var(--ck-heading-color); }
+@media screen and (min-width: 990px) {
+  .ck-ec-split .ck-split { flex-direction: row; min-height: var(--ck-minh); }
+  .ck-ec-split .ck-split__panel { flex: 0 0 calc(var(--ck-panel-w) - var(--ck-gap) / 2); padding: var(--ck-panel-pad); order: 1; }
+  .ck-ec-split .ck-split__media { flex: 1; height: auto; order: 2; }
+  .ck-ec-split .ck-split[data-media="start"] .ck-split__media { order: 0; }
+}
+
+.ck-ec-featured { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-featured ck-scroller { display: block; }
+.ck-ec-featured .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-featured[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-featured .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-featured .ck-text p { margin: 0; }
+.ck-ec-featured .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-featured .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-featured[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-featured[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-featured[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-featured { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-featured .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-featured[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-featured * { animation: none !important; transition: none !important; } }
+
+.ck-ec-featured .ck-proof { display: inline-block; margin: var(--ck-proof-gap, 6px) 0 0; padding: var(--ck-chip-py) var(--ck-chip-px); border: 1px dashed var(--ck-proof-fg); border-radius: var(--ck-radius); background: var(--ck-proof-bg); color: var(--ck-proof-fg); font-size: var(--ck-small); line-height: 1.6; }
+
+.ck-ec-featured .ck-feat { display: flex; flex-direction: column; gap: var(--ck-gap); text-align: start; }
+.ck-ec-featured .ck-feat__side { background: var(--ck-side-bg); border-radius: var(--ck-panel-radius); overflow: hidden; height: var(--ck-side-h-m); }
+.ck-ec-featured .ck-feat__side-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ck-ec-featured .ck-feat__panel { background: var(--ck-panel-bg); border-radius: var(--ck-panel-radius); padding: var(--ck-panel-pad-m); display: flex; flex-direction: column; gap: var(--ck-gap); align-items: center; }
+.ck-ec-featured .ck-feat__product { width: var(--ck-img-w); max-width: 100%; }
+.ck-ec-featured .ck-feat__img { width: 100%; height: auto; display: block; }
+.ck-ec-featured .ck-feat__info { display: flex; flex-direction: column; gap: var(--ck-item-gap); align-items: flex-start; flex: 1; }
+.ck-ec-featured .ck-feat__tag { background: var(--ck-tag-bg); color: var(--ck-tag-fg); border-radius: var(--ck-radius); padding: var(--ck-chip-py) var(--ck-chip-px); font-weight: var(--ck-btn-weight); }
+.ck-ec-featured .ck-feat__title { margin: 0; font-family: var(--ck-heading-font); font-size: var(--ck-title-size); font-weight: var(--ck-btn-weight); color: var(--ck-heading-color); line-height: var(--ck-h-lh); }
+.ck-ec-featured .ck-feat__price { font-size: var(--ck-large); font-weight: var(--ck-btn-weight); }
+.ck-ec-featured .ck-feat__sale { color: var(--ck-sale-color); }
+.ck-ec-featured .ck-feat__compare { color: var(--ck-compare-color); }
+.ck-ec-featured .ck-feat__note { color: var(--ck-note-color); font-size: var(--ck-small); }
+.ck-ec-featured .ck-feat__btn { display: inline-flex; align-items: center; gap: var(--ck-chip-px); }
+@media screen and (min-width: 990px) {
+  .ck-ec-featured .ck-feat { flex-direction: row; min-height: var(--ck-minh); }
+  .ck-ec-featured .ck-feat__side { flex: 0 0 calc(var(--ck-side-w) - var(--ck-gap) / 2); height: auto; }
+  .ck-ec-featured .ck-feat[data-media="end"] .ck-feat__side { order: 2; }
+  .ck-ec-featured .ck-feat__panel { flex: 1; flex-direction: row; padding: var(--ck-panel-pad); }
+}
+
+.ck-ec-cards { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-cards ck-scroller { display: block; }
+.ck-ec-cards .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-cards[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-cards .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-cards .ck-text p { margin: 0; }
+.ck-ec-cards .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-cards .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-cards[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-cards[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-cards[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-cards { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-cards .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-cards[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-cards * { animation: none !important; transition: none !important; } }
+
+.ck-ec-cards .ck-head { margin-bottom: var(--ck-head-gap); }
+.ck-ec-cards .ck-sub { margin-top: var(--ck-sub-gap); }
+
+.ck-ec-cards .ck-proof { display: inline-block; margin: var(--ck-proof-gap, 6px) 0 0; padding: var(--ck-chip-py) var(--ck-chip-px); border: 1px dashed var(--ck-proof-fg); border-radius: var(--ck-radius); background: var(--ck-proof-bg); color: var(--ck-proof-fg); font-size: var(--ck-small); line-height: 1.6; }
+
+.ck-ec-cards .ck-cards__intro { max-width: var(--ck-intro-w); margin: 0 auto var(--ck-head-gap); }
+.ck-ec-cards .ck-cards { display: grid; gap: var(--ck-gap); grid-template-columns: repeat(var(--ck-cols-mobile), minmax(0, 1fr)); }
+.ck-ec-cards .ck-card { display: flex; flex-direction: column; align-items: var(--ck-card-align); text-align: var(--ck-card-align); gap: var(--ck-item-gap); padding: var(--ck-card-pad); border-radius: var(--ck-card-radius); background: var(--ck-card-bg, var(--ck-card-bg-d)); }
+.ck-ec-cards .ck-card--dashed { border: 2px dashed var(--ck-card-border); }
+.ck-ec-cards .ck-card__media { width: var(--ck-img-size-m); max-width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: var(--ck-card-radius); }
+.ck-ec-cards .ck-cards[data-shape="circle"] .ck-card__media { border-radius: 50%; }
+.ck-ec-cards .ck-cards[data-shape="square"] .ck-card__media { border-radius: 0; }
+.ck-ec-cards .ck-card__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ck-ec-cards .ck-card__num { display: inline-flex; align-items: center; justify-content: center; min-width: var(--ck-num-size); height: var(--ck-num-size); border-radius: 50%; background: var(--ck-num-bg); color: var(--ck-num-fg); font-weight: var(--ck-btn-weight); }
+.ck-ec-cards .ck-card__title { margin: 0; font-family: var(--ck-heading-font); font-size: var(--ck-title-size-m); font-weight: var(--ck-title-weight); line-height: var(--ck-h-lh); color: var(--ck-heading-color); }
+.ck-ec-cards .ck-card__link { color: var(--ck-heading-color); font-weight: var(--ck-btn-weight); }
+.ck-ec-cards .ck-cards__foot { margin-top: var(--ck-foot-gap); color: var(--ck-foot-color); font-size: var(--ck-large); }
+.ck-ec-cards .ck-cards__cta { margin-top: var(--ck-foot-gap); }
+@media screen and (min-width: 750px) { .ck-ec-cards .ck-cards { grid-template-columns: repeat(var(--ck-cols-tablet), minmax(0, 1fr)); } }
+@media screen and (min-width: 990px) {
+  .ck-ec-cards .ck-cards { grid-template-columns: repeat(var(--ck-cols), minmax(0, 1fr)); }
+  .ck-ec-cards .ck-card__media { width: var(--ck-img-size); }
+  .ck-ec-cards .ck-card__title { font-size: var(--ck-title-size); }
+}
+
+.ck-ec-quotes { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-quotes ck-scroller { display: block; }
+.ck-ec-quotes .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-quotes[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-quotes .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-quotes .ck-text p { margin: 0; }
+.ck-ec-quotes .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-quotes .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-quotes[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-quotes[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-quotes[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-quotes { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-quotes .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-quotes[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-quotes * { animation: none !important; transition: none !important; } }
+
+.ck-ec-quotes .ck-head { margin-bottom: var(--ck-head-gap); }
+.ck-ec-quotes .ck-sub { margin-top: var(--ck-sub-gap); }
+
+.ck-ec-quotes .ck-quotes { display: grid; gap: var(--ck-gap); grid-template-columns: repeat(var(--ck-cols-mobile), minmax(0, 1fr)); }
+.ck-ec-quotes .ck-quote { margin: 0; padding: var(--ck-card-pad); border-radius: var(--ck-card-radius); background: var(--ck-card-bg, var(--ck-card-bg-d)); color: var(--ck-card-fg, var(--ck-card-fg-d)); font-family: var(--ck-heading-font); font-size: var(--ck-quote-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); display: flex; align-items: center; justify-content: center; }
+.ck-ec-quotes .ck-quotes__foot { margin-top: var(--ck-foot-gap); color: var(--ck-foot-color); font-size: var(--ck-large); }
+@media screen and (min-width: 750px) { .ck-ec-quotes .ck-quotes { grid-template-columns: repeat(var(--ck-cols-tablet), minmax(0, 1fr)); } .ck-ec-quotes .ck-quote { font-size: var(--ck-quote-size); } }
+@media screen and (min-width: 990px) { .ck-ec-quotes .ck-quotes { grid-template-columns: repeat(var(--ck-cols), minmax(0, 1fr)); } }
+
+.ck-ec-faq { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-faq ck-scroller { display: block; }
+.ck-ec-faq .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-faq[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-faq .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-faq .ck-text p { margin: 0; }
+.ck-ec-faq .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-faq .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-faq[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-faq[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-faq[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-faq { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-faq .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-faq[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-faq * { animation: none !important; transition: none !important; } }
+
+.ck-ec-faq .ck-head { margin-bottom: var(--ck-head-gap); }
+.ck-ec-faq .ck-sub { margin-top: var(--ck-sub-gap); }
+
+.ck-ec-faq .ck-proof { display: inline-block; margin: var(--ck-proof-gap, 6px) 0 0; padding: var(--ck-chip-py) var(--ck-chip-px); border: 1px dashed var(--ck-proof-fg); border-radius: var(--ck-radius); background: var(--ck-proof-bg); color: var(--ck-proof-fg); font-size: var(--ck-small); line-height: 1.6; }
+
+.ck-ec-faq .ck-faq { max-width: var(--ck-faq-w); margin: 0 auto; display: grid; gap: var(--ck-gap); text-align: start; }
+.ck-ec-faq .ck-faq__item { background: var(--ck-item-bg); border-radius: var(--ck-item-radius); }
+.ck-ec-faq .ck-faq__q { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: var(--ck-row-pad); padding: var(--ck-row-pad); font-family: var(--ck-heading-font); font-size: var(--ck-q-size-m); font-weight: var(--ck-h-weight); color: var(--ck-heading-color); }
+.ck-ec-faq .ck-faq__q::-webkit-details-marker { display: none; }
+.ck-ec-faq .ck-faq__icon { position: relative; flex: 0 0 auto; width: var(--ck-small); height: var(--ck-small); }
+.ck-ec-faq .ck-faq__icon::before, .ck-ec-faq .ck-faq__icon::after { content: ""; position: absolute; inset: 45% 0 auto; height: 2px; background: var(--ck-line); transition: transform var(--ck-anim-dur) ease; }
+.ck-ec-faq .ck-faq__icon::after { transform: rotate(90deg); }
+.ck-ec-faq .ck-faq__item[open] .ck-faq__icon::after { transform: rotate(0deg); }
+.ck-ec-faq .ck-faq__a { padding: 0 var(--ck-row-pad) var(--ck-row-pad); }
+@media screen and (min-width: 750px) { .ck-ec-faq .ck-faq__q { font-size: var(--ck-q-size); } }
+
+.ck-ec-gallery { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-gallery ck-scroller { display: block; }
+.ck-ec-gallery .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-gallery[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-gallery .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-gallery .ck-text p { margin: 0; }
+.ck-ec-gallery .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-gallery .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-gallery[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-gallery[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-gallery[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-gallery { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-gallery .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-gallery[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-gallery * { animation: none !important; transition: none !important; } }
+
+.ck-ec-gallery .ck-head { margin-bottom: var(--ck-head-gap); }
+.ck-ec-gallery .ck-sub { margin-top: var(--ck-sub-gap); }
+
+.ck-ec-gallery .ck-gal { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - var(--ck-gap) * (var(--ck-cols-mobile) - 1)) / var(--ck-cols-mobile)); gap: var(--ck-gap); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.ck-ec-gallery .ck-gal::-webkit-scrollbar { display: none; }
+.ck-ec-gallery .ck-gal__item { position: relative; display: block; padding-top: var(--ck-ratio); border-radius: var(--ck-img-radius); overflow: hidden; scroll-snap-align: start; }
+.ck-ec-gallery .ck-gal__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--ck-anim-dur) ease; }
+.ck-ec-gallery .ck-gal__item:hover .ck-gal__img { transform: scale(1.05); }
+@media screen and (min-width: 750px) { .ck-ec-gallery .ck-gal { grid-auto-columns: calc((100% - var(--ck-gap) * (var(--ck-cols-tablet) - 1)) / var(--ck-cols-tablet)); } }
+@media screen and (min-width: 990px) { .ck-ec-gallery .ck-gal { grid-auto-columns: calc((100% - var(--ck-gap) * (var(--ck-cols) - 1)) / var(--ck-cols)); } }
+
+.ck-ec-newsletter { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-newsletter ck-scroller { display: block; }
+.ck-ec-newsletter .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-newsletter[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-newsletter .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-newsletter .ck-text p { margin: 0; }
+.ck-ec-newsletter .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-newsletter .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-newsletter[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-newsletter[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-newsletter[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-newsletter { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-newsletter .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-newsletter[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-newsletter * { animation: none !important; transition: none !important; } }
+
+.ck-ec-newsletter .ck-nl { display: flex; flex-direction: column; gap: var(--ck-gap); align-items: center; }
+.ck-ec-newsletter .ck-nl__media { width: 100%; }
+.ck-ec-newsletter .ck-nl__img { width: 100%; height: auto; display: block; }
+.ck-ec-newsletter .ck-nl__content { flex: 1; text-align: var(--ck-align); }
+.ck-ec-newsletter .ck-nl__kicker { margin: 0; font-family: var(--ck-heading-font); font-size: calc(var(--ck-kicker-size) * 0.75); color: var(--ck-heading-color); }
+.ck-ec-newsletter .ck-nl__form { margin-top: var(--ck-btn-py); max-width: var(--ck-form-w); }
+.ck-ec-newsletter .ck-nl__field { display: flex; align-items: center; border: 1px solid var(--ck-input-border); background: var(--ck-input-bg); border-radius: var(--ck-radius); padding: var(--ck-chip-py); }
+.ck-ec-newsletter .ck-nl__input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; color: inherit; padding: 0 var(--ck-btn-py); }
+.ck-ec-newsletter .ck-nl__input:focus { outline: none; }
+.ck-ec-newsletter .ck-nl__field:focus-within { outline: 2px solid var(--ck-heading-color); }
+@media screen and (min-width: 990px) {
+  .ck-ec-newsletter .ck-nl { flex-direction: row; }
+  .ck-ec-newsletter .ck-nl__media { flex: 0 0 var(--ck-media-w); margin-bottom: calc(var(--ck-media-offset) * -1); align-self: flex-end; }
+  .ck-ec-newsletter .ck-nl[data-media="end"] .ck-nl__media { order: 2; }
+  .ck-ec-newsletter .ck-nl__kicker { font-size: var(--ck-kicker-size); }
+}
+
+</style>
+<meta name="robots" content="noindex,nofollow">
+<style>
+@font-face { font-family: 'Tajawal'; font-weight: 400; src: url('../images/ck-tajawal-400.woff2') format('woff2'); unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'Tajawal'; font-weight: 500; src: url('../images/ck-tajawal-500.woff2') format('woff2'); unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFC; }
+@font-face { font-family: 'Tajawal'; font-weight: 600 900; src: url('../images/ck-tajawal-700.woff2') format('woff2'); unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFC; }
+:root { --ck-ar-font: 'Tajawal'; }
+body { font-family: 'DM Sans', 'Tajawal', sans-serif; }
+</style>
+</head>
+<body>
+<header class="ck-demo-header"><strong>أساس</strong><nav><a href="#">العطور</a><a href="#">العود والبخور</a><a href="#">الهدايا</a></nav></header>
+<div id="shopify-section-hero" class="shopify-section"><style>
+  #shopify-section-hero {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-hero" style="
+    --ck-bg: #FFE3D7;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 64px;
+    --ck-h-size-m: 26px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 0px;
+    --ck-pad-bottom: 0px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: right;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-minh: 720px;
+    --ck-media-w: 40%;
+    --ck-text-gap: 24px;
+    --ck-gap: 40px;
+    --ck-valign: center;
+    --ck-align-m: center;
+    --ck-link-color: #000000;
+  " data-animate="none"
+>
+<div class="ck-inner ck-hero" data-media="end">
+  <div class="ck-hero__text"><h1 class="ck-heading">ريحتك تدخل قبلك… وتقعد بعد ما تطلع.</h1><div class="ck-text ck-hero__sub"><p>عطور ودهن عود وبخور مبنية من القاعدة: نبدأ بالعود الحقيقي، وبعدين كل شي ثاني. ونكتب لك على كل عطر كم ساعة يقعد.</p></div><div class="ck-hero__actions"><a class="ck-btn" href="shopify://collections/all">اكتشف عطرك</a><a class="ck-hero__link" href="#">جرّب قبل لا تشتري ←</a></div>
+  </div>
+  <div class="ck-hero__media"><img src="../images/ec-hero.png" class="ck-hero__img" alt="صورة الواجهة" loading="eager"></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-marquee" class="shopify-section"><style>
+  #shopify-section-marquee {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-marquee" style="
+    --ck-bg: #F4C2C2;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 18px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 20px;
+    --ck-pad-bottom: 20px;
+    --ck-pad-top-m: 12px;
+    --ck-pad-bottom-m: 12px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 0px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-marquee-dur: 30s;
+    --ck-marquee-dir: normal;
+    --ck-item-gap: 30px;
+    --ck-icon-size: 32px;
+    --ck-marquee-play: paused;
+  " data-animate="none" data-full-width
+>
+<div class="ck-marquee__viewport" aria-label="مزايا المتجر">
+  <div class="ck-marquee__track"><div class="ck-marquee__group"><span class="ck-marquee__item" style="" >جرّب قبل القنينة: مجموعة التجربة ينخصم سعرها من طلبك الجاي [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >ما ثبت معك الساعات المكتوبة؟ رجّعه [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >يرد عليك إنسان بالواتساب خلال ___ دقيقة</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >توصيل داخل الكويت خلال ___ ساعة، مغلّف ضد الحر</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span></div><div class="ck-marquee__group" aria-hidden="true"><span class="ck-marquee__item" style="" >جرّب قبل القنينة: مجموعة التجربة ينخصم سعرها من طلبك الجاي [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >ما ثبت معك الساعات المكتوبة؟ رجّعه [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >يرد عليك إنسان بالواتساب خلال ___ دقيقة</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >توصيل داخل الكويت خلال ___ ساعة، مغلّف ضد الحر</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span></div><div class="ck-marquee__group" aria-hidden="true"><span class="ck-marquee__item" style="" >جرّب قبل القنينة: مجموعة التجربة ينخصم سعرها من طلبك الجاي [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >ما ثبت معك الساعات المكتوبة؟ رجّعه [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >يرد عليك إنسان بالواتساب خلال ___ دقيقة</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >توصيل داخل الكويت خلال ___ ساعة، مغلّف ضد الحر</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span></div><div class="ck-marquee__group" aria-hidden="true"><span class="ck-marquee__item" style="" >جرّب قبل القنينة: مجموعة التجربة ينخصم سعرها من طلبك الجاي [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >ما ثبت معك الساعات المكتوبة؟ رجّعه [يحتاج إثبات]</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >يرد عليك إنسان بالواتساب خلال ___ دقيقة</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span><span class="ck-marquee__item" style="" >توصيل داخل الكويت خلال ___ ساعة، مغلّف ضد الحر</span>
+          <span class="ck-marquee__sep" aria-hidden="true"><img src="../images/ec-star.png" class="ck-marquee__icon" alt="" loading="lazy"></span></div></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-categories" class="shopify-section"><style>
+  #shopify-section-categories {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-categories" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 50px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 3;
+    --ck-cols-mobile: 2;
+    --ck-gap: 24px;
+    --ck-arrow-bg: #9B9B9B;
+    --ck-arrow-fg: #FFFFFF;
+    --ck-arrow-size: 28px;
+    --ck-ratio: 126%;
+    --ck-title-size: 20px;
+    --ck-title-size-m: 16px;
+    --ck-row-gap: 40px;
+    --ck-text-gap: 20px;
+  " data-animate="none" data-arrows-desktop="true"
+>
+<ck-scroller class="ck-inner"><div class="ck-head"><h2 class="ck-heading">كل قسم… نفس القاعدة.</h2></div><div class="ck-arrows">
+  <button type="button" class="ck-arrow" data-prev aria-label="السابق"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  <button type="button" class="ck-arrow" data-next aria-label="التالي"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+</div><div class="ck-cats" data-shape="oval" data-layout="slider" data-track><a class="ck-cat" href="shopify://collections/all" >
+        <span class="ck-cat__media"><img src="../images/ec-cat-1.png" class="ck-cat__img" alt="" loading="lazy"></span><span class="ck-cat__title">عطور رجالي</span><span class="ck-cat__text">تقعد على الدشداشة لين آخر الديوانية.</span></a><a class="ck-cat" href="shopify://collections/all" >
+        <span class="ck-cat__media"><img src="../images/ec-cat-2.png" class="ck-cat__img" alt="" loading="lazy"></span><span class="ck-cat__title">عطور نسائي</span><span class="ck-cat__text">تمسك بالعباية والشيلة، مو بس بالرشة الأولى.</span></a><a class="ck-cat" href="shopify://collections/all" >
+        <span class="ck-cat__media"><img src="../images/ec-cat-3.png" class="ck-cat__img" alt="" loading="lazy"></span><span class="ck-cat__title">للجنسين</span><span class="ck-cat__text">قاعدة عود ومسك تناسب الكل.</span></a><a class="ck-cat" href="shopify://collections/all" >
+        <span class="ck-cat__media"><img src="../images/ec-cat-4.png" class="ck-cat__img" alt="" loading="lazy"></span><span class="ck-cat__title">دهن العود</span><span class="ck-cat__text">نقطة وحدة تكفي، إذا كان صدق.</span></a><a class="ck-cat" href="shopify://collections/all" >
+        <span class="ck-cat__media"><img src="../images/ec-ins-4.png" class="ck-cat__img" alt="" loading="lazy"></span><span class="ck-cat__title">عود وبخور ومعمول</span><span class="ck-cat__text">للبيت، للدوام، وللعزايم.</span></a><a class="ck-cat" href="shopify://collections/all" >
+        <span class="ck-cat__media"><img src="../images/ec-ins-2.png" class="ck-cat__img" alt="" loading="lazy"></span><span class="ck-cat__title">مباخر</span><span class="ck-cat__text">حرارة صح، ريحة صح.</span></a><a class="ck-cat" href="shopify://collections/all" >
+        <span class="ck-cat__media"><img src="../images/ec-ins-3.png" class="ck-cat__img" alt="" loading="lazy"></span><span class="ck-cat__title">هدايا</span><span class="ck-cat__text">جاهزة ومغلّفة، على ميزانيتك.</span></a></div>
+</ck-scroller>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-bestsellers" class="shopify-section"><style>
+  #shopify-section-bestsellers {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-products" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 50px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 3;
+    --ck-cols-mobile: 1;
+    --ck-gap: 30px;
+    --ck-arrow-bg: #9B9B9B;
+    --ck-arrow-fg: #FFFFFF;
+    --ck-arrow-size: 28px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-ratio: 100%;
+    --ck-img-fit: cover;
+    --ck-title-size: 16px;
+    --ck-vendor-color: #7E7E7E;
+    --ck-price-color: #000000;
+    --ck-sale-color: #FF7C7C;
+    --ck-compare-color: #B0B0B0;
+    --ck-badge-bg: #F4C2C2;
+    --ck-badge-fg: #000000;
+    --ck-note-color: #B4532A;
+    --ck-item-gap: 6px;
+    --ck-foot-gap: 30px;
+  " data-animate="none" data-arrows-desktop="false"
+>
+<ck-scroller class="ck-inner"><div class="ck-head"><h2 class="ck-heading">الأكثر طلب</h2></div><div class="ck-arrows">
+  <button type="button" class="ck-arrow" data-prev aria-label="السابق"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  <button type="button" class="ck-arrow" data-next aria-label="التالي"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+</div><div class="ck-prods" data-track><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-1.jpg" class="ck-prod__img" alt="" loading="lazy"></a><span class="ck-prod__vendor">أساس</span><a class="ck-prod__title" href="#">اسم العطر ١</a><div class="ck-text ck-prod__details"><p>القاعدة: عود + عنبر + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قوي · الموسم: شتوي</p></div><span class="ck-proof">[يحتاج إثبات من البراند] القاعدة والساعات</span><span class="ck-prod__price">٢٤ د.ك</span><span class="ck-prod__note">سعر تجريبي</span></div><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-5.jpg" class="ck-prod__img" alt="" loading="lazy"></a><span class="ck-prod__vendor">أساس</span><a class="ck-prod__title" href="#">اسم العطر ٢</a><div class="ck-text ck-prod__details"><p>القاعدة: عود + راتنج + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: متوسط · الموسم: طول السنة</p></div><span class="ck-proof">[يحتاج إثبات من البراند] القاعدة والساعات</span><span class="ck-prod__price">٢٢ د.ك</span><span class="ck-prod__note">سعر تجريبي</span></div><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-4.jpg" class="ck-prod__img" alt="" loading="lazy"></a><span class="ck-prod__vendor">أساس</span><a class="ck-prod__title" href="#">اسم العطر ٣</a><div class="ck-text ck-prod__details"><p>القاعدة: عنبر + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قريب · الموسم: صيفي</p></div><span class="ck-proof">[يحتاج إثبات من البراند] القاعدة والساعات</span><span class="ck-prod__price">١٨ د.ك</span><span class="ck-prod__note">سعر تجريبي</span></div><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-2.jpg" class="ck-prod__img" alt="" loading="lazy"></a><span class="ck-prod__vendor">أساس</span><a class="ck-prod__title" href="#">اسم العطر ٤</a><div class="ck-text ck-prod__details"><p>القاعدة: عود + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قوي · الموسم: شتوي</p></div><span class="ck-proof">[يحتاج إثبات من البراند] القاعدة والساعات</span><span class="ck-prod__price">٢٨ د.ك</span><span class="ck-prod__note">سعر تجريبي</span></div><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-10.jpg" class="ck-prod__img" alt="" loading="lazy"></a><span class="ck-prod__vendor">أساس</span><a class="ck-prod__title" href="#">اسم العطر ٥</a><div class="ck-text ck-prod__details"><p>القاعدة: مسك + عنبر (مثال) · الثبات: ___ ساعة</p><p>الفوحان: متوسط · الموسم: طول السنة</p></div><span class="ck-proof">[يحتاج إثبات من البراند] القاعدة والساعات</span><span class="ck-prod__price">٢٠ د.ك</span><span class="ck-prod__note">سعر تجريبي</span></div><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-3.jpg" class="ck-prod__img" alt="" loading="lazy"></a><span class="ck-prod__vendor">أساس</span><a class="ck-prod__title" href="#">اسم العطر ٦</a><div class="ck-text ck-prod__details"><p>القاعدة: عود + عنبر (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قريب · الموسم: صيفي</p></div><span class="ck-proof">[يحتاج إثبات من البراند] القاعدة والساعات</span><span class="ck-prod__price">٢٦ د.ك</span><span class="ck-prod__note">سعر تجريبي</span></div></div></ck-scroller>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-oud" class="shopify-section"><style>
+  #shopify-section-oud {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-split" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 36px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 50px;
+    --ck-pad-bottom: 12px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 12px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-panel-w: 61%;
+    --ck-panel-bg: #F5F5DC;
+    --ck-media-bg: #FFE3D7;
+    --ck-panel-radius: 20px;
+    --ck-panel-pad: 60px;
+    --ck-panel-pad-m: 24px;
+    --ck-minh: 460px;
+    --ck-media-h-m: 220px;
+    --ck-gap: 24px;
+    --ck-item-gap: 18px;
+    --ck-fit: cover;
+    --ck-badge-bg: #FF9494;
+    --ck-badge-fg: #FFFFFF;
+    --ck-accent: #000000;
+    --ck-panel-align: center;
+    --ck-panel-max: 760px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+  " data-animate="none"
+>
+<div class="ck-inner">
+  <div class="ck-split" data-media="end">
+    <div class="ck-split__panel"><span class="ck-badge">العود</span><h2 class="ck-heading">العود الصدق… داخله مثل برّا.</h2><div class="ck-text ck-split__body"><p>مثل الذهب. المطلي يلمع من برّا. الصافي ذهب لين داخله.</p></div><div class="ck-split__actions"><a class="ck-btn" href="shopify://collections/all">تسوّق العود والبخور</a></div>
+    </div>
+    <div class="ck-split__media"><img src="../images/ec-promo.png" class="ck-split__img" alt="" loading="lazy"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-home_scent" class="shopify-section"><style>
+  #shopify-section-home_scent {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-featured" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 0px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-side-w: 38%;
+    --ck-side-bg: #E5DCCB;
+    --ck-panel-bg: #E6E6FA;
+    --ck-panel-radius: 20px;
+    --ck-panel-pad: 50px;
+    --ck-panel-pad-m: 20px;
+    --ck-minh: 470px;
+    --ck-side-h-m: 220px;
+    --ck-gap: 24px;
+    --ck-item-gap: 14px;
+    --ck-img-w: 320px;
+    --ck-tag-bg: #B9AC8A;
+    --ck-tag-fg: #FFFFFF;
+    --ck-title-size: 24px;
+    --ck-sale-color: #FF7C7C;
+    --ck-compare-color: #B0B0B0;
+    --ck-note-color: #B4532A;
+  " data-animate="none"
+>
+<div class="ck-inner">
+  <div class="ck-feat" data-media="start">
+    <div class="ck-feat__side"><img src="../images/ec-hand.png" class="ck-feat__side-img" alt="" loading="lazy"></div>
+    <div class="ck-feat__panel">
+      <div class="ck-feat__product"><img src="../images/ec-featured.png" class="ck-feat__img" alt="" loading="lazy"></div>
+      <div class="ck-feat__info"><span class="ck-feat__tag">ريحة البيت</span><h2 class="ck-feat__title">طقم «ريحة البيت»</h2><div class="ck-text"><p>معمول يومي + عود للعزايم + مبخرة</p></div><span class="ck-feat__price"><span class="ck-feat__sale">___ د.ك</span></span><span class="ck-feat__note">سعر تجريبي</span><span class="ck-proof">[يحتاج إثبات من البراند] مواصفات المبخرة وضمانها</span><a class="ck-btn ck-feat__btn" href="shopify://collections/all"><svg viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true" focusable="false"><path d="M6 7h12l-1 13H7L6 7Zm3 0a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2"/></svg>خذ طقم ريحة البيت</a></div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-gifts" class="shopify-section"><style>
+  #shopify-section-gifts {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-products" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 50px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 3;
+    --ck-cols-mobile: 1;
+    --ck-gap: 30px;
+    --ck-arrow-bg: #9B9B9B;
+    --ck-arrow-fg: #FFFFFF;
+    --ck-arrow-size: 28px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-ratio: 100%;
+    --ck-img-fit: cover;
+    --ck-title-size: 16px;
+    --ck-vendor-color: #7E7E7E;
+    --ck-price-color: #000000;
+    --ck-sale-color: #FF7C7C;
+    --ck-compare-color: #B0B0B0;
+    --ck-badge-bg: #F4C2C2;
+    --ck-badge-fg: #000000;
+    --ck-note-color: #B4532A;
+    --ck-item-gap: 6px;
+    --ck-foot-gap: 30px;
+  " data-animate="none" data-arrows-desktop="false"
+>
+<ck-scroller class="ck-inner"><div class="ck-head"><h2 class="ck-heading">هدية تبيّض الوجه.</h2><div class="ck-text ck-sub"><p>العطر هدية ما تنرد. اختار على ميزانيتك، وإحنا نغلّفها ونوصلها على الوقت.</p></div></div><div class="ck-arrows">
+  <button type="button" class="ck-arrow" data-prev aria-label="السابق"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  <button type="button" class="ck-arrow" data-next aria-label="التالي"><svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" focusable="false"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+</div><div class="ck-prods" data-track><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-6.jpg" class="ck-prod__img" alt="" loading="lazy"></a><a class="ck-prod__title" href="#">تحت ١٥ د.ك</a><div class="ck-text ck-prod__details"><p>للزميل، للجار، للضيف</p></div><span class="ck-prod__price"></span><span class="ck-prod__note">سعر تجريبي</span></div><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-8.jpg" class="ck-prod__img" alt="" loading="lazy"></a><a class="ck-prod__title" href="#">من ٢٥ لـ ٣٥ د.ك</a><div class="ck-text ck-prod__details"><p>للأهل والمناسبات</p></div><span class="ck-prod__price"></span><span class="ck-prod__note">سعر تجريبي</span></div><div class="ck-prod" >
+          <a class="ck-prod__media" href="#"><img src="../images/ec-p-7.jpg" class="ck-prod__img" alt="" loading="lazy"></a><a class="ck-prod__title" href="#">بوكس على ذوقك</a><div class="ck-text ck-prod__details"><p>اختار القطع، ونحط اسمه عليه</p></div><span class="ck-proof">[يحتاج إثبات من البراند] البوكس والاسم</span><span class="ck-prod__price"></span><span class="ck-prod__note">سعر تجريبي</span></div></div><div class="ck-text ck-prods__foot"><p>كيس هدية لكل قطعة. وموعد توصيل نقوله لك قبل لا تدفع. [يحتاج إثبات من البراند]</p></div></ck-scroller>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-base" class="shopify-section"><style>
+  #shopify-section-base {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-cards" style="
+    --ck-bg: #FFF5E5;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 60px;
+    --ck-pad-bottom: 60px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 40px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 3;
+    --ck-cols-tablet: 2;
+    --ck-cols-mobile: 1;
+    --ck-gap: 24px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-img-size: 200px;
+    --ck-img-size-m: 180px;
+    --ck-card-pad: 0px;
+    --ck-card-radius: 20px;
+    --ck-card-bg-d: rgba(0,0,0,0);
+    --ck-card-border: #B4532A;
+    --ck-card-align: center;
+    --ck-title-size: 24px;
+    --ck-title-size-m: 20px;
+    --ck-title-weight: 700;
+    --ck-num-bg: #000000;
+    --ck-num-fg: #FFFFFF;
+    --ck-item-gap: 12px;
+    --ck-foot-gap: 30px;
+    --ck-foot-color: #000000;
+    --ck-intro-w: 760px;
+  " data-animate="none"
+>
+<div class="ck-inner"><div class="ck-cards" data-shape="circle"><div class="ck-card" style="" ><div class="ck-card__media"><img src="../images/ec-ft-1.png" class="ck-card__img" alt="" loading="lazy"></div><h3 class="ck-card__title">القاعدة مكتوبة أول شي.</h3><div class="ck-text ck-card__text"><p>على كل عطر تشوف شنو قاعدته قبل لا تشوف ريحته الأولى.</p></div></div><div class="ck-card" style="" ><div class="ck-card__media"><img src="../images/ec-ft-2.png" class="ck-card__img" alt="" loading="lazy"></div><h3 class="ck-card__title">الثبات بالساعات، مو بالكلام.</h3><div class="ck-text ck-card__text"><p>نكتب لك كم ساعة يقعد على الجلد، وعلى الدشداشة، وعلى العباية.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] ساعات الاختبار + الطريقة</span></div><div class="ck-card" style="" ><div class="ck-card__media"><img src="../images/ec-ft-3.png" class="ck-card__img" alt="" loading="lazy"></div><h3 class="ck-card__title">فوحان واضح.</h3><div class="ck-text ck-card__text"><p>نقول لك إذا هو عطر «يدخل المكان قبلك» أو عطر «قريب منك»، عشان تختار على مكانك: دوام، ديوانية، عزيمة.</p></div></div></div></div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-quotes" class="shopify-section"><style>
+  #shopify-section-quotes {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-quotes" style="
+    --ck-bg: #FFFFFF;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 50px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 2;
+    --ck-cols-mobile: 1;
+    --ck-gap: 24px;
+    --ck-card-pad: 28px;
+    --ck-card-radius: 20px;
+    --ck-quote-size: 20px;
+    --ck-quote-size-m: 18px;
+    --ck-card-bg-d: #FFE3D7;
+    --ck-card-fg-d: #000000;
+    --ck-foot-gap: 40px;
+    --ck-foot-color: #000000;
+  " data-animate="none"
+>
+<div class="ck-inner"><div class="ck-head"><h2 class="ck-heading">إذا قلت وحدة من هذي… مو بروحك.</h2></div><div class="ck-quotes"><blockquote class="ck-quote" style="" >«الريحة حلوة… والثبات صفر.»</blockquote><blockquote class="ck-quote" style="" >«رشّيته الصبح، وقبل الظهر اختفى.»</blockquote><blockquote class="ck-quote" style="" >«دفعت فلوس عطر… وطلع كأنه ماي.»</blockquote><blockquote class="ck-quote" style="" >«نفس الريحة بالضبط… بس ما يقعد.»</blockquote></div><div class="ck-text ck-quotes__foot"><p>المشكلة مو بجلدك. ومو لازم ترش أكثر. المشكلة بطريقة بناء العطر نفسه.</p></div></div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-why" class="shopify-section"><style>
+  #shopify-section-why {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-split" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 36px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 50px;
+    --ck-pad-bottom: 12px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 12px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-panel-w: 61%;
+    --ck-panel-bg: #FFE3D7;
+    --ck-media-bg: #FFE3D7;
+    --ck-panel-radius: 20px;
+    --ck-panel-pad: 60px;
+    --ck-panel-pad-m: 24px;
+    --ck-minh: 460px;
+    --ck-media-h-m: 220px;
+    --ck-gap: 24px;
+    --ck-item-gap: 18px;
+    --ck-fit: cover;
+    --ck-badge-bg: #FF9494;
+    --ck-badge-fg: #FFFFFF;
+    --ck-accent: #000000;
+    --ck-panel-align: start;
+    --ck-panel-max: 760px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+  " data-animate="none"
+>
+<div class="ck-inner">
+  <div class="ck-split" data-media="start">
+    <div class="ck-split__panel"><span class="ck-badge">ليش عطرك يطير؟</span><h2 class="ck-heading">لأنه مبني من فوق.</h2><div class="ck-text ck-split__body"><p>أي عطر له ثلاث طبقات.</p><p><strong>الطبقة الأولى:</strong> أول ريحة تشمها. حلوة، وتطير بعد دقايق.</p><p><strong>الطبقة الوسطى:</strong> تقعد ساعة أو ساعتين.</p><p><strong>القاعدة:</strong> هي اللي تقعد على جلدك وعلى ثوبك لين آخر اليوم.</p><p>الريحة الأولى سهلة. أي أحد يقلدها، وأي أحد يحطها بقنينة حلوة. القاعدة هي الغالية. العود الحقيقي، والراتنج، والمسك. وهذي أول شي ينقص بالعطر الرخيص والمقلد.</p><p>جذي تشم العطر بالمحل وتقول «يجنن»… وبعد ساعة ما تلاقي منه شي.</p></div><div class="ck-tl ck-tl--head" style="" >
+              <span class="ck-tl__label"></span>
+              <span class="ck-tl__cell">٠ دقيقة</span>
+              <span class="ck-tl__cell">ساعة</span>
+              <span class="ck-tl__cell">٦ ساعات</span>
+            </div><div class="ck-tl" style="--ck-row: #E5E5E5;" >
+              <span class="ck-tl__label">عطر مبني من فوق</span>
+              <span class="ck-tl__cell">قوي</span>
+              <span class="ck-tl__cell">خفيف</span>
+              <span class="ck-tl__cell">ما في شي</span>
+            </div><div class="ck-tl" style="--ck-row: #E5E5E5;" >
+              <span class="ck-tl__label">عطر مبني من القاعدة</span>
+              <span class="ck-tl__cell">قوي</span>
+              <span class="ck-tl__cell">ثابت</span>
+              <span class="ck-tl__cell">لين الحين موجود</span>
+            </div><div class="ck-note ck-text ck-note--plain" ><p>رقم الـ ٦ ساعات لعطرنا</p><span class="ck-proof">[يحتاج إثبات من البراند] رقم اختبار حقيقي</span></div><div class="ck-note ck-text ck-note--big" ><p>الريحة الأولى ديكور… الثبات أساس. وبيت بلا أساس، حتى لو صبغته ذهب، يطيح.</p></div><div class="ck-split__actions"></div>
+    </div>
+    <div class="ck-split__media"><img src="../images/ec-ins-1.png" class="ck-split__img" alt="" loading="lazy"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-old_way" class="shopify-section"><style>
+  #shopify-section-old_way {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-cards" style="
+    --ck-bg: #FFFFFF;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 40px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 2;
+    --ck-cols-mobile: 1;
+    --ck-gap: 24px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-img-size: 200px;
+    --ck-img-size-m: 180px;
+    --ck-card-pad: 30px;
+    --ck-card-radius: 20px;
+    --ck-card-bg-d: rgba(0,0,0,0);
+    --ck-card-border: #B4532A;
+    --ck-card-align: start;
+    --ck-title-size: 24px;
+    --ck-title-size-m: 20px;
+    --ck-title-weight: 700;
+    --ck-num-bg: #000000;
+    --ck-num-fg: #FFFFFF;
+    --ck-item-gap: 12px;
+    --ck-foot-gap: 30px;
+    --ck-foot-color: #000000;
+    --ck-intro-w: 760px;
+  " data-animate="none"
+>
+<div class="ck-inner"><div class="ck-head"><h2 class="ck-heading">جربت كل شي؟ هذا ليش ما نفع.</h2></div><div class="ck-cards" data-shape="circle"><div class="ck-card" style="--ck-card-bg: #FFE3D7;" ><span class="ck-card__num">1</span><h3 class="ck-card__title">تدفع على الاسم</h3><div class="ck-text ck-card__text"><p>فوق ٢٠٠ دينار… والسؤال نفسه: يثبت؟ الاسم ما يثبّت عطر. القاعدة تثبّته.</p></div></div><div class="ck-card" style="--ck-card-bg: #F5F5DC;" ><span class="ck-card__num">2</span><h3 class="ck-card__title">تاخذ البديل الرخيص</h3><div class="ck-text ck-card__text"><p>ينسخ أول ريحة بس. القاعدة اللي تقعد؟ ما تنسخ.</p></div></div><div class="ck-card" style="--ck-card-bg: #E6E6FA;" ><span class="ck-card__num">3</span><h3 class="ck-card__title">تستر من مزاد أو لايف</h3><div class="ck-text ck-card__text"><p>«أصلي بس بدون كرتون». لا تعرف شنو بداخله، ولا متى انفتح، ولا وين انحفظ.</p></div></div><div class="ck-card" style="--ck-card-bg: #FFF5E5;" ><span class="ck-card__num">4</span><h3 class="ck-card__title">ترش أكثر</h3><div class="ck-text ck-card__text"><p>عشر رشات من عطر بلا قاعدة… تطير بنفس السرعة. بس تزعج اللي جنبك.</p></div></div></div><div class="ck-text ck-cards__foot"><p><strong>المشكلة وحدة بالأربع: محد يبدأ من القاعدة.</strong></p></div></div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-base_intro" class="shopify-section"><style>
+  #shopify-section-base_intro {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-split" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 36px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 50px;
+    --ck-pad-bottom: 12px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 12px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-panel-w: 61%;
+    --ck-panel-bg: #FFF5E5;
+    --ck-media-bg: #FFE3D7;
+    --ck-panel-radius: 20px;
+    --ck-panel-pad: 60px;
+    --ck-panel-pad-m: 24px;
+    --ck-minh: 460px;
+    --ck-media-h-m: 220px;
+    --ck-gap: 24px;
+    --ck-item-gap: 18px;
+    --ck-fit: cover;
+    --ck-badge-bg: #FF9494;
+    --ck-badge-fg: #FFFFFF;
+    --ck-accent: #000000;
+    --ck-panel-align: center;
+    --ck-panel-max: 760px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+  " data-animate="none"
+>
+<div class="ck-inner">
+  <div class="ck-split" data-media="start">
+    <div class="ck-split__panel"><span class="ck-badge">مبني من القاعدة</span><h2 class="ck-heading">إحنا نبدأ من تحت.</h2><div class="ck-text ck-split__body"><p>كل عطر عندنا يبدأ بقاعدته: عود حقيقي، وراتنج، ومسك.</p><p>بعدين نبني فوقها الوسط، وآخر شي الريحة الأولى.</p><p>يعني الريحة اللي تحبها بأول دقيقة… هي نفسها اللي تلاقيها آخر الليل، بس أهدى.</p></div><div class="ck-note ck-text ck-note--plain" ><p>مواد القاعدة لكل عطر</p><span class="ck-proof">[يحتاج إثبات من البراند] مواد القاعدة لكل عطر</span></div><div class="ck-split__actions"><a class="ck-btn" href="#">شوف كيف نختبر الثبات ←</a></div>
+    </div>
+    <div class="ck-split__media"><img src="../images/ec-ins-3.png" class="ck-split__img" alt="" loading="lazy"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-oud_detail" class="shopify-section"><style>
+  #shopify-section-oud_detail {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-split" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 36px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 50px;
+    --ck-pad-bottom: 12px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 12px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-panel-w: 61%;
+    --ck-panel-bg: #F5F5DC;
+    --ck-media-bg: #FFE3D7;
+    --ck-panel-radius: 20px;
+    --ck-panel-pad: 60px;
+    --ck-panel-pad-m: 24px;
+    --ck-minh: 460px;
+    --ck-media-h-m: 220px;
+    --ck-gap: 24px;
+    --ck-item-gap: 18px;
+    --ck-fit: cover;
+    --ck-badge-bg: #B9AC8A;
+    --ck-badge-fg: #FFFFFF;
+    --ck-accent: #000000;
+    --ck-panel-align: start;
+    --ck-panel-max: 760px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+  " data-animate="none"
+>
+<div class="ck-inner">
+  <div class="ck-split" data-media="start">
+    <div class="ck-split__panel"><span class="ck-badge">العود الصدق</span><h2 class="ck-heading">جرّبها بنفسك</h2><div class="ck-text ck-split__body"><p>العود الحقيقي يتكوّن داخل الشجرة على سنين. وقليل من الشجر يطلع منه أصلاً.</p><p>عشان جذي السوق امتلى خشب مدهون، وخشب مصبوغ، وريحة «عود» مسوية بالمختبر.</p><p>الدهن اللي على السطح يفوح قوي أول دقايق… وبعدين يطير، أو تطلع منه ريحة خشب محروق.</p><p>العود الصدق غير. الدهن داخل الخشب نفسه، فالريحة تطلع طبقة ورى طبقة، وتقعد.</p></div><div class="ck-step" >
+              <span class="ck-step__num">١</span>
+              <div class="ck-step__body"><strong class="ck-step__title">اكسرها:</strong><div class="ck-text"><p>إذا لون العودة من داخل مثل برّا، هذي إشارة إنها مو مصبوغة.</p></div>
+              </div>
+            </div><div class="ck-step" >
+              <span class="ck-step__num">٢</span>
+              <div class="ck-step__body"><strong class="ck-step__title">بخّرها على حرارة هادية:</strong><div class="ck-text"><p>الصدق يطلع طبقات، ويتغيّر ويحلى. المدهون يفوح دفعة وحدة وينطفي.</p></div>
+              </div>
+            </div><div class="ck-step" >
+              <span class="ck-step__num">٣</span>
+              <div class="ck-step__body"><strong class="ck-step__title">شم ثوبك بعد ساعة:</strong><div class="ck-text"><p>الريحة اللي تقعد… هي اللي كانت داخل.</p></div>
+              </div>
+            </div><div class="ck-note ck-text ck-note--box" ><p>وما نسميها «سوبر» و«دبل سوبر». نقول لك وش تناسب: <strong>يومي · دوام · ديوانية · مناسبات</strong>، وسعر كل وحدة واضح وثابت.</p></div><div class="ck-note ck-text ck-note--plain" ><p>شهادة / تحليل لكل دفعة</p><span class="ck-proof">[يحتاج إثبات من البراند] شهادة أو تحليل</span></div><div class="ck-split__actions"><a class="ck-btn" href="shopify://collections/all">تسوّق العود والبخور</a></div>
+    </div>
+    <div class="ck-split__media"><img src="../images/ec-cat-4.png" class="ck-split__img" alt="" loading="lazy"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-home_detail" class="shopify-section"><style>
+  #shopify-section-home_detail {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-split" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 36px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 50px;
+    --ck-pad-bottom: 12px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 12px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-panel-w: 61%;
+    --ck-panel-bg: #E6E6FA;
+    --ck-media-bg: #E5DCCB;
+    --ck-panel-radius: 20px;
+    --ck-panel-pad: 60px;
+    --ck-panel-pad-m: 24px;
+    --ck-minh: 460px;
+    --ck-media-h-m: 220px;
+    --ck-gap: 24px;
+    --ck-item-gap: 18px;
+    --ck-fit: cover;
+    --ck-badge-bg: #FF9494;
+    --ck-badge-fg: #FFFFFF;
+    --ck-accent: #000000;
+    --ck-panel-align: center;
+    --ck-panel-max: 760px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+  " data-animate="none"
+>
+<div class="ck-inner">
+  <div class="ck-split" data-media="end">
+    <div class="ck-split__panel"><span class="ck-badge">ريحة البيت</span><h2 class="ck-heading">بيت ريحته عزايم… حتى بيوم عادي.</h2><div class="ck-text ck-split__body"><p>تبي الريحة تمسك بالستاير والكنب، والضيف أول ما يدخل يسأل «وش البخور حقك؟»</p><p>السر مو بس بالبخور. السر بالحرارة.</p><p>نفس البخور، إذا انحط على جمرة حارة، يطلع دفعة قوية وبعدين ريحة خشب محروق.</p><p>وإذا انحط على حرارة هادية، يطلع ناعم وطبقات ويقعد.</p><p><strong>عشان جذي:</strong> كل علبة بخور معها كرت «كيف تبخّر صح».</p></div><div class="ck-split__actions"><a class="ck-btn" href="shopify://collections/all">خذ طقم ريحة البيت</a></div>
+    </div>
+    <div class="ck-split__media"><img src="../images/ec-hand.png" class="ck-split__img" alt="" loading="lazy"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-proof" class="shopify-section"><style>
+  #shopify-section-proof {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-cards" style="
+    --ck-bg: #FFFFFF;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 40px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 2;
+    --ck-cols-mobile: 1;
+    --ck-gap: 24px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-img-size: 200px;
+    --ck-img-size-m: 180px;
+    --ck-card-pad: 30px;
+    --ck-card-radius: 20px;
+    --ck-card-bg-d: rgba(0,0,0,0);
+    --ck-card-border: #B4532A;
+    --ck-card-align: center;
+    --ck-title-size: 24px;
+    --ck-title-size-m: 20px;
+    --ck-title-weight: 700;
+    --ck-num-bg: #000000;
+    --ck-num-fg: #FFFFFF;
+    --ck-item-gap: 12px;
+    --ck-foot-gap: 30px;
+    --ck-foot-color: #000000;
+    --ck-intro-w: 760px;
+  " data-animate="none"
+>
+<div class="ck-inner"><div class="ck-head"><h2 class="ck-heading">لا تصدقنا… صدّق ثوبك.</h2></div><div class="ck-cards" data-shape="circle"><div class="ck-card ck-card--dashed" style="" ><h3 class="ck-card__title">تقييم زبون حقيقي</h3><div class="ck-text ck-card__text"><p>مكان لتقييم حقيقي من زبائن البراند. ما نكتب تقييمات من عندنا.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] تقييم حقيقي</span></div><div class="ck-card ck-card--dashed" style="" ><h3 class="ck-card__title">تقييم زبون حقيقي</h3><div class="ck-text ck-card__text"><p>مكان لتقييم حقيقي من زبائن البراند. ما نكتب تقييمات من عندنا.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] تقييم حقيقي</span></div><div class="ck-card ck-card--dashed" style="" ><h3 class="ck-card__title">تقييم زبون حقيقي</h3><div class="ck-text ck-card__text"><p>مكان لتقييم حقيقي من زبائن البراند. ما نكتب تقييمات من عندنا.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] تقييم حقيقي</span></div><div class="ck-card ck-card--dashed" style="" ><h3 class="ck-card__title">كيف نختبر الثبات</h3><div class="ck-text ck-card__text"><p>الطريقة، والأرقام، وصور.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] طريقة الاختبار والأرقام</span></div></div><div class="ck-text ck-cards__foot"><p>«من ٢٠٠٢ صار في ‹عود› يتسوّى بالمختبر» · «قليل من شجر العود يطلع منه راتنج أصلاً»</p></div></div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-offer" class="shopify-section"><style>
+  #shopify-section-offer {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-cards" style="
+    --ck-bg: #FFECE1;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 60px;
+    --ck-pad-bottom: 60px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 40px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 4;
+    --ck-cols-tablet: 2;
+    --ck-cols-mobile: 1;
+    --ck-gap: 24px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-img-size: 200px;
+    --ck-img-size-m: 180px;
+    --ck-card-pad: 30px;
+    --ck-card-radius: 20px;
+    --ck-card-bg-d: #FFFFFF;
+    --ck-card-border: #B4532A;
+    --ck-card-align: start;
+    --ck-title-size: 24px;
+    --ck-title-size-m: 20px;
+    --ck-title-weight: 700;
+    --ck-num-bg: #000000;
+    --ck-num-fg: #FFFFFF;
+    --ck-item-gap: 12px;
+    --ck-foot-gap: 30px;
+    --ck-foot-color: #000000;
+    --ck-intro-w: 760px;
+  " data-animate="none"
+>
+<div class="ck-inner"><div class="ck-head"><h2 class="ck-heading">جرّب أول. ادفع بعدين على اللي حبيته.</h2></div><div class="ck-cards" data-shape="circle"><div class="ck-card" style="" ><span class="ck-card__num">1</span><h3 class="ck-card__title">مجموعة التجربة:</h3><div class="ck-text ck-card__text"><p>عينات من عطورنا. سعرها ينخصم من أول قنينة كاملة تشتريها. (سعر تجريبي: ٦–٩ د.ك)</p></div><span class="ck-proof">[يحتاج إثبات من البراند] محتوى المجموعة والسعر</span></div><div class="ck-card" style="" ><span class="ck-card__num">2</span><h3 class="ck-card__title">ضمان الثبات:</h3><div class="ck-text ck-card__text"><p>إذا ما قعد معك العطر الساعات المكتوبة عليه، رجّعه.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] شروط الضمان</span></div><div class="ck-card" style="" ><span class="ck-card__num">3</span><h3 class="ck-card__title">ما تدفع على شي مو موجود:</h3><div class="ck-text ck-card__text"><p>اللي تشوفه بالموقع موجود عندنا. وإذا صار شي، فلوسك ترجع فوراً.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] سياسة الاسترجاع</span></div><div class="ck-card" style="" ><span class="ck-card__num">4</span><h3 class="ck-card__title">إنسان يرد عليك:</h3><div class="ck-text ck-card__text"><p>بالواتساب، خلال ___ دقيقة بأوقات الدوام.</p></div><span class="ck-proof">[يحتاج إثبات من البراند] وقت الرد</span></div></div><div class="ck-cards__cta"><a class="ck-btn" href="shopify://collections/all">اطلب مجموعة التجربة</a></div></div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-faq" class="shopify-section"><style>
+  #shopify-section-faq {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-faq" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 50px;
+    --ck-sub-gap: 10px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+    --ck-faq-w: 900px;
+    --ck-q-size: 18px;
+    --ck-q-size-m: 16px;
+    --ck-row-pad: 20px;
+    --ck-line: #000000;
+    --ck-item-bg: #FFF5E5;
+    --ck-item-radius: 16px;
+    --ck-gap: 12px;
+  " data-animate="none"
+>
+<div class="ck-inner"><div class="ck-head"><h2 class="ck-heading">الأسئلة الشائعة</h2></div><div class="ck-faq"><details class="ck-faq__item" open >
+        <summary class="ck-faq__q">كل المحلات تقول ثبات عالي. شنو الفرق عندكم؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>إحنا نكتب الرقم: كم ساعة على الجلد وكم على الثوب، وكيف اختبرناه. وإذا ما قعد، رجّعه.</p><span class="ck-proof">[يحتاج إثبات من البراند]</span></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">أخاف يكون مقلد أو معاد تعبئة.<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>عطورنا تركيبتنا إحنا، مو نسخة من ماركة. وتوصلك من عندنا مباشرة، مختومة.</p><span class="ck-proof">[يحتاج إثبات من البراند]</span></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">ما أقدر أشم أونلاين. شلون أختار؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>ابدأ بمجموعة التجربة. وسعرها ينخصم من القنينة الكبيرة.</p></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">ليش أدفع ٢٠ دينار وأنا ألقى عطر بـ ٥؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>اللي بـ ٥ غالباً ينسخ أول ريحة بس. تدفع على القاعدة اللي تقعد، مو على قنينة.</p></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">دهن العود ريحته غريبة أول ما حطيته. يعني مغشوش؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>لا، بالعكس. الدهن الصدق يفتح قوي، وبعدين يهدأ ويقعد قريب من الجلد. نقطة أو نقطتين تكفي، وعطه وقت.</p></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">البخور عندي يطلع ريحة خشب محروق. ليش؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>غالباً الحرارة عالية. حط كسرة صغيرة على حرارة هادية. الكرت اللي مع العلبة يشرح لك.</p></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">شلون أعرف إن العود مو مدهون؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>اكسره وشوف داخله، وبخّره على حرارة هادية وشوف إذا يطلع طبقات. ومع كل دفعة نعطيك ___</p><span class="ck-proof">[يحتاج إثبات من البراند]</span></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">العطر يوصل حار من الشمس؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>نغلّفه ضد الحر ونوصله خلال ___ ساعة.</p><span class="ck-proof">[يحتاج إثبات من البراند]</span></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">أبي هدية وما أعرف شنو آخذ.<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>اختار ميزانيتك من قسم الهدايا، أو كلّمنا بالواتساب ونختار معك.</p></div>
+      </details><details class="ck-faq__item"  >
+        <summary class="ck-faq__q">إذا خلص المنتج بعد ما دفعت؟<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a"><p>ما نعرض إلا الموجود. وإذا صار خطأ، فلوسك ترجع فوراً.</p><span class="ck-proof">[يحتاج إثبات من البراند]</span></div>
+      </details></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-final_cta" class="shopify-section"><style>
+  #shopify-section-final_cta {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-split" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 36px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 50px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 0px;
+    --ck-pad-bottom-m: 12px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-panel-w: 61%;
+    --ck-panel-bg: #F5F5DC;
+    --ck-media-bg: #FFE3D7;
+    --ck-panel-radius: 20px;
+    --ck-panel-pad: 60px;
+    --ck-panel-pad-m: 24px;
+    --ck-minh: 460px;
+    --ck-media-h-m: 220px;
+    --ck-gap: 24px;
+    --ck-item-gap: 18px;
+    --ck-fit: cover;
+    --ck-badge-bg: #FF9494;
+    --ck-badge-fg: #FFFFFF;
+    --ck-accent: #000000;
+    --ck-panel-align: center;
+    --ck-panel-max: 760px;
+    --ck-proof-fg: #B4532A;
+    --ck-proof-bg: #FFF4E8;
+  " data-animate="none"
+>
+<div class="ck-inner">
+  <div class="ck-split" data-media="end">
+    <div class="ck-split__panel"><h2 class="ck-heading">خل الناس تسألك «وش عطرك؟»… مو «متى حطيته؟»</h2><div class="ck-text ck-split__body"><p>ابدأ من القاعدة. جرّب عيناتك اليوم، وخذ القنينة اللي تقعد معك.</p></div><div class="ck-split__actions"><a class="ck-btn" href="shopify://collections/all">اطلب مجموعة التجربة</a><a class="ck-split__link" href="shopify://collections/all">أو تسوّق كل العطور ←</a></div>
+    </div>
+    <div class="ck-split__media"><img src="../images/ec-ins-5.png" class="ck-split__img" alt="" loading="lazy"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-gram" class="shopify-section"><style>
+  #shopify-section-gram {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-gallery" style="
+    --ck-bg: #ffffff;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 32px;
+    --ck-h-size-m: 24px;
+    --ck-h-weight: 500;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 70px;
+    --ck-pad-bottom: 100px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 50px;
+    --ck-align: center;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-head-gap: 50px;
+    --ck-sub-gap: 10px;
+    --ck-cols: 5;
+    --ck-cols-tablet: 3;
+    --ck-cols-mobile: 2;
+    --ck-gap: 24px;
+    --ck-ratio: 100%;
+    --ck-img-radius: 20px;
+  " data-animate="none"
+>
+<ck-scroller class="ck-inner"><div class="ck-head"><h2 class="ck-heading">شوفوا الثبات بعيون زبائنا (@___)</h2><div class="ck-text ck-sub"><p>[يحتاج إثبات من البراند: حساب إنستقرام وصور زبائن حقيقيين]</p></div></div><div class="ck-gal" data-track><a class="ck-gal__item" href="#" ><img src="../images/ec-ins-1.png" class="ck-gal__img" alt="" loading="lazy"></a><a class="ck-gal__item" href="#" ><img src="../images/ec-ins-2.png" class="ck-gal__img" alt="" loading="lazy"></a><a class="ck-gal__item" href="#" ><img src="../images/ec-ins-3.png" class="ck-gal__img" alt="" loading="lazy"></a><a class="ck-gal__item" href="#" ><img src="../images/ec-ins-4.png" class="ck-gal__img" alt="" loading="lazy"></a><a class="ck-gal__item" href="#" ><img src="../images/ec-ins-5.png" class="ck-gal__img" alt="" loading="lazy"></a></div>
+</ck-scroller>
+</div>
+</div>
+
+
+
+
+
+</div><div id="shopify-section-newsletter" class="shopify-section"><style>
+  #shopify-section-newsletter {
+    --ck-heading-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+    --ck-body-font: DM Sans, var(--ck-ar-font, sans-serif), sans-serif;
+  }
+  
+  
+</style>
+<div class="color-scheme-1 ck-scheme">
+<div class="ck-ec-newsletter" style="
+    --ck-bg: #FFECE1;
+    --ck-fg: #686868;
+    --ck-heading-color: #000000;
+    --ck-btn-bg: #000000;
+    --ck-btn-fg: #ffffff;
+    --ck-btn-bg-hover: #333333;
+    --ck-btn-border: #000000;
+    --ck-btn-border-w: 0px;
+    --ck-h-size: 56px;
+    --ck-h-size-m: 30px;
+    --ck-h-weight: 400;
+    --ck-h-lh: 1.2;
+    --ck-h-ls: 0em;
+    --ck-h-tt: none;
+    --ck-b-size: 14px;
+    --ck-b-size-m: 14px;
+    --ck-b-lh: 1.7;
+    --ck-btn-size: 15px;
+    --ck-btn-weight: 700;
+    --ck-btn-tt: none;
+    --ck-btn-ls: 0em;
+    --ck-pad-top: 60px;
+    --ck-pad-bottom: 50px;
+    --ck-pad-top-m: 30px;
+    --ck-pad-bottom-m: 30px;
+    --ck-max-width: 1440px;
+    --ck-gutter: 36px;
+    --ck-align: right;
+    --ck-radius: 30px;
+    --ck-btn-px: 32px;
+    --ck-btn-py: 12px;
+    --ck-anim-dur: 600ms;
+    --ck-anim-distance: 24px;
+    --ck-small: 12px;
+    --ck-large: 18px;
+    --ck-chip-px: 12px;
+    --ck-chip-py: 3px;
+    --ck-num-size: 34px;
+    --ck-media-w: 40%;
+    --ck-gap: 120px;
+    --ck-kicker-size: 24px;
+    --ck-input-border: #E5E5E5;
+    --ck-input-bg: #FFFFFF;
+    --ck-form-w: 400px;
+    --ck-media-offset: 50px;
+  " data-animate="none"
+>
+<div class="ck-inner ck-nl" data-media="start">
+  <div class="ck-nl__media"><img src="../images/ec-newsletter.png" class="ck-nl__img" alt="" loading="lazy"></div>
+  <div class="ck-nl__content"><h2 class="ck-heading">تعلّم تختار ريحتك</h2><div class="ck-text"><p>نرسل لك مرة بالأسبوع: كيف تختار عطر يثبت، كيف تبخّر صح، وأول من يعرف بالدفعات الجديدة.</p></div><form onsubmit="return false" class="">
+      <input type="hidden" name="contact[tags]" value="newsletter"><div class="ck-nl__field">
+          <input class="ck-nl__input" type="email" name="contact[email]" required autocomplete="email" placeholder="إيميلك" aria-label="إيميلك">
+          <button class="ck-btn ck-nl__btn" type="submit">اشترك</button>
+        </div></form>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div>
+<script>
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+if (!customElements.get('ck-scroller')) {
+  class CkScroller extends HTMLElement {
+    connectedCallback() {
+      this.track = this.querySelector('[data-track]');
+      this.prev = this.querySelector('[data-prev]');
+      this.next = this.querySelector('[data-next]');
+      this.step = (d) => {
+        if (!this.track) return;
+        const card = this.track.firstElementChild;
+        const w = card ? card.getBoundingClientRect().width : this.track.clientWidth;
+        const rtl = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        this.track.scrollBy({ left: d * rtl * w, behavior: reduce ? 'auto' : 'smooth' });
+      };
+      this.onPrev = () => this.step(-1);
+      this.onNext = () => this.step(1);
+      this.prev && this.prev.addEventListener('click', this.onPrev);
+      this.next && this.next.addEventListener('click', this.onNext);
+    }
+    disconnectedCallback() {
+      this.prev && this.prev.removeEventListener('click', this.onPrev);
+      this.next && this.next.removeEventListener('click', this.onNext);
+    }
+  }
+  customElements.define('ck-scroller', CkScroller);
+}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+if (!customElements.get('ck-scroller')) {
+  class CkScroller extends HTMLElement {
+    connectedCallback() {
+      this.track = this.querySelector('[data-track]');
+      this.prev = this.querySelector('[data-prev]');
+      this.next = this.querySelector('[data-next]');
+      this.step = (d) => {
+        if (!this.track) return;
+        const card = this.track.firstElementChild;
+        const w = card ? card.getBoundingClientRect().width : this.track.clientWidth;
+        const rtl = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        this.track.scrollBy({ left: d * rtl * w, behavior: reduce ? 'auto' : 'smooth' });
+      };
+      this.onPrev = () => this.step(-1);
+      this.onNext = () => this.step(1);
+      this.prev && this.prev.addEventListener('click', this.onPrev);
+      this.next && this.next.addEventListener('click', this.onNext);
+    }
+    disconnectedCallback() {
+      this.prev && this.prev.removeEventListener('click', this.onPrev);
+      this.next && this.next.removeEventListener('click', this.onNext);
+    }
+  }
+  customElements.define('ck-scroller', CkScroller);
+}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+if (!customElements.get('ck-scroller')) {
+  class CkScroller extends HTMLElement {
+    connectedCallback() {
+      this.track = this.querySelector('[data-track]');
+      this.prev = this.querySelector('[data-prev]');
+      this.next = this.querySelector('[data-next]');
+      this.step = (d) => {
+        if (!this.track) return;
+        const card = this.track.firstElementChild;
+        const w = card ? card.getBoundingClientRect().width : this.track.clientWidth;
+        const rtl = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        this.track.scrollBy({ left: d * rtl * w, behavior: reduce ? 'auto' : 'smooth' });
+      };
+      this.onPrev = () => this.step(-1);
+      this.onNext = () => this.step(1);
+      this.prev && this.prev.addEventListener('click', this.onPrev);
+      this.next && this.next.addEventListener('click', this.onNext);
+    }
+    disconnectedCallback() {
+      this.prev && this.prev.removeEventListener('click', this.onPrev);
+      this.next && this.next.removeEventListener('click', this.onNext);
+    }
+  }
+  customElements.define('ck-scroller', CkScroller);
+}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+
+</script>
+</body>
+</html>

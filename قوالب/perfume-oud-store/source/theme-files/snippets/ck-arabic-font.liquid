@@ -1,0 +1,13 @@
+{%- comment -%} Arabic font (Tajawal, SIL OFL) self-hosted in assets. Only the Arabic subset: Latin text keeps the theme fonts. {%- endcomment -%}
+{%- if settings.ck_arabic_font_enable -%}
+<style>
+  @font-face { font-family: '{{ settings.ck_arabic_font }}'; font-style: normal; font-weight: 400; font-display: swap; src: url('{{ 'ck-tajawal-400.woff2' | asset_url }}') format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE70-FEFC; }
+  @font-face { font-family: '{{ settings.ck_arabic_font }}'; font-style: normal; font-weight: 500; font-display: swap; src: url('{{ 'ck-tajawal-500.woff2' | asset_url }}') format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE70-FEFC; }
+  @font-face { font-family: '{{ settings.ck_arabic_font }}'; font-style: normal; font-weight: 600 900; font-display: swap; src: url('{{ 'ck-tajawal-700.woff2' | asset_url }}') format('woff2'); unicode-range: U+0600-06FF, U+0750-077F, U+0870-08FF, U+200C-200E, U+2010-2011, U+FB50-FDFF, U+FE70-FEFC; }
+  {%- if settings.ck_rtl %}
+  body { font-family: var(--font-body-family), '{{ settings.ck_arabic_font }}', sans-serif; }
+  h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 { font-family: var(--font-heading-family), '{{ settings.ck_arabic_font }}', sans-serif; }
+  {%- endif %}
+</style>
+{%- endif -%}
+<style>:root { --ck-ar-font: '{{ settings.ck_arabic_font }}'; }</style>

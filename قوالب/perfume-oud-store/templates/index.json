@@ -1,0 +1,950 @@
+{
+  "sections": {
+    "hero": {
+      "type": "ck-ec-hero",
+      "settings": {
+        "heading": "ريحتك تدخل قبلك… وتقعد بعد ما تطلع.",
+        "text": "<p>عطور ودهن عود وبخور مبنية من القاعدة: نبدأ بالعود الحقيقي، وبعدين كل شي ثاني. ونكتب لك على كل عطر كم ساعة يقعد.</p>",
+        "button_label": "اكتشف عطرك",
+        "button_link": "shopify://collections/all",
+        "link2_label": "جرّب قبل لا تشتري ←",
+        "image_alt": "صورة الواجهة"
+      }
+    },
+    "marquee": {
+      "type": "ck-ec-marquee",
+      "settings": {
+        "heading_size": 32,
+        "heading_size_mobile": 18,
+        "speed": 30
+      },
+      "blocks": {
+        "marquee_1": {
+          "type": "item",
+          "settings": {
+            "text": "جرّب قبل القنينة: مجموعة التجربة ينخصم سعرها من طلبك الجاي [يحتاج إثبات]"
+          }
+        },
+        "marquee_2": {
+          "type": "item",
+          "settings": {
+            "text": "ما ثبت معك الساعات المكتوبة؟ رجّعه [يحتاج إثبات]"
+          }
+        },
+        "marquee_3": {
+          "type": "item",
+          "settings": {
+            "text": "يرد عليك إنسان بالواتساب خلال ___ دقيقة"
+          }
+        },
+        "marquee_4": {
+          "type": "item",
+          "settings": {
+            "text": "توصيل داخل الكويت خلال ___ ساعة، مغلّف ضد الحر"
+          }
+        }
+      },
+      "block_order": [
+        "marquee_1",
+        "marquee_2",
+        "marquee_3",
+        "marquee_4"
+      ]
+    },
+    "quotes": {
+      "type": "ck-ec-quotes",
+      "settings": {
+        "heading": "إذا قلت وحدة من هذي… مو بروحك.",
+        "background_color": "#FFFFFF",
+        "card_background": "#FFE3D7",
+        "footer_text": "<p>المشكلة مو بجلدك. ومو لازم ترش أكثر. المشكلة بطريقة بناء العطر نفسه.</p>",
+        "padding_top": 70
+      },
+      "blocks": {
+        "quotes_1": {
+          "type": "quote",
+          "settings": {
+            "text": "«الريحة حلوة… والثبات صفر.»"
+          }
+        },
+        "quotes_2": {
+          "type": "quote",
+          "settings": {
+            "text": "«رشّيته الصبح، وقبل الظهر اختفى.»"
+          }
+        },
+        "quotes_3": {
+          "type": "quote",
+          "settings": {
+            "text": "«دفعت فلوس عطر… وطلع كأنه ماي.»"
+          }
+        },
+        "quotes_4": {
+          "type": "quote",
+          "settings": {
+            "text": "«نفس الريحة بالضبط… بس ما يقعد.»"
+          }
+        }
+      },
+      "block_order": [
+        "quotes_1",
+        "quotes_2",
+        "quotes_3",
+        "quotes_4"
+      ]
+    },
+    "why": {
+      "type": "ck-ec-split",
+      "settings": {
+        "badge_text": "ليش عطرك يطير؟",
+        "heading": "لأنه مبني من فوق.",
+        "text": "<p>أي عطر له ثلاث طبقات.</p><p><strong>الطبقة الأولى:</strong> أول ريحة تشمها. حلوة، وتطير بعد دقايق.</p><p><strong>الطبقة الوسطى:</strong> تقعد ساعة أو ساعتين.</p><p><strong>القاعدة:</strong> هي اللي تقعد على جلدك وعلى ثوبك لين آخر اليوم.</p><p>الريحة الأولى سهلة. أي أحد يقلدها، وأي أحد يحطها بقنينة حلوة. القاعدة هي الغالية. العود الحقيقي، والراتنج، والمسك. وهذي أول شي ينقص بالعطر الرخيص والمقلد.</p><p>جذي تشم العطر بالمحل وتقول «يجنن»… وبعد ساعة ما تلاقي منه شي.</p>",
+        "button_label": "",
+        "image_asset": "ec-ins-1.png",
+        "image_alt": "",
+        "media_position": "start",
+        "panel_alignment": "start",
+        "panel_background": "#FFE3D7",
+        "padding_top": 50
+      },
+      "blocks": {
+        "why_1": {
+          "type": "timeline",
+          "settings": {
+            "is_header": true,
+            "label": "",
+            "stage_1": "٠ دقيقة",
+            "stage_2": "ساعة",
+            "stage_3": "٦ ساعات"
+          }
+        },
+        "why_2": {
+          "type": "timeline",
+          "settings": {
+            "label": "عطر مبني من فوق",
+            "stage_1": "قوي",
+            "stage_2": "خفيف",
+            "stage_3": "ما في شي",
+            "row_color": "#E5E5E5"
+          }
+        },
+        "why_3": {
+          "type": "timeline",
+          "settings": {
+            "label": "عطر مبني من القاعدة",
+            "stage_1": "قوي",
+            "stage_2": "ثابت",
+            "stage_3": "لين الحين موجود",
+            "row_color": "#E5E5E5"
+          }
+        },
+        "why_4": {
+          "type": "note",
+          "settings": {
+            "text": "<p>رقم الـ ٦ ساعات لعطرنا</p>",
+            "show_proof": true,
+            "proof_note": "رقم اختبار حقيقي"
+          }
+        },
+        "why_5": {
+          "type": "note",
+          "settings": {
+            "style": "big",
+            "text": "<p>الريحة الأولى ديكور… الثبات أساس. وبيت بلا أساس، حتى لو صبغته ذهب، يطيح.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "why_1",
+        "why_2",
+        "why_3",
+        "why_4",
+        "why_5"
+      ]
+    },
+    "old_way": {
+      "type": "ck-ec-cards",
+      "settings": {
+        "heading": "جربت كل شي؟ هذا ليش ما نفع.",
+        "background_color": "#FFFFFF",
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "card_padding": 30,
+        "card_alignment": "start",
+        "footer_text": "<p><strong>المشكلة وحدة بالأربع: محد يبدأ من القاعدة.</strong></p>",
+        "padding_top": 70
+      },
+      "blocks": {
+        "old_way_1": {
+          "type": "card",
+          "settings": {
+            "number": "1",
+            "title": "تدفع على الاسم",
+            "text": "<p>فوق ٢٠٠ دينار… والسؤال نفسه: يثبت؟ الاسم ما يثبّت عطر. القاعدة تثبّته.</p>",
+            "card_background": "#FFE3D7"
+          }
+        },
+        "old_way_2": {
+          "type": "card",
+          "settings": {
+            "number": "2",
+            "title": "تاخذ البديل الرخيص",
+            "text": "<p>ينسخ أول ريحة بس. القاعدة اللي تقعد؟ ما تنسخ.</p>",
+            "card_background": "#F5F5DC"
+          }
+        },
+        "old_way_3": {
+          "type": "card",
+          "settings": {
+            "number": "3",
+            "title": "تستر من مزاد أو لايف",
+            "text": "<p>«أصلي بس بدون كرتون». لا تعرف شنو بداخله، ولا متى انفتح، ولا وين انحفظ.</p>",
+            "card_background": "#E6E6FA"
+          }
+        },
+        "old_way_4": {
+          "type": "card",
+          "settings": {
+            "number": "4",
+            "title": "ترش أكثر",
+            "text": "<p>عشر رشات من عطر بلا قاعدة… تطير بنفس السرعة. بس تزعج اللي جنبك.</p>",
+            "card_background": "#FFF5E5"
+          }
+        }
+      },
+      "block_order": [
+        "old_way_1",
+        "old_way_2",
+        "old_way_3",
+        "old_way_4"
+      ]
+    },
+    "base_intro": {
+      "type": "ck-ec-split",
+      "settings": {
+        "badge_text": "مبني من القاعدة",
+        "heading": "إحنا نبدأ من تحت.",
+        "text": "<p>كل عطر عندنا يبدأ بقاعدته: عود حقيقي، وراتنج، ومسك.</p><p>بعدين نبني فوقها الوسط، وآخر شي الريحة الأولى.</p><p>يعني الريحة اللي تحبها بأول دقيقة… هي نفسها اللي تلاقيها آخر الليل، بس أهدى.</p>",
+        "button_label": "شوف كيف نختبر الثبات ←",
+        "image_alt": "",
+        "image_asset": "ec-ins-3.png",
+        "media_position": "start",
+        "panel_background": "#FFF5E5",
+        "padding_top": 50
+      },
+      "blocks": {
+        "base_intro_1": {
+          "type": "note",
+          "settings": {
+            "text": "<p>مواد القاعدة لكل عطر</p>",
+            "show_proof": true,
+            "proof_note": "مواد القاعدة لكل عطر"
+          }
+        }
+      },
+      "block_order": [
+        "base_intro_1"
+      ]
+    },
+    "base": {
+      "type": "ck-ec-cards",
+      "settings": {
+        "heading": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "base_1": {
+          "type": "card",
+          "settings": {
+            "image_asset": "ec-ft-1.png",
+            "title": "القاعدة مكتوبة أول شي.",
+            "text": "<p>على كل عطر تشوف شنو قاعدته قبل لا تشوف ريحته الأولى.</p>"
+          }
+        },
+        "base_2": {
+          "type": "card",
+          "settings": {
+            "image_asset": "ec-ft-2.png",
+            "title": "الثبات بالساعات، مو بالكلام.",
+            "text": "<p>نكتب لك كم ساعة يقعد على الجلد، وعلى الدشداشة، وعلى العباية.</p>",
+            "show_proof": true,
+            "proof_note": "ساعات الاختبار + الطريقة"
+          }
+        },
+        "base_3": {
+          "type": "card",
+          "settings": {
+            "image_asset": "ec-ft-3.png",
+            "title": "فوحان واضح.",
+            "text": "<p>نقول لك إذا هو عطر «يدخل المكان قبلك» أو عطر «قريب منك»، عشان تختار على مكانك: دوام، ديوانية، عزيمة.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "base_1",
+        "base_2",
+        "base_3"
+      ]
+    },
+    "categories": {
+      "type": "ck-ec-categories",
+      "settings": {
+        "heading": "كل قسم… نفس القاعدة.",
+        "padding_top": 70,
+        "arrows_desktop": true
+      },
+      "blocks": {
+        "categories_1": {
+          "type": "category",
+          "settings": {
+            "title": "عطور رجالي",
+            "text": "تقعد على الدشداشة لين آخر الديوانية.",
+            "image_asset": "ec-cat-1.png",
+            "link": "shopify://collections/all"
+          }
+        },
+        "categories_2": {
+          "type": "category",
+          "settings": {
+            "title": "عطور نسائي",
+            "text": "تمسك بالعباية والشيلة، مو بس بالرشة الأولى.",
+            "image_asset": "ec-cat-2.png",
+            "link": "shopify://collections/all"
+          }
+        },
+        "categories_3": {
+          "type": "category",
+          "settings": {
+            "title": "للجنسين",
+            "text": "قاعدة عود ومسك تناسب الكل.",
+            "image_asset": "ec-cat-3.png",
+            "link": "shopify://collections/all"
+          }
+        },
+        "categories_4": {
+          "type": "category",
+          "settings": {
+            "title": "دهن العود",
+            "text": "نقطة وحدة تكفي، إذا كان صدق.",
+            "image_asset": "ec-cat-4.png",
+            "link": "shopify://collections/all"
+          }
+        },
+        "categories_5": {
+          "type": "category",
+          "settings": {
+            "title": "عود وبخور ومعمول",
+            "text": "للبيت، للدوام، وللعزايم.",
+            "image_asset": "ec-ins-4.png",
+            "link": "shopify://collections/all"
+          }
+        },
+        "categories_6": {
+          "type": "category",
+          "settings": {
+            "title": "مباخر",
+            "text": "حرارة صح، ريحة صح.",
+            "image_asset": "ec-ins-2.png",
+            "link": "shopify://collections/all"
+          }
+        },
+        "categories_7": {
+          "type": "category",
+          "settings": {
+            "title": "هدايا",
+            "text": "جاهزة ومغلّفة، على ميزانيتك.",
+            "image_asset": "ec-ins-3.png",
+            "link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "categories_1",
+        "categories_2",
+        "categories_3",
+        "categories_4",
+        "categories_5",
+        "categories_6",
+        "categories_7"
+      ]
+    },
+    "bestsellers": {
+      "type": "ck-ec-products",
+      "settings": {
+        "heading": "الأكثر طلب",
+        "price_note": "سعر تجريبي",
+        "padding_top": 70
+      },
+      "blocks": {
+        "bestsellers_1": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-1.jpg",
+            "vendor": "أساس",
+            "title": "اسم العطر ١",
+            "details": "<p>القاعدة: عود + عنبر + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قوي · الموسم: شتوي</p>",
+            "price": "٢٤ د.ك",
+            "show_proof": true,
+            "proof_note": "القاعدة والساعات"
+          }
+        },
+        "bestsellers_2": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-5.jpg",
+            "vendor": "أساس",
+            "title": "اسم العطر ٢",
+            "details": "<p>القاعدة: عود + راتنج + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: متوسط · الموسم: طول السنة</p>",
+            "price": "٢٢ د.ك",
+            "show_proof": true,
+            "proof_note": "القاعدة والساعات"
+          }
+        },
+        "bestsellers_3": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-4.jpg",
+            "vendor": "أساس",
+            "title": "اسم العطر ٣",
+            "details": "<p>القاعدة: عنبر + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قريب · الموسم: صيفي</p>",
+            "price": "١٨ د.ك",
+            "show_proof": true,
+            "proof_note": "القاعدة والساعات"
+          }
+        },
+        "bestsellers_4": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-2.jpg",
+            "vendor": "أساس",
+            "title": "اسم العطر ٤",
+            "details": "<p>القاعدة: عود + مسك (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قوي · الموسم: شتوي</p>",
+            "price": "٢٨ د.ك",
+            "show_proof": true,
+            "proof_note": "القاعدة والساعات"
+          }
+        },
+        "bestsellers_5": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-10.jpg",
+            "vendor": "أساس",
+            "title": "اسم العطر ٥",
+            "details": "<p>القاعدة: مسك + عنبر (مثال) · الثبات: ___ ساعة</p><p>الفوحان: متوسط · الموسم: طول السنة</p>",
+            "price": "٢٠ د.ك",
+            "show_proof": true,
+            "proof_note": "القاعدة والساعات"
+          }
+        },
+        "bestsellers_6": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-3.jpg",
+            "vendor": "أساس",
+            "title": "اسم العطر ٦",
+            "details": "<p>القاعدة: عود + عنبر (مثال) · الثبات: ___ ساعة</p><p>الفوحان: قريب · الموسم: صيفي</p>",
+            "price": "٢٦ د.ك",
+            "show_proof": true,
+            "proof_note": "القاعدة والساعات"
+          }
+        }
+      },
+      "block_order": [
+        "bestsellers_1",
+        "bestsellers_2",
+        "bestsellers_3",
+        "bestsellers_4",
+        "bestsellers_5",
+        "bestsellers_6"
+      ]
+    },
+    "oud": {
+      "type": "ck-ec-split",
+      "settings": {
+        "badge_text": "العود",
+        "heading": "العود الصدق… داخله مثل برّا.",
+        "text": "<p>مثل الذهب. المطلي يلمع من برّا. الصافي ذهب لين داخله.</p>",
+        "button_label": "تسوّق العود والبخور",
+        "button_link": "shopify://collections/all",
+        "image_alt": "",
+        "image_asset": "ec-promo.png",
+        "panel_background": "#F5F5DC",
+        "padding_top": 50
+      }
+    },
+    "oud_detail": {
+      "type": "ck-ec-split",
+      "settings": {
+        "badge_text": "العود الصدق",
+        "heading": "جرّبها بنفسك",
+        "text": "<p>العود الحقيقي يتكوّن داخل الشجرة على سنين. وقليل من الشجر يطلع منه أصلاً.</p><p>عشان جذي السوق امتلى خشب مدهون، وخشب مصبوغ، وريحة «عود» مسوية بالمختبر.</p><p>الدهن اللي على السطح يفوح قوي أول دقايق… وبعدين يطير، أو تطلع منه ريحة خشب محروق.</p><p>العود الصدق غير. الدهن داخل الخشب نفسه، فالريحة تطلع طبقة ورى طبقة، وتقعد.</p>",
+        "button_label": "تسوّق العود والبخور",
+        "button_link": "shopify://collections/all",
+        "image_alt": "",
+        "image_asset": "ec-cat-4.png",
+        "media_position": "start",
+        "panel_alignment": "start",
+        "panel_background": "#F5F5DC",
+        "badge_background": "#B9AC8A",
+        "padding_top": 50
+      },
+      "blocks": {
+        "oud_detail_1": {
+          "type": "step",
+          "settings": {
+            "number": "١",
+            "title": "اكسرها:",
+            "text": "<p>إذا لون العودة من داخل مثل برّا، هذي إشارة إنها مو مصبوغة.</p>"
+          }
+        },
+        "oud_detail_2": {
+          "type": "step",
+          "settings": {
+            "number": "٢",
+            "title": "بخّرها على حرارة هادية:",
+            "text": "<p>الصدق يطلع طبقات، ويتغيّر ويحلى. المدهون يفوح دفعة وحدة وينطفي.</p>"
+          }
+        },
+        "oud_detail_3": {
+          "type": "step",
+          "settings": {
+            "number": "٣",
+            "title": "شم ثوبك بعد ساعة:",
+            "text": "<p>الريحة اللي تقعد… هي اللي كانت داخل.</p>"
+          }
+        },
+        "oud_detail_4": {
+          "type": "note",
+          "settings": {
+            "style": "box",
+            "text": "<p>وما نسميها «سوبر» و«دبل سوبر». نقول لك وش تناسب: <strong>يومي · دوام · ديوانية · مناسبات</strong>، وسعر كل وحدة واضح وثابت.</p>"
+          }
+        },
+        "oud_detail_5": {
+          "type": "note",
+          "settings": {
+            "text": "<p>شهادة / تحليل لكل دفعة</p>",
+            "show_proof": true,
+            "proof_note": "شهادة أو تحليل"
+          }
+        }
+      },
+      "block_order": [
+        "oud_detail_1",
+        "oud_detail_2",
+        "oud_detail_3",
+        "oud_detail_4",
+        "oud_detail_5"
+      ]
+    },
+    "home_scent": {
+      "type": "ck-ec-featured",
+      "settings": {
+        "tag": "ريحة البيت",
+        "title": "طقم «ريحة البيت»",
+        "text": "<p>معمول يومي + عود للعزايم + مبخرة</p>",
+        "price": "___ د.ك",
+        "price_note": "سعر تجريبي",
+        "button_label": "خذ طقم ريحة البيت",
+        "button_link": "shopify://collections/all",
+        "show_proof": true,
+        "proof_note": "مواصفات المبخرة وضمانها",
+        "image_alt": "",
+        "side_image_alt": ""
+      }
+    },
+    "home_detail": {
+      "type": "ck-ec-split",
+      "settings": {
+        "badge_text": "ريحة البيت",
+        "heading": "بيت ريحته عزايم… حتى بيوم عادي.",
+        "text": "<p>تبي الريحة تمسك بالستاير والكنب، والضيف أول ما يدخل يسأل «وش البخور حقك؟»</p><p>السر مو بس بالبخور. السر بالحرارة.</p><p>نفس البخور، إذا انحط على جمرة حارة، يطلع دفعة قوية وبعدين ريحة خشب محروق.</p><p>وإذا انحط على حرارة هادية، يطلع ناعم وطبقات ويقعد.</p><p><strong>عشان جذي:</strong> كل علبة بخور معها كرت «كيف تبخّر صح».</p>",
+        "button_label": "خذ طقم ريحة البيت",
+        "button_link": "shopify://collections/all",
+        "image_alt": "",
+        "image_asset": "ec-hand.png",
+        "panel_background": "#E6E6FA",
+        "media_background": "#E5DCCB",
+        "padding_top": 50
+      }
+    },
+    "gifts": {
+      "type": "ck-ec-products",
+      "settings": {
+        "heading": "هدية تبيّض الوجه.",
+        "subheading": "<p>العطر هدية ما تنرد. اختار على ميزانيتك، وإحنا نغلّفها ونوصلها على الوقت.</p>",
+        "columns_desktop": 4,
+        "price_note": "سعر تجريبي",
+        "show_vendor": false,
+        "footer_text": "<p>كيس هدية لكل قطعة. وموعد توصيل نقوله لك قبل لا تدفع. [يحتاج إثبات من البراند]</p>",
+        "padding_top": 70
+      },
+      "blocks": {
+        "gifts_1": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-6.jpg",
+            "title": "تحت ١٥ د.ك",
+            "details": "<p>للزميل، للجار، للضيف</p>",
+            "price": "",
+            "show_proof": false,
+            "proof_note": ""
+          }
+        },
+        "gifts_2": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-8.jpg",
+            "title": "من ٢٥ لـ ٣٥ د.ك",
+            "details": "<p>للأهل والمناسبات</p>",
+            "price": "",
+            "show_proof": false,
+            "proof_note": ""
+          }
+        },
+        "gifts_3": {
+          "type": "product",
+          "settings": {
+            "image_asset": "ec-p-7.jpg",
+            "title": "بوكس على ذوقك",
+            "details": "<p>اختار القطع، ونحط اسمه عليه</p>",
+            "price": "",
+            "show_proof": true,
+            "proof_note": "البوكس والاسم"
+          }
+        }
+      },
+      "block_order": [
+        "gifts_1",
+        "gifts_2",
+        "gifts_3"
+      ]
+    },
+    "proof": {
+      "type": "ck-ec-cards",
+      "settings": {
+        "heading": "لا تصدقنا… صدّق ثوبك.",
+        "background_color": "#FFFFFF",
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "card_padding": 30,
+        "footer_text": "<p>«من ٢٠٠٢ صار في ‹عود› يتسوّى بالمختبر» · «قليل من شجر العود يطلع منه راتنج أصلاً»</p>",
+        "padding_top": 70
+      },
+      "blocks": {
+        "proof_1": {
+          "type": "card",
+          "settings": {
+            "dashed": true,
+            "title": "تقييم زبون حقيقي",
+            "text": "<p>مكان لتقييم حقيقي من زبائن البراند. ما نكتب تقييمات من عندنا.</p>",
+            "show_proof": true,
+            "proof_note": "تقييم حقيقي"
+          }
+        },
+        "proof_2": {
+          "type": "card",
+          "settings": {
+            "dashed": true,
+            "title": "تقييم زبون حقيقي",
+            "text": "<p>مكان لتقييم حقيقي من زبائن البراند. ما نكتب تقييمات من عندنا.</p>",
+            "show_proof": true,
+            "proof_note": "تقييم حقيقي"
+          }
+        },
+        "proof_3": {
+          "type": "card",
+          "settings": {
+            "dashed": true,
+            "title": "تقييم زبون حقيقي",
+            "text": "<p>مكان لتقييم حقيقي من زبائن البراند. ما نكتب تقييمات من عندنا.</p>",
+            "show_proof": true,
+            "proof_note": "تقييم حقيقي"
+          }
+        },
+        "proof_4": {
+          "type": "card",
+          "settings": {
+            "dashed": true,
+            "title": "كيف نختبر الثبات",
+            "text": "<p>الطريقة، والأرقام، وصور.</p>",
+            "show_proof": true,
+            "proof_note": "طريقة الاختبار والأرقام"
+          }
+        }
+      },
+      "block_order": [
+        "proof_1",
+        "proof_2",
+        "proof_3",
+        "proof_4"
+      ]
+    },
+    "offer": {
+      "type": "ck-ec-cards",
+      "settings": {
+        "heading": "جرّب أول. ادفع بعدين على اللي حبيته.",
+        "background_color": "#FFECE1",
+        "columns_desktop": 4,
+        "columns_tablet": 2,
+        "card_padding": 30,
+        "card_alignment": "start",
+        "card_background": "#FFFFFF",
+        "button_label": "اطلب مجموعة التجربة",
+        "button_link": "shopify://collections/all",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "offer_1": {
+          "type": "card",
+          "settings": {
+            "number": "1",
+            "title": "مجموعة التجربة:",
+            "text": "<p>عينات من عطورنا. سعرها ينخصم من أول قنينة كاملة تشتريها. (سعر تجريبي: ٦–٩ د.ك)</p>",
+            "show_proof": true,
+            "proof_note": "محتوى المجموعة والسعر"
+          }
+        },
+        "offer_2": {
+          "type": "card",
+          "settings": {
+            "number": "2",
+            "title": "ضمان الثبات:",
+            "text": "<p>إذا ما قعد معك العطر الساعات المكتوبة عليه، رجّعه.</p>",
+            "show_proof": true,
+            "proof_note": "شروط الضمان"
+          }
+        },
+        "offer_3": {
+          "type": "card",
+          "settings": {
+            "number": "3",
+            "title": "ما تدفع على شي مو موجود:",
+            "text": "<p>اللي تشوفه بالموقع موجود عندنا. وإذا صار شي، فلوسك ترجع فوراً.</p>",
+            "show_proof": true,
+            "proof_note": "سياسة الاسترجاع"
+          }
+        },
+        "offer_4": {
+          "type": "card",
+          "settings": {
+            "number": "4",
+            "title": "إنسان يرد عليك:",
+            "text": "<p>بالواتساب، خلال ___ دقيقة بأوقات الدوام.</p>",
+            "show_proof": true,
+            "proof_note": "وقت الرد"
+          }
+        }
+      },
+      "block_order": [
+        "offer_1",
+        "offer_2",
+        "offer_3",
+        "offer_4"
+      ]
+    },
+    "faq": {
+      "type": "ck-ec-faq",
+      "settings": {
+        "heading": "الأسئلة الشائعة",
+        "padding_top": 70
+      },
+      "blocks": {
+        "faq_1": {
+          "type": "qa",
+          "settings": {
+            "question": "كل المحلات تقول ثبات عالي. شنو الفرق عندكم؟",
+            "answer": "<p>إحنا نكتب الرقم: كم ساعة على الجلد وكم على الثوب، وكيف اختبرناه. وإذا ما قعد، رجّعه.</p>",
+            "show_proof": true
+          }
+        },
+        "faq_2": {
+          "type": "qa",
+          "settings": {
+            "question": "أخاف يكون مقلد أو معاد تعبئة.",
+            "answer": "<p>عطورنا تركيبتنا إحنا، مو نسخة من ماركة. وتوصلك من عندنا مباشرة، مختومة.</p>",
+            "show_proof": true
+          }
+        },
+        "faq_3": {
+          "type": "qa",
+          "settings": {
+            "question": "ما أقدر أشم أونلاين. شلون أختار؟",
+            "answer": "<p>ابدأ بمجموعة التجربة. وسعرها ينخصم من القنينة الكبيرة.</p>",
+            "show_proof": false
+          }
+        },
+        "faq_4": {
+          "type": "qa",
+          "settings": {
+            "question": "ليش أدفع ٢٠ دينار وأنا ألقى عطر بـ ٥؟",
+            "answer": "<p>اللي بـ ٥ غالباً ينسخ أول ريحة بس. تدفع على القاعدة اللي تقعد، مو على قنينة.</p>",
+            "show_proof": false
+          }
+        },
+        "faq_5": {
+          "type": "qa",
+          "settings": {
+            "question": "دهن العود ريحته غريبة أول ما حطيته. يعني مغشوش؟",
+            "answer": "<p>لا، بالعكس. الدهن الصدق يفتح قوي، وبعدين يهدأ ويقعد قريب من الجلد. نقطة أو نقطتين تكفي، وعطه وقت.</p>",
+            "show_proof": false
+          }
+        },
+        "faq_6": {
+          "type": "qa",
+          "settings": {
+            "question": "البخور عندي يطلع ريحة خشب محروق. ليش؟",
+            "answer": "<p>غالباً الحرارة عالية. حط كسرة صغيرة على حرارة هادية. الكرت اللي مع العلبة يشرح لك.</p>",
+            "show_proof": false
+          }
+        },
+        "faq_7": {
+          "type": "qa",
+          "settings": {
+            "question": "شلون أعرف إن العود مو مدهون؟",
+            "answer": "<p>اكسره وشوف داخله، وبخّره على حرارة هادية وشوف إذا يطلع طبقات. ومع كل دفعة نعطيك ___</p>",
+            "show_proof": true
+          }
+        },
+        "faq_8": {
+          "type": "qa",
+          "settings": {
+            "question": "العطر يوصل حار من الشمس؟",
+            "answer": "<p>نغلّفه ضد الحر ونوصله خلال ___ ساعة.</p>",
+            "show_proof": true
+          }
+        },
+        "faq_9": {
+          "type": "qa",
+          "settings": {
+            "question": "أبي هدية وما أعرف شنو آخذ.",
+            "answer": "<p>اختار ميزانيتك من قسم الهدايا، أو كلّمنا بالواتساب ونختار معك.</p>",
+            "show_proof": false
+          }
+        },
+        "faq_10": {
+          "type": "qa",
+          "settings": {
+            "question": "إذا خلص المنتج بعد ما دفعت؟",
+            "answer": "<p>ما نعرض إلا الموجود. وإذا صار خطأ، فلوسك ترجع فوراً.</p>",
+            "show_proof": true
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9",
+        "faq_10"
+      ]
+    },
+    "final_cta": {
+      "type": "ck-ec-split",
+      "settings": {
+        "heading": "خل الناس تسألك «وش عطرك؟»… مو «متى حطيته؟»",
+        "text": "<p>ابدأ من القاعدة. جرّب عيناتك اليوم، وخذ القنينة اللي تقعد معك.</p>",
+        "button_label": "اطلب مجموعة التجربة",
+        "button_link": "shopify://collections/all",
+        "link2_label": "أو تسوّق كل العطور ←",
+        "link2_link": "shopify://collections/all",
+        "image_asset": "ec-ins-5.png",
+        "image_alt": "",
+        "panel_background": "#F5F5DC",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "gram": {
+      "type": "ck-ec-gallery",
+      "settings": {
+        "heading": "شوفوا الثبات بعيون زبائنا (@___)",
+        "subheading": "<p>[يحتاج إثبات من البراند: حساب إنستقرام وصور زبائن حقيقيين]</p>",
+        "padding_top": 70,
+        "padding_bottom": 100
+      },
+      "blocks": {
+        "gram_1": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "ec-ins-1.png"
+          }
+        },
+        "gram_2": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "ec-ins-2.png"
+          }
+        },
+        "gram_3": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "ec-ins-3.png"
+          }
+        },
+        "gram_4": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "ec-ins-4.png"
+          }
+        },
+        "gram_5": {
+          "type": "photo",
+          "settings": {
+            "image_asset": "ec-ins-5.png"
+          }
+        }
+      },
+      "block_order": [
+        "gram_1",
+        "gram_2",
+        "gram_3",
+        "gram_4",
+        "gram_5"
+      ]
+    },
+    "newsletter": {
+      "type": "ck-ec-newsletter",
+      "settings": {
+        "kicker": "",
+        "heading": "تعلّم تختار ريحتك",
+        "text": "<p>نرسل لك مرة بالأسبوع: كيف تختار عطر يثبت، كيف تبخّر صح، وأول من يعرف بالدفعات الجديدة.</p>",
+        "placeholder": "إيميلك",
+        "button_label": "اشترك",
+        "success_message": "تم الاشتراك، شكراً!",
+        "image_alt": "",
+        "heading_size": 56
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "marquee",
+    "categories",
+    "bestsellers",
+    "oud",
+    "home_scent",
+    "gifts",
+    "base",
+    "quotes",
+    "why",
+    "old_way",
+    "base_intro",
+    "oud_detail",
+    "home_detail",
+    "proof",
+    "offer",
+    "faq",
+    "final_cta",
+    "gram",
+    "newsletter"
+  ]
+}

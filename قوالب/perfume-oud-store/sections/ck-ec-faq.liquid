@@ -1,0 +1,773 @@
+{%- liquid
+  assign hf = section.settings.heading_font
+  assign bf = section.settings.body_font
+-%}
+<style>
+  #shopify-section-{{ section.id }} {
+    --ck-heading-font: {{ hf.family }}, var(--ck-ar-font, sans-serif), {{ hf.fallback_families }};
+    --ck-body-font: {{ bf.family }}, var(--ck-ar-font, sans-serif), {{ bf.fallback_families }};
+  }
+  {{ hf | font_face: font_display: 'swap' }}
+  {{ bf | font_face: font_display: 'swap' }}
+</style>
+<div class="color-{{ section.settings.color_scheme }} ck-scheme">
+<div class="ck-ec-faq" style="
+    --ck-bg: {{ section.settings.background_color }};
+    --ck-fg: {{ section.settings.text_color }};
+    --ck-heading-color: {{ section.settings.heading_color }};
+    --ck-btn-bg: {{ section.settings.button_background }};
+    --ck-btn-fg: {{ section.settings.button_text }};
+    --ck-btn-bg-hover: {{ section.settings.button_hover_background }};
+    --ck-btn-border: {{ section.settings.button_border }};
+    --ck-btn-border-w: {{ section.settings.button_border_width }}px;
+    --ck-h-size: {{ section.settings.heading_size }}px;
+    --ck-h-size-m: {{ section.settings.heading_size_mobile }}px;
+    --ck-h-weight: {{ section.settings.heading_weight }};
+    --ck-h-lh: {{ section.settings.heading_line_height }};
+    --ck-h-ls: {{ section.settings.heading_letter_spacing }}em;
+    --ck-h-tt: {{ section.settings.heading_text_transform }};
+    --ck-b-size: {{ section.settings.body_size }}px;
+    --ck-b-size-m: {{ section.settings.body_size_mobile }}px;
+    --ck-b-lh: {{ section.settings.body_line_height }};
+    --ck-btn-size: {{ section.settings.button_size }}px;
+    --ck-btn-weight: {{ section.settings.button_weight }};
+    --ck-btn-tt: {{ section.settings.button_text_transform }};
+    --ck-btn-ls: {{ section.settings.button_letter_spacing }}em;
+    --ck-pad-top: {{ section.settings.padding_top }}px;
+    --ck-pad-bottom: {{ section.settings.padding_bottom }}px;
+    --ck-pad-top-m: {{ section.settings.padding_top_mobile }}px;
+    --ck-pad-bottom-m: {{ section.settings.padding_bottom_mobile }}px;
+    --ck-max-width: {{ section.settings.content_width }}px;
+    --ck-gutter: {{ section.settings.side_padding }}px;
+    --ck-align: {{ section.settings.text_alignment }};
+    --ck-radius: {{ section.settings.corner_radius }}px;
+    --ck-btn-px: {{ section.settings.button_padding_x }}px;
+    --ck-btn-py: {{ section.settings.button_padding_y }}px;
+    --ck-anim-dur: {{ section.settings.animation_duration }}ms;
+    --ck-anim-distance: {{ section.settings.animation_distance }}px;
+    --ck-small: {{ section.settings.small_text_size }}px;
+    --ck-large: {{ section.settings.large_text_size }}px;
+    --ck-chip-px: {{ section.settings.chip_padding_x }}px;
+    --ck-chip-py: {{ section.settings.chip_padding_y }}px;
+    --ck-num-size: {{ section.settings.number_size }}px;
+    --ck-head-gap: {{ section.settings.head_gap }}px;
+    --ck-sub-gap: {{ section.settings.sub_gap }}px;
+    --ck-proof-fg: {{ section.settings.proof_color }};
+    --ck-proof-bg: {{ section.settings.proof_background }};
+    --ck-faq-w: {{ section.settings.list_width }}px;
+    --ck-q-size: {{ section.settings.question_size }}px;
+    --ck-q-size-m: {{ section.settings.question_size_mobile }}px;
+    --ck-row-pad: {{ section.settings.row_padding }}px;
+    --ck-line: {{ section.settings.line_color }};
+    --ck-item-bg: {{ section.settings.item_background }};
+    --ck-item-radius: {{ section.settings.item_radius }}px;
+    --ck-gap: {{ section.settings.gap }}px;
+  " data-animate="{{ section.settings.animation_style }}"
+  {%- if section.settings.full_width %} data-full-width{% endif %}
+  {%- unless section.settings.show_on_mobile %} data-hide-mobile{% endunless %}
+  {%- unless section.settings.show_on_desktop %} data-hide-desktop{% endunless %}
+>
+<div class="ck-inner">
+  
+{%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+<div class="ck-head">
+  {%- if section.settings.heading != blank -%}<h2 class="ck-heading">{{ section.settings.heading }}</h2>{%- endif -%}
+  {%- if section.settings.subheading != blank -%}<div class="ck-text ck-sub">{{ section.settings.subheading }}</div>{%- endif -%}
+</div>
+{%- endif -%}
+
+  <div class="ck-faq">
+    {%- for block in section.blocks -%}
+      <details class="ck-faq__item" {% if forloop.first and section.settings.open_first %}open{% endif %} {{ block.shopify_attributes }}>
+        <summary class="ck-faq__q">{{ block.settings.question }}<span class="ck-faq__icon" aria-hidden="true"></span></summary>
+        <div class="ck-text ck-faq__a">{{ block.settings.answer }}{%- if block.settings.show_proof -%}<span class="ck-proof">{{ settings.ck_proof_label }}{%- if block.settings.proof_note != blank %} {{ block.settings.proof_note }}{% endif -%}</span>{%- endif -%}</div>
+      </details>
+    {%- endfor -%}
+  </div>
+</div>
+</div>
+</div>
+
+{% stylesheet %}
+.ck-ec-faq { background: var(--ck-bg); color: var(--ck-fg); font-family: var(--ck-body-font); font-size: var(--ck-b-size-m); line-height: var(--ck-b-lh); padding-top: var(--ck-pad-top-m); padding-bottom: var(--ck-pad-bottom-m); text-align: var(--ck-align); }
+.ck-ec-faq ck-scroller { display: block; }
+.ck-ec-faq .ck-inner { max-width: var(--ck-max-width); margin: 0 auto; padding-left: var(--ck-gutter); padding-right: var(--ck-gutter); }
+.ck-ec-faq[data-full-width] .ck-inner { max-width: 100%; }
+.ck-ec-faq .ck-heading { font-family: var(--ck-heading-font); font-size: var(--ck-h-size-m); font-weight: var(--ck-h-weight); line-height: var(--ck-h-lh); letter-spacing: var(--ck-h-ls); text-transform: var(--ck-h-tt); color: var(--ck-heading-color); margin: 0; }
+.ck-ec-faq .ck-text p { margin: 0; }
+.ck-ec-faq .ck-btn { display: inline-block; background: var(--ck-btn-bg); color: var(--ck-btn-fg); border: var(--ck-btn-border-w) solid var(--ck-btn-border); border-radius: var(--ck-radius); padding: var(--ck-btn-py) var(--ck-btn-px); font-family: var(--ck-body-font); font-size: var(--ck-btn-size); font-weight: var(--ck-btn-weight); text-transform: var(--ck-btn-tt); letter-spacing: var(--ck-btn-ls); line-height: 1.2; text-decoration: none; cursor: pointer; transition: background-color var(--ck-anim-dur) ease; }
+.ck-ec-faq .ck-btn:hover { background: var(--ck-btn-bg-hover); }
+.ck-ec-faq[data-animate="fade"] .ck-inner { animation: ck-fade var(--ck-anim-dur) ease both; }
+.ck-ec-faq[data-animate="slide"] .ck-inner { animation: ck-slide var(--ck-anim-dur) ease both; }
+@keyframes ck-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ck-slide { from { opacity: 0; transform: translateY(var(--ck-anim-distance)); } to { opacity: 1; transform: none; } }
+@media screen and (max-width: 749px) { .ck-ec-faq[data-hide-mobile] { display: none; } }
+@media screen and (min-width: 750px) {
+  .ck-ec-faq { font-size: var(--ck-b-size); padding-top: var(--ck-pad-top); padding-bottom: var(--ck-pad-bottom); }
+  .ck-ec-faq .ck-heading { font-size: var(--ck-h-size); }
+  .ck-ec-faq[data-hide-desktop] { display: none; }
+}
+/* reduced motion must beat every animation rule above, including Dawn's */
+@media (prefers-reduced-motion: reduce) { .ck-ec-faq * { animation: none !important; transition: none !important; } }
+
+.ck-ec-faq .ck-head { margin-bottom: var(--ck-head-gap); }
+.ck-ec-faq .ck-sub { margin-top: var(--ck-sub-gap); }
+
+.ck-ec-faq .ck-proof { display: inline-block; margin: var(--ck-proof-gap, 6px) 0 0; padding: var(--ck-chip-py) var(--ck-chip-px); border: 1px dashed var(--ck-proof-fg); border-radius: var(--ck-radius); background: var(--ck-proof-bg); color: var(--ck-proof-fg); font-size: var(--ck-small); line-height: 1.6; }
+
+.ck-ec-faq .ck-faq { max-width: var(--ck-faq-w); margin: 0 auto; display: grid; gap: var(--ck-gap); text-align: start; }
+.ck-ec-faq .ck-faq__item { background: var(--ck-item-bg); border-radius: var(--ck-item-radius); }
+.ck-ec-faq .ck-faq__q { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: var(--ck-row-pad); padding: var(--ck-row-pad); font-family: var(--ck-heading-font); font-size: var(--ck-q-size-m); font-weight: var(--ck-h-weight); color: var(--ck-heading-color); }
+.ck-ec-faq .ck-faq__q::-webkit-details-marker { display: none; }
+.ck-ec-faq .ck-faq__icon { position: relative; flex: 0 0 auto; width: var(--ck-small); height: var(--ck-small); }
+.ck-ec-faq .ck-faq__icon::before, .ck-ec-faq .ck-faq__icon::after { content: ""; position: absolute; inset: 45% 0 auto; height: 2px; background: var(--ck-line); transition: transform var(--ck-anim-dur) ease; }
+.ck-ec-faq .ck-faq__icon::after { transform: rotate(90deg); }
+.ck-ec-faq .ck-faq__item[open] .ck-faq__icon::after { transform: rotate(0deg); }
+.ck-ec-faq .ck-faq__a { padding: 0 var(--ck-row-pad) var(--ck-row-pad); }
+@media screen and (min-width: 750px) { .ck-ec-faq .ck-faq__q { font-size: var(--ck-q-size); } }
+{% endstylesheet %}
+
+{% javascript %}
+document.addEventListener('shopify:section:load', () => {});
+document.addEventListener('shopify:section:unload', () => {});
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "EC: FAQ",
+  "tag": "section",
+  "class": "ck-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "range",
+      "id": "head_gap",
+      "label": "Space under heading",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "sub_gap",
+      "label": "Space between heading and subheading",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Questions"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first",
+      "label": "Open the first question",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "list_width",
+      "label": "List max width",
+      "min": 400,
+      "max": 1400,
+      "step": 10,
+      "default": 900,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "question_size",
+      "label": "Question size (desktop)",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "question_size_mobile",
+      "label": "Question size (mobile)",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "row_padding",
+      "label": "Row padding",
+      "min": 4,
+      "max": 40,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between rows",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "item_background",
+      "label": "Row background",
+      "default": "#FFF5E5"
+    },
+    {
+      "type": "range",
+      "id": "item_radius",
+      "label": "Row corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Placeholder chips"
+    },
+    {
+      "type": "color",
+      "id": "proof_color",
+      "label": "Placeholder text",
+      "default": "#B4532A"
+    },
+    {
+      "type": "color",
+      "id": "proof_background",
+      "label": "Placeholder background",
+      "default": "#FFF4E8"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#686868"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_border",
+      "label": "Button border",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Button border width",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "dm_sans_n5"
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body font",
+      "default": "dm_sans_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size (desktop)",
+      "min": 12,
+      "max": 112,
+      "step": 2,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading size (mobile)",
+      "min": 12,
+      "max": 72,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_weight",
+      "label": "Heading weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "label": "Heading line height",
+      "min": 0.8,
+      "max": 2,
+      "step": 0.1,
+      "default": 1.2
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "label": "Heading letter spacing",
+      "min": -1,
+      "max": 3,
+      "step": 0.1,
+      "default": 0,
+      "unit": "em"
+    },
+    {
+      "type": "select",
+      "id": "heading_text_transform",
+      "label": "Heading case",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "As typed"
+        },
+        {
+          "value": "uppercase",
+          "label": "UPPERCASE"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "Text size (desktop)",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_size_mobile",
+      "label": "Text size (mobile)",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "body_line_height",
+      "label": "Text line height",
+      "min": 1,
+      "max": 2.2,
+      "step": 0.1,
+      "default": 1.7
+    },
+    {
+      "type": "range",
+      "id": "button_size",
+      "label": "Button text size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "button_weight",
+      "label": "Button weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "default": 700
+    },
+    {
+      "type": "select",
+      "id": "button_text_transform",
+      "label": "Button case",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "As typed"
+        },
+        {
+          "value": "uppercase",
+          "label": "UPPERCASE"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "button_letter_spacing",
+      "label": "Button letter spacing",
+      "min": -1,
+      "max": 3,
+      "step": 0.1,
+      "default": 0,
+      "unit": "em"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding (mobile)",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding (mobile)",
+      "min": 0,
+      "max": 160,
+      "step": 2,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content width",
+      "min": 600,
+      "max": 2000,
+      "step": 20,
+      "default": 1440,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "side_padding",
+      "label": "Side padding",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_x",
+      "label": "Button side padding",
+      "min": 4,
+      "max": 64,
+      "step": 2,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_y",
+      "label": "Button height padding",
+      "min": 4,
+      "max": 32,
+      "step": 2,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Small parts"
+    },
+    {
+      "type": "range",
+      "id": "small_text_size",
+      "label": "Small text size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "large_text_size",
+      "label": "Large text size",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "chip_padding_x",
+      "label": "Badge side padding",
+      "min": 4,
+      "max": 30,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "chip_padding_y",
+      "label": "Badge height padding",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "default": 3,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "label": "Number circle size",
+      "min": 20,
+      "max": 60,
+      "step": 1,
+      "default": 34,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Visibility and animation"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_desktop",
+      "label": "Show on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_mobile",
+      "label": "Show on mobile",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "Entrance animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fade",
+          "label": "Fade in"
+        },
+        {
+          "value": "slide",
+          "label": "Slide up"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "animation_duration",
+      "label": "Animation duration",
+      "min": 0,
+      "max": 1500,
+      "step": 50,
+      "default": 600,
+      "unit": "ms"
+    },
+    {
+      "type": "range",
+      "id": "animation_distance",
+      "label": "Slide distance",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "default": 24,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "qa",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "question",
+          "label": "Question",
+          "default": "Question?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_proof",
+          "label": "Show 'needs proof from brand' placeholder",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "proof_note",
+          "label": "What proof is missing"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "EC: FAQ",
+      "blocks": [
+        {
+          "type": "qa"
+        },
+        {
+          "type": "qa"
+        },
+        {
+          "type": "qa"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

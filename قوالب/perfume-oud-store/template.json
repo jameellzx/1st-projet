@@ -1,0 +1,50 @@
+{
+  "name": "perfume-oud-store",
+  "title": "متجر عطور وعود وبخور (RTL عربي) - تصميم ecomposer 6481",
+  "made": "2026-11-15",
+  "source_url": "https://ecomposer.app/demo/6481",
+  "first_store": "wbx0tf-4r.myshopify.com theme #169050570971",
+  "sections": [
+    "ck-ec-cards",
+    "ck-ec-categories",
+    "ck-ec-faq",
+    "ck-ec-featured",
+    "ck-ec-gallery",
+    "ck-ec-hero",
+    "ck-ec-marquee",
+    "ck-ec-newsletter",
+    "ck-ec-products",
+    "ck-ec-quotes",
+    "ck-ec-split"
+  ],
+  "page_order": [
+    "hero",
+    "marquee",
+    "categories",
+    "bestsellers",
+    "oud",
+    "home_scent",
+    "gifts",
+    "base",
+    "quotes",
+    "why",
+    "old_way",
+    "base_intro",
+    "oud_detail",
+    "home_detail",
+    "proof",
+    "offer",
+    "faq",
+    "final_cta",
+    "gram",
+    "newsletter"
+  ],
+  "colors": {
+    "ec-cards": "#FFF5E5",
+    "ec-categories": "#ffffff",
+    "ec-hero": "#FFE3D7",
+    "ec-marquee": "#F4C2C2",
+    "ec-newsletter": "#FFECE1"
+  },
+  "fonts": "dm_sans_n4, dm_sans_n5"
+}
