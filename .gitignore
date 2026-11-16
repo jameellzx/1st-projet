@@ -1,1 +1,7 @@
 ﻿.claude/settings.local.json
+
+# client phone numbers - keep private
+*.xlsx
+
+# local demo previews
+_preview/

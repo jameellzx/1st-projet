@@ -6,6 +6,24 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8765"],
       "port": 8765
+    },
+    {
+      "name": "katib-acne",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8770", "--directory", "katib-clients/acne-gameplan-gulf/site"],
+      "port": 8770
+    },
+    {
+      "name": "templates",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8780", "--directory", "قوالب"],
+      "port": 8780
+    },
+    {
+      "name": "perfume-demos",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8790", "--directory", "_preview"],
+      "port": 8790
     }
   ]
 }
